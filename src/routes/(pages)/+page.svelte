@@ -2,6 +2,7 @@
 	import Seo from '$lib/Seo.svelte';
 	import What from '$lib/What.svelte';
 	import Hero from '$lib/Hero.svelte';
+	import PhotoGroup from '$lib/PhotoGroup.svelte';
 	export let data;
 
 	const { posts } = data;
@@ -22,6 +23,8 @@
 		{/each}
 	</div>
 </div>
+
+<PhotoGroup />
 
 <Seo title="German Magic Farm" description="This is homepage" type="WebSite" />
 
