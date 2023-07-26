@@ -46,8 +46,8 @@
 	$: routeId = $page.url.pathname;
 </script>
 
-<div>
-	<nav>
+<div class="relative">
+	<nav class="color-border">
 		<a class="logo" href="/">
 			<h1>German Magic Farm</h1>
 		</a>
@@ -80,6 +80,29 @@
 		background-color: #343a40;
 		color: white;
 		text-align: center;
+		border-bottom: 3px solid #ffcd02;
+	}
+
+	.relative {
+		position: relative;
+	}
+
+	.color-border:after {
+		background: linear-gradient(
+			to right,
+			#000 25%,
+			#ffcd02 25%,
+			#ffcd02 50%,
+			#e84f47 50%,
+			#e84f47 75%,
+			#000 75%
+		);
+		position: absolute;
+		content: '';
+		height: 4px;
+		right: 0;
+		left: 0;
+		top: 0;
 	}
 
 	.nav-wrapper {

@@ -22,7 +22,7 @@
 	<div class="grid">
 		{#each pics as { title, photo, excerpt }}
 			<div>
-				<p>{title}</p>
+				<h3>{title}</h3>
 				<img class="square" src={photo} alt={title} />
 				<p>{excerpt}</p>
 			</div>

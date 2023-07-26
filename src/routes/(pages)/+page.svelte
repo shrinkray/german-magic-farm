@@ -3,16 +3,17 @@
 	import What from '$lib/What.svelte';
 	import Hero from '$lib/Hero.svelte';
 	import PhotoGroup from '$lib/PhotoGroup.svelte';
+	import CheckItOut from '$lib/CheckItOut.svelte';
 	export let data;
 
 	const { posts } = data;
 </script>
 
 <Hero />
-<What />
+<div class="fade"><What /></div>
 
 <!-- <img src="german-magic-bg.jpg" alt="" /> -->
-<div class="container">
+<!-- <div class="container">
 	<div class="grid">
 		{#each posts as { id, title, image, body }}
 			<div>
@@ -22,9 +23,11 @@
 			</div>
 		{/each}
 	</div>
-</div>
+</div> -->
 
 <PhotoGroup />
+
+<CheckItOut />
 
 <Seo title="German Magic Farm" description="This is homepage" type="WebSite" />
 

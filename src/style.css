@@ -6,7 +6,7 @@
   --bg-color: white;
   --color: #333;
   --heading-color: #f30a0a;
-
+  --accent-fade: rgba(255, 206, 0, 0.08)
 }
 
 [data-theme="dark"] {
@@ -43,4 +43,8 @@ textarea {
 .wrapper {
   width: min(100% - 2rem, 50rem);
   margin-inline: auto;
+}
+
+.fade {
+  background-color: var(--accent-fade);
 }
