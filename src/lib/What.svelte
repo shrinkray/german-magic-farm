@@ -41,6 +41,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		gap: 1.5rem;
+		padding-bottom: var(--size-7);
 	}
 
 	.flexible-grid > * {

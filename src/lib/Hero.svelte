@@ -23,6 +23,7 @@
 		background-image: var(--bg-image);
 		background-position: center;
 		background-repeat: no-repeat;
+		background-size: cover;
 	}
 	h2 {
 		margin: 0;
