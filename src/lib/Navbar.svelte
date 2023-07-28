@@ -14,8 +14,12 @@
 			href: '/services'
 		},
 		{
-			title: 'About',
-			href: '/about'
+			title: 'Meet Pam Bauer',
+			href: '/meet-pam-bauer'
+		},
+		{
+			title: 'Clinics',
+			href: '/clinics'
 		},
 		{
 			title: 'Contact',
