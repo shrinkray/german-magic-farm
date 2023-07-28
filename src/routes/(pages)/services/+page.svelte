@@ -1,43 +1,38 @@
 <script>
-  import Seo from "$lib/Seo.svelte";
-  import Contact from "$lib/Contact.svelte";
-  import services from "$lib/data/services.json";
-  import Hero from "$lib/Hero.svelte";
+	import Seo from '$lib/Seo.svelte';
+	import Contact from '$lib/Contact.svelte';
+	import services from '$lib/data/services.json';
+	import Hero from '$lib/Hero.svelte';
 </script>
 
 <Hero
-  herotitle="About Page Title"
-  tagline="About pg tagline"
-  --heading-color="pink"
-  --bg-image="url(pam-dressage-slider.jpg)"
+	herotitle="About Page Title"
+	tagline="About pg tagline"
+	--heading-color="pink"
+	--bg-image="url(pam-dressage-slider.jpg)"
 />
 <div class="container grid">
-  <div class="what">
-    <h3>About Us</h3>
+	<div class="what">
+		<h1>Services at German Magic Farm</h1>
 
-    <p class="content">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deserunt neque
-      tempore recusandae animi soluta quasi? Asperiores rem dolore eaque vel,
-      porro, soluta unde debitis aliquam laboriosam. Repellat explicabo,
-      maiores!
-    </p>
-    {#each services as { content, title, amount }, index}
-      <h2>{title}</h2>
-      <p class="bold">{amount}</p>
-      <p class="content">{content}</p>
-    {/each}
-  </div>
-  <Contact />
+		<p class="content">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deserunt neque tempore recusandae
+			animi soluta quasi? Asperiores rem dolore eaque vel, porro, soluta unde debitis aliquam
+			laboriosam. Repellat explicabo, maiores!
+		</p>
+		{#each services as { content, title, amount }, index}
+			<h2>{title}</h2>
+			<p class="bold">{amount}</p>
+			<p class="content">{content}</p>
+		{/each}
+	</div>
+	<Contact />
 </div>
 <div />
-<Seo
-  title="About | Business Frontpage"
-  description="This is about page"
-  type="WebPage"
-/>
+<Seo title="About | Business Frontpage" description="This is about page" type="WebPage" />
 
 <style>
-  /*  .grid {
+	/*  .grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 2em;
@@ -46,20 +41,20 @@
     grid-column: span 8;
   } */
 
-  h3 {
-    padding-bottom: 0.5em;
-    margin-bottom: 0.5em;
-    font-size: 2em;
-    font-weight: 500;
-    border-bottom: 1px solid #ddd;
-  }
+	h3 {
+		padding-bottom: 0.5em;
+		margin-bottom: 0.5em;
+		font-size: 2em;
+		font-weight: 500;
+		border-bottom: 1px solid #ddd;
+	}
 
-  .bold {
-    font-weight: bold;
-  }
+	.bold {
+		font-weight: bold;
+	}
 
-  .content {
-    line-height: 1.6;
-    box-shadow: var(--shadow-4);
-  }
+	.content {
+		line-height: 1.6;
+		box-shadow: var(--shadow-4);
+	}
 </style>
