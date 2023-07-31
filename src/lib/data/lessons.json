@@ -1,0 +1,38 @@
+[
+    {
+        "kindOfLesson": "Starter lessons",
+        "firstPrice": "35",
+        "firstDescription": "for first “Let's get to know one another “ session on GMF horses.",
+        "secondPrice": "45",
+        "secondDescription": "for additional sessions on GMF horses",
+        "thirdPrice": "",
+        "thirdDescription": ""
+    },
+    {
+        "kindOfLesson": "Private lessons",
+        "firstPrice": "55",
+        "firstDescription": "per session on a GMF horse",
+        "secondPrice": "60",
+        "secondDescription": "per session on a student owned horse",
+        "thirdPrice": "55",
+        "thirdDescription": "per session for Professional ride on non GMF horse"
+    },
+    {
+        "kindOfLesson": "Group lessons",
+        "firstPrice": "45",
+        "firstDescription": "per session on a GMF horse",
+        "secondPrice": "50",
+        "secondDescription": "per session on a student owned horse",
+        "thirdPrice": "",
+        "thirdDescription": ""
+    },
+    {
+        "kindOfLesson": "Off Site Lessons",
+        "firstPrice": "70",
+        "firstDescription": "per session for private lesson",
+        "secondPrice": "50",
+        "secondDescription": "per session for 2 or more riders",
+        "thirdPrice": "75",
+        "thirdDescription": "per session for Professional ride off site"
+    }
+]
