@@ -1,4 +1,4 @@
-<script>
+<script land="ts">
 	import Seo from '$lib/Seo.svelte';
 	import Contact from '$lib/Contact.svelte';
 	import services from '$lib/data/services.json';
@@ -29,20 +29,18 @@
 			<p class="content">{content}</p>
 		{/each}
 	</div>
-	<div>
+	<div class="lessons">
 		{#each lessons as { kindOfLesson, firstPrice, firstDescription, secondPrice, secondDescription, thirdPrice, thirdDescription }}
 			<div class="flexible-grid">
 				<h3>{kindOfLesson}</h3>
-				<div class="nodollarsign">
-					<p>${firstPrice}{firstDescription}</p>
-					<p>${secondPrice} {secondDescription}</p>
+				<div>
+					<p>{firstPrice} {firstDescription}</p>
+					<p>{secondPrice} {secondDescription}</p>
 					{#if showThird}
-						<p class="symbol">${thirdPrice} {thirdDescription}</p>
+						<p class="symbol">{thirdPrice} {thirdDescription}</p>
 					{/if}
 				</div>
 			</div>
-
-			<p />
 		{/each}
 	</div>
 
@@ -64,7 +62,7 @@
 	.flexible-grid {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 1.5rem;
+		gap: 2.8rem;
 		padding-bottom: var(--size-7);
 	}
 
@@ -76,6 +74,9 @@
 		border-bottom: 1px solid #ddd;
 	}
 
+	.lessons {
+		padding-block: var(--size-7);
+	}
 	/*div.nodollarsign > p:nth-last-child(odd) {
 		display: none;
 	} */
