@@ -37,7 +37,7 @@
 					<p>${firstPrice}{firstDescription}</p>
 					<p>${secondPrice} {secondDescription}</p>
 					{#if showThird}
-						<p>${thirdPrice} {thirdDescription}</p>
+						<p class="symbol">${thirdPrice} {thirdDescription}</p>
 					{/if}
 				</div>
 			</div>
@@ -76,9 +76,13 @@
 		border-bottom: 1px solid #ddd;
 	}
 
-	div.nodollarsign > p:nth-last-child(3) {
+	/*div.nodollarsign > p:nth-last-child(odd) {
 		display: none;
-	}
+	} */
+
+	/*div.nodollarsign p:nth-child(odd) {
+		display: none;
+	} */
 
 	.bold {
 		font-weight: bold;
