@@ -4,57 +4,58 @@
 
 <div class="container">
 	<h3>Meet Pam Bauer</h3>
+
 	<p>
-		Nav was in the container but it was scoped and not in the style.css had different styles so
-		confusing
+		Pam Bauer is the resident trainer & owner here at German Magic Farm. Having ridden for over 31
+		years she brings to her farm the collective experiences from working in various countries like
+		Germany, Austria, Japan and now here in the US.
 	</p>
+
 	<p>
-		Etiam convallis purus a ornare facilisis. Sed sodales accumsan mauris, ut congue sapien pretium
-		id. Duis viverra consectetur posuere. Integer feugiat nulla ac elit pretium gravida. Donec
-		laoreet porttitor dolor nec accumsan. Maecenas fringilla felis sodales nisl mattis, id congue
-		sem volutpat. Nam ut dolor a ante iaculis porttitor ultricies et nisl. Maecenas sed sapien ac
-		turpis aliquam elementum. Aliquam at eleifend metus. Curabitur ut fermentum turpis. Nulla tempus
-		rutrum purus, non bibendum ante vulputate at. Nulla vel viverra nulla. Duis libero risus,
-		ultricies non rhoncus at, tristique id velit. Duis ac ex tortor. Curabitur dui metus, ornare eu
-		ornare vel, scelerisque in augue. Aliquam eget consectetur justo, ac hendrerit lectus.
+		Pam began her teaching career in Germany where she taught jumping and dressage to all ages and
+		levels of riders and horses. She earned her training license in Germany and also her judging
+		license up through dressage Level 3 and up through 1.30m for judging jumping.
 	</p>
+
 	<p>
-		Fusce ullamcorper nisl eros. Mauris sed urna mattis, mattis velit non, dignissim massa. Aenean
-		maximus ligula sed diam tincidunt, sed tempor metus finibus. Morbi ut nisi id sapien viverra
-		malesuada ut ut dui. Mauris ut mollis magna, viverra fermentum metus. Proin ac ipsum quis mauris
-		interdum sagittis. Fusce id massa eu dolor pharetra efficitur a sed nisi. Quisque quis gravida
-		purus. Morbi facilisis sapien et tellus convallis, eu mattis nisl volutpat. Aliquam quis
-		vehicula leo. Phasellus posuere dui orci, eu luctus neque sollicitudin sit amet. Donec nunc
-		massa, posuere quis leo eget, porta dapibus velit. Maecenas quis pulvinar orci.
+		At home in Germany, Pam earned her Silver Medal; and taught for 15 years. She coached the
+		Bavarian Pony Team to winning their national championships several times.
 	</p>
+
+	<p>Pam trained and taught in Austria for a year after working in Germany.</p>
+
 	<p>
-		Nunc varius sit amet ante id laoreet. Integer sapien nisl, accumsan dictum tempor eu, tempus at
-		mi. Duis sit amet tellus elit. Aliquam tincidunt tellus eros, sed placerat ligula aliquam a.
-		Morbi dapibus congue mauris, id dapibus lectus hendrerit at. Aliquam et porttitor metus. Lorem
-		ipsum dolor sit amet, consectetur adipiscing elit. Praesent imperdiet elit eu libero facilisis,
-		sit amet vulputate leo rhoncus.
+		Next it was off to Japan for Pam where she showed dressage up through FEI 5th level and rode for
+		the well known Mieko Yagi who represented Japan at the Olympics in dressage.
 	</p>
+
 	<p>
-		Suspendisse accumsan ipsum nunc, sed fringilla metus hendrerit nec. Nulla gravida ante ac
-		laoreet fermentum. Nunc aliquam nibh diam, id elementum urna convallis et. Duis mattis lacinia
-		pharetra. Mauris ac lorem venenatis, ultricies nisl a, efficitur mauris. Etiam lacinia fermentum
-		lectus, ac blandit nisi bibendum quis. Curabitur sit amet pharetra elit. Class aptent taciti
-		sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus ut tincidunt
-		nulla. Vivamus fermentum sapien semper ex convallis hendrerit. Sed id eleifend justo.
+		Pam was Chief Instructor for the famous Tokyo Riding Club and trained horses and students up
+		through Grand Prix. Once again in Japan she taught and trained dressage & jumping to various
+		horses and riders. In Japan Pam also volunteered at a hypotherapie facility (similar to USA
+		handicapped riding).
 	</p>
+
 	<p>
-		Nunc quam sem, condimentum ut nibh vitae, facilisis laoreet ligula. Vestibulum ultrices sapien
-		at nulla ullamcorper eleifend. Duis quam elit, pulvinar et aliquam a, porttitor sit amet sem.
-		Suspendisse potenti. Maecenas et mollis enim. Morbi vel scelerisque felis. Maecenas ultrices sem
-		eget neque suscipit, eget consequat magna efficitur.
+		In recent years Pam moved to the USA and began her own training business. She spends her time
+		between training at her own German Magic Farm, at various nearby farms, and of course the many
+		different shows she attends with students and training horses.
 	</p>
+
 	<p>
-		Vestibulum suscipit diam tortor, ut semper dolor elementum pulvinar. Curabitur vitae lacus ut
-		augue viverra venenatis non non libero. Nullam vitae pharetra felis. Integer a turpis non libero
-		posuere dictum eget id massa. Nulla ac lorem dictum, facilisis lectus a, pellentesque nisi.
-		Phasellus sapien enim, rhoncus et mattis eu, facilisis sed est. Maecenas faucibus ultrices
-		varius.
+		Specializing in developing that vital partnership between horse and rider; she helps her
+		students learn the necessary effective body positions for both dressage and jumping disciplines
+		& educating them in giving correct and effective aids.
 	</p>
+
+	<p>
+		Pam's vast array of experience from working for several professionals in addition the knowledge
+		gained from traveling to different countries, gives her the ability to successfully work with
+		all breeds of horses and all types of riders!.
+	</p>
+
+	<p>Pam happily provides a fun, relaxed atmosphere for her students and equine friends!</p>
+	<br />
 </div>
 <Seo title="Services | Business Frontpage" description="This is service page" type="WebPage" />
 

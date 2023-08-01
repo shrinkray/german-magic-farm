@@ -9,31 +9,34 @@
 </script>
 
 <Hero
-	herotitle="About Page Title"
-	tagline="About pg tagline"
-	--heading-color="pink"
+	herotitle="Services:  German Magic Farm"
+	tagline="Training, Lessons, Leasing, Showing and Fun!"
 	--bg-image="url(pam-dressage-slider.jpg)"
+	--bg-opacity="0.5"
 />
 <div class="container grid">
 	<div class="what">
-		<h1>Services at German Magic Farm</h1>
+		<h1>Services Offered at German Magic Farm</h1>
 
-		<p class="content">
+		<p>
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deserunt neque tempore recusandae
 			animi soluta quasi? Asperiores rem dolore eaque vel, porro, soluta unde debitis aliquam
 			laboriosam. Repellat explicabo, maiores!
 		</p>
+
 		{#each services as { content, title, amount }, index}
-			<h2>{title}</h2>
-			<p class="bold">{amount}</p>
-			<p class="content">{content}</p>
+			<div class="">
+				<h2>{title}</h2>
+				<p class="bold">{amount}</p>
+				<p class="">{content}</p>
+			</div>
 		{/each}
 	</div>
 	<div class="lessons">
 		{#each lessons as { kindOfLesson, firstPrice, firstDescription, secondPrice, secondDescription, thirdPrice, thirdDescription }}
 			<div class="flexible-grid">
 				<h3>{kindOfLesson}</h3>
-				<div>
+				<div class="">
 					<p>{firstPrice} {firstDescription}</p>
 					<p>{secondPrice} {secondDescription}</p>
 					{#if showThird}
@@ -77,6 +80,16 @@
 	.lessons {
 		padding-block: var(--size-7);
 	}
+
+	div.what * {
+		padding: var(--size-2);
+	}
+
+	div.what > div:nth-child(odd) {
+		background-color: var(--accent-fade);
+		padding: var(--size-2);
+	}
+
 	/*div.nodollarsign > p:nth-last-child(odd) {
 		display: none;
 	} */
@@ -91,6 +104,6 @@
 
 	.content {
 		line-height: 1.6;
-		box-shadow: var(--shadow-4);
+		/*box-shadow: var(--shadow-4); */
 	}
 </style>

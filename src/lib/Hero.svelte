@@ -1,11 +1,11 @@
 <script>
-	export let herotitle = 'German Magic Farm';
-	export let tagline = 'My home page tagline ';
+	export let herotitle = '';
+	export let tagline = '';
 </script>
 
 <div class="hero">
 	<div class="container">
-		<!-- <h2>{herotitle}</h2> -->
+		<h2>{herotitle}</h2>
 		<p>
 			{tagline}
 		</p>
@@ -15,6 +15,8 @@
 <style>
 	:root {
 		--bg-image: url('german-magic-bg.jpg');
+		--bg-opacity: 0;
+		--visibility: visible;
 	}
 	.hero {
 		padding: 11em 0;
@@ -24,7 +26,20 @@
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
+		position: relative;
+		isolation: isolate;
 	}
+
+	.hero::after {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		/* shorthaand for top btm left right) */
+		inset: 0;
+		background: grey;
+		opacity: var(--bg-opacity);
+	}
+
 	h2 {
 		margin: 0;
 		font-size: 3.5em;

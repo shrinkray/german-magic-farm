@@ -5,15 +5,17 @@
   --primary-color: #d10000;
   --bg-color: white;
   --color: #333;
-  --heading-color: #f30a0a;
-  --accent-fade: rgba(255, 206, 0, 0.08)
+  --heading-color: white;
+  --accent-fade: rgba(255, 206, 0, 0.08);
+  --hero-lg-heading: white;
 }
 
 [data-theme="dark"] {
   --primary-color: #2b3f63;
   --bg-color: #000;
   --color: #ddd;
-  --heading-color: purple;
+  --heading-color: white;
+  --hero-lg-heading: white;
 }
 
 body {
