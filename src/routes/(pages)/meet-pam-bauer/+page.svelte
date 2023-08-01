@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Seo from '$lib/Seo.svelte';
 
 	import Gallery from 'svelte-gallery';
@@ -11,9 +11,11 @@
 	];
 </script>
 
-<div class="full"><Gallery gutter="25" rowHeight="220" {images} /></div>
+<Gallery gutter="25" rowHeight="220" {images} />
 
-<div class="">
+<p />
+
+<div class="container">
 	<h3>Meet Pam Bauer</h3>
 
 	<p>
@@ -71,9 +73,14 @@
 <Seo title="Services | Business Frontpage" description="This is service page" type="WebPage" />
 
 <style>
-	.container {
-		width: 100%;
+	/*:root {
+		--lg-wrapper: 100%;
 	}
+
+	.container {
+		width: var(--lg-wrapper);
+		max-width: 100%;
+	}   */
 
 	h3 {
 		padding-bottom: 0.5em;
