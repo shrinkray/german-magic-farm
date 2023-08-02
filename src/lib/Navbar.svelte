@@ -86,6 +86,9 @@
 <Hamburger bind:open />
 
 <style>
+	a.logo {
+		color: var(--color);
+	}
 	nav {
 		padding: 0.5em;
 		background-color: #343a40;
