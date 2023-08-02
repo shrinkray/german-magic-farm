@@ -17,6 +17,7 @@
 		--bg-image: url('german-magic-bg.jpg');
 		--bg-opacity: 0;
 		--visibility: visible;
+		--bg-size: cover;
 	}
 	.hero {
 		padding: 11em 0;
@@ -25,7 +26,8 @@
 		background-image: var(--bg-image);
 		background-position: center;
 		background-repeat: no-repeat;
-		background-size: cover;
+		background-size: var(--bg-size);
+
 		position: relative;
 		isolation: isolate;
 	}
