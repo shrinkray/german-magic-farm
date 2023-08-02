@@ -56,7 +56,7 @@
 <a class="logo" href="/">
 	<h1>German Magic Farm</h1>
 </a>
-<li class="relative">
+<div class="relative">
 	{#if currentTheme == 'light'}
 		<a class="moon" href={'#'} on:click={() => setTheme('dark')}>
 			<Moon />
@@ -66,7 +66,7 @@
 			<Sun />
 		</a>
 	{/if}
-</li>
+</div>
 {#if open}
 	<div class="relative">
 		<!-- show menu -->
