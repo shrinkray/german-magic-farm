@@ -56,6 +56,17 @@
 <a class="logo" href="/">
 	<h1>German Magic Farm</h1>
 </a>
+<li class="relative">
+	{#if currentTheme == 'light'}
+		<a class="moon" href={'#'} on:click={() => setTheme('dark')}>
+			<Moon />
+		</a>
+	{:else}
+		<a class="sun" href={'#'} on:click={() => setTheme('light')}>
+			<Sun />
+		</a>
+	{/if}
+</li>
 {#if open}
 	<div class="relative">
 		<!-- show menu -->
@@ -68,17 +79,6 @@
 						>
 					</li>
 				{/each}
-				<li class="relative">
-					{#if currentTheme == 'light'}
-						<a class="moon" href={'#'} on:click={() => setTheme('dark')}>
-							<Moon />
-						</a>
-					{:else}
-						<a class="sun" href={'#'} on:click={() => setTheme('light')}>
-							<Sun />
-						</a>
-					{/if}
-				</li>
 			</ul>
 		</nav>
 	</div>
