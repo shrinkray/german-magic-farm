@@ -56,7 +56,7 @@
 <a class="logo" href="/">
 	<h1>German Magic Farm</h1>
 </a>
-<div class="relative">
+<div class="relative move-moon">
 	{#if currentTheme == 'light'}
 		<a class="moon" href={'#'} on:click={() => setTheme('dark')}>
 			<Moon />
@@ -88,6 +88,11 @@
 <style>
 	a.logo {
 		color: var(--color);
+	}
+
+	.move-moon {
+		margin-left: auto;
+		padding-right: 1em;
 	}
 	nav {
 		padding: 0.5em;
