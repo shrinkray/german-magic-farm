@@ -2,7 +2,7 @@
 	import Seo from '$lib/Seo.svelte';
 	import What from '$lib/What.svelte';
 	import Hero from '$lib/Hero.svelte';
-	import PhotoGroup from '$lib/PhotoGroup.svelte';
+	import PhotoCard from '$lib/PhotoCard.svelte';
 	import CheckItOut from '$lib/CheckItOut.svelte';
 	export let data;
 
@@ -25,7 +25,7 @@
 	</div>
 </div> -->
 
-<PhotoGroup />
+<PhotoCard />
 
 <CheckItOut />
 

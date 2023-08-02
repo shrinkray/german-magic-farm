@@ -1,20 +1,9 @@
 <script lang="ts">
 	import Seo from '$lib/Seo.svelte';
-
-	import Gallery from 'svelte-gallery';
-
-	const images = [
-		{ src: './pam-bauer-winter-trot.png', width: 200, height: 200 },
-		{ src: './pam-bauer-oxer.jpg', width: 200, height: 200 },
-		{ src: './pam-bauer-teaching.jpg', width: 200, height: 200 },
-		{ src: './spotless-dressage.jpg', width: 200, height: 200 }
-	];
+	import PhotoCluster from '$lib/PhotoCluster.svelte';
 </script>
 
-<Gallery gutter="25" rowHeight="220" {images} />
-
-<p />
-
+<PhotoCluster />
 <div class="container">
 	<h3>Meet Pam Bauer</h3>
 
@@ -70,7 +59,7 @@
 	<p>Pam happily provides a fun, relaxed atmosphere for her students and equine friends!</p>
 	<br />
 </div>
-<Seo title="Services | Business Frontpage" description="This is service page" type="WebPage" />
+<Seo title="Meet Pam Bauer" description="This is service page" type="WebPage" />
 
 <style>
 	/*:root {

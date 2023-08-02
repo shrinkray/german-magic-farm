@@ -37,6 +37,13 @@ p {
   padding-inline: 2em;
 }
 
+.auto-grid {
+  --min-column-size: 9rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(var(--min-column-size), 100%), 1fr));
+}
+
 input,
 textarea {
   background-color: transparent;
@@ -49,4 +56,8 @@ textarea {
 
 .fade {
   background-color: var(--accent-fade);
+}
+
+.square {
+  aspect-ratio: var(--ratio-square);
 }

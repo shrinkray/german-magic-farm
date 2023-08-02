@@ -41,13 +41,6 @@
 		padding: 2em 0;
 	} */
 
-	.auto-grid {
-		--min-column-size: 9rem;
-		display: grid;
-		gap: 1rem;
-		grid-template-columns: repeat(auto-fit, minmax(min(var(--min-column-size), 100%), 1fr));
-	}
-
 	img {
 		width: 100%;
 		object-fit: cover;
@@ -58,9 +51,5 @@
 	img:hover {
 		transform: scale(1.08);
 		/* transform: skewX(-3deg); */
-	}
-
-	.square {
-		aspect-ratio: var(--ratio-square);
 	}
 </style>
