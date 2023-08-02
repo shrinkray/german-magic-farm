@@ -53,13 +53,13 @@
 	$: routeId = $page.url.pathname;
 </script>
 
+<a class="logo" href="/">
+	<h1>German Magic Farm</h1>
+</a>
 {#if open}
 	<div class="relative">
 		<!-- show menu -->
 		<nav class="color-border">
-			<a class="logo" href="/">
-				<h1>German Magic Farm</h1>
-			</a>
 			<ul>
 				{#each navs as { title, href }}
 					<li>
