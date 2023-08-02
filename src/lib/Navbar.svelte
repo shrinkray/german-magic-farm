@@ -53,8 +53,8 @@
 	$: routeId = $page.url.pathname;
 </script>
 
-<div class="relative">
-	{#if open}
+{#if open}
+	<div class="relative">
 		<!-- show menu -->
 		<nav class="color-border">
 			<a class="logo" href="/">
@@ -81,9 +81,9 @@
 				</li>
 			</ul>
 		</nav>
-	{/if}
-	<Hamburger bind:open />
-</div>
+	</div>
+{/if}
+<Hamburger bind:open />
 
 <style>
 	nav {
