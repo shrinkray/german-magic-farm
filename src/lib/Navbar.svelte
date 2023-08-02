@@ -3,6 +3,9 @@
 	import { onMount } from 'svelte';
 	import Moon from './icons/moon.svelte';
 	import Sun from './icons/sun.svelte';
+	import { Hamburger } from 'svelte-hamburgers';
+
+	let open;
 
 	const navs = [
 		{
@@ -51,31 +54,35 @@
 </script>
 
 <div class="relative">
-	<nav class="color-border">
-		<a class="logo" href="/">
-			<h1>German Magic Farm</h1>
-		</a>
-		<ul>
-			{#each navs as { title, href }}
-				<li>
-					<a {href} class:active={href === '/' ? routeId === '/' : url.includes(href)} {title}
-						>{title}</a
-					>
+	{#if open}
+		<!-- show menu -->
+		<nav class="color-border">
+			<a class="logo" href="/">
+				<h1>German Magic Farm</h1>
+			</a>
+			<ul>
+				{#each navs as { title, href }}
+					<li>
+						<a {href} class:active={href === '/' ? routeId === '/' : url.includes(href)} {title}
+							>{title}</a
+						>
+					</li>
+				{/each}
+				<li class="relative">
+					{#if currentTheme == 'light'}
+						<a class="moon" href={'#'} on:click={() => setTheme('dark')}>
+							<Moon />
+						</a>
+					{:else}
+						<a class="sun" href={'#'} on:click={() => setTheme('light')}>
+							<Sun />
+						</a>
+					{/if}
 				</li>
-			{/each}
-			<li class="relative">
-				{#if currentTheme == 'light'}
-					<a class="moon" href={'#'} on:click={() => setTheme('dark')}>
-						<Moon />
-					</a>
-				{:else}
-					<a class="sun" href={'#'} on:click={() => setTheme('light')}>
-						<Sun />
-					</a>
-				{/if}
-			</li>
-		</ul>
-	</nav>
+			</ul>
+		</nav>
+	{/if}
+	<Hamburger bind:open />
 </div>
 
 <style>
@@ -83,7 +90,7 @@
 		padding: 0.5em;
 		background-color: #343a40;
 		color: white;
-		text-align: center;
+
 		border-bottom: 3px solid #ffcd02;
 	}
 
@@ -120,12 +127,13 @@
 	ul {
 		display: flex;
 		flex-direction: column;
+		text-align: center;
 		padding: 0;
 		list-style: none;
 		font-size: 1.5em;
 	}
 	li {
-		padding-block: 0.75em;
+		padding-block: 0.4em;
 	}
 	h1 {
 		margin: 0;
