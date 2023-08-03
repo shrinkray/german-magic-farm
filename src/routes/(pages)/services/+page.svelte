@@ -18,12 +18,6 @@
 	<div class="alt-color-band flow">
 		<h1>Services Offered at German Magic Farm</h1>
 
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deserunt neque tempore recusandae
-			animi soluta quasi? Asperiores rem dolore eaque vel, porro, soluta unde debitis aliquam
-			laboriosam. Repellat explicabo, maiores!
-		</p>
-
 		{#each services as { content, title, amount }, index}
 			<div class="">
 				<h2>{title}</h2>
