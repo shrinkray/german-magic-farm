@@ -53,22 +53,24 @@
 	$: routeId = $page.url.pathname;
 </script>
 
-<a class="logo flex" href="/">
-	<img src="./german-magic-farm-logo-short.svg" alt="" />
-	<span>German Magic Farm</span>
-</a>
+<div class="flex">
+	<a class="logo flex" href="/">
+		<img src="./german-magic-farm-logo-short.svg" alt="" />
+		<span>German Magic Farm</span>
+	</a>
 
-<!-- begin dark light toggle code -->
-<div class="relative move-moon">
-	{#if currentTheme == 'light'}
-		<a class="moon" href={'#'} on:click={() => setTheme('dark')}>
-			<Moon />
-		</a>
-	{:else}
-		<a class="sun" href={'#'} on:click={() => setTheme('light')}>
-			<Sun />
-		</a>
-	{/if}
+	<!-- begin dark light toggle code -->
+	<div class="relative move-moon">
+		{#if currentTheme == 'light'}
+			<a class="moon" href={'#'} on:click={() => setTheme('dark')}>
+				<Moon />
+			</a>
+		{:else}
+			<a class="sun" href={'#'} on:click={() => setTheme('light')}>
+				<Sun />
+			</a>
+		{/if}
+	</div>
 </div>
 
 {#if open}
@@ -92,6 +94,7 @@
 <style>
 	.flex {
 		display: flex;
+		align-items: center;
 	}
 
 	span {
