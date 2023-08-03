@@ -75,7 +75,10 @@ h3 {
   font-size: var(--fs-400);
 }
 
+
+/* all items but fist one */
 .flow>*+* {
+
   margin-top: 1em;
 }
 
@@ -85,9 +88,7 @@ h3 {
 } */
 
 
-
-
-/* .container way I had it be4 K {
+/* .container way I had it be4 Kevin's styles added {
   max-width: var(--size-md);
   margin: 0 auto;
   padding-inline: 2em;

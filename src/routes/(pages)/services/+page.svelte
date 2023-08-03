@@ -14,8 +14,8 @@
 	--bg-image="url(pam-dressage-slider.jpg)"
 	--bg-opacity="0.5"
 />
-<div class="container grid flow">
-	<div class="alt-color-band">
+<div class="container grid">
+	<div class="alt-color-band flow">
 		<h1>Services Offered at German Magic Farm</h1>
 
 		<p>
@@ -71,12 +71,11 @@
 	}
 
 	div.alt-color-band * {
-		/* padding: var(--size-2); */
+		padding-inline: var(--size-2);
 	}
 
 	div.alt-color-band > div:nth-child(odd) {
 		background-color: var(--accent-fade);
-		/* padding: var(--size-2); */
 	}
 
 	.bold {
