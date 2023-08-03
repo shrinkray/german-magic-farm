@@ -75,7 +75,9 @@ h3 {
   font-size: var(--fs-400);
 }
 
-.flow>*+* {}
+.flow>*+* {
+  margin-top: 1em;
+}
 
 /* same as above
 .flow > :where(:not(:first-child)) {

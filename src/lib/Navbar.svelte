@@ -89,6 +89,7 @@
 		</nav>
 	</div>
 {/if}
+
 <Hamburger bind:open />
 
 <style>
@@ -123,7 +124,6 @@
 		padding: 0.5em;
 		background-color: #343a40;
 		color: white;
-
 		border-bottom: 3px solid #ffcd02;
 	}
 

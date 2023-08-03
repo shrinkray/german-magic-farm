@@ -6,7 +6,9 @@
 
 <div class="app">
 	<Navbar />
-	<slot />
+
+	<main><slot /></main>
+
 	<Footer />
 </div>
 

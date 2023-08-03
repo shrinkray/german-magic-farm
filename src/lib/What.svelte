@@ -28,20 +28,10 @@
 </div>
 
 <style>
-	/*  .grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 2em;
-  }
-  .what {
-    grid-column: span 8;
-  } */
-
 	.flexible-grid {
 		display: flex;
 		flex-wrap: wrap;
 		gap: 1.5rem;
-		padding-bottom: var(--size-7);
 	}
 
 	.flexible-grid > * {

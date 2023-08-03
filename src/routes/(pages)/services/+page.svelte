@@ -15,7 +15,7 @@
 	--bg-opacity="0.5"
 />
 <div class="container grid flow">
-	<div class="what">
+	<div class="alt-color-band">
 		<h1>Services Offered at German Magic Farm</h1>
 
 		<p>
@@ -53,20 +53,10 @@
 <Seo title="Services | German Magic Farm" description="This is about page" type="WebPage" />
 
 <style>
-	/*  .grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 2em;
-  }
-  .what {
-    grid-column: span 8;
-  } */
-
 	.flexible-grid {
 		display: flex;
 		flex-wrap: wrap;
 		gap: 2.8rem;
-		padding-bottom: var(--size-7);
 	}
 
 	h3 {
@@ -80,28 +70,16 @@
 		padding-block: var(--size-7);
 	}
 
-	div.what * {
-		padding: var(--size-2);
+	div.alt-color-band * {
+		/* padding: var(--size-2); */
 	}
 
-	div.what > div:nth-child(odd) {
+	div.alt-color-band > div:nth-child(odd) {
 		background-color: var(--accent-fade);
-		padding: var(--size-2);
+		/* padding: var(--size-2); */
 	}
-
-	/*div.nodollarsign > p:nth-last-child(odd) {
-		display: none;
-	} */
-
-	/*div.nodollarsign p:nth-child(odd) {
-		display: none;
-	} */
 
 	.bold {
 		font-weight: bold;
-	}
-
-	.content {
-		/*box-shadow: var(--shadow-4); */
 	}
 </style>
