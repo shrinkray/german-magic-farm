@@ -93,6 +93,12 @@
 	.flex {
 		display: flex;
 	}
+
+	span {
+		font-size: var(--fs-400);
+		font-weight: 700;
+	}
+
 	a.logo {
 		color: var(--color);
 		align-items: center;
