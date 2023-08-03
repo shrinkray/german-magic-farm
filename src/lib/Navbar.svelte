@@ -125,6 +125,8 @@
 		background-color: #343a40;
 		color: white;
 		border-bottom: 3px solid #ffcd02;
+		z-index: 5;
+		position: absolute;
 	}
 
 	.relative {
