@@ -53,9 +53,12 @@
 	$: routeId = $page.url.pathname;
 </script>
 
-<a class="logo" href="/">
-	<h1>German Magic Farm</h1>
+<a class="logo flex" href="/">
+	<img src="./german-magic-farm-logo-short.svg" alt="" />
+	<span>German Magic Farm</span>
 </a>
+
+<!-- begin dark light toggle code -->
 <div class="relative move-moon">
 	{#if currentTheme == 'light'}
 		<a class="moon" href={'#'} on:click={() => setTheme('dark')}>
@@ -67,6 +70,7 @@
 		</a>
 	{/if}
 </div>
+
 {#if open}
 	<div class="relative">
 		<!-- show menu -->
@@ -86,8 +90,16 @@
 <Hamburger bind:open />
 
 <style>
+	.flex {
+		display: flex;
+	}
 	a.logo {
 		color: var(--color);
+		align-items: center;
+	}
+
+	span {
+		padding-left: 8px;
 	}
 
 	.move-moon {
