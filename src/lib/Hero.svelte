@@ -44,13 +44,12 @@
 
 	h2 {
 		margin: 0;
-		font-size: 3.5em;
-		font-weight: 500;
+		/* font-size: 3.5em;
+		font-weight: 500; */
 		color: var(--heading-color);
 	}
 	p {
 		color: #ddd;
 		font-size: 1.1em;
-		line-height: 1.6;
 	}
 </style>

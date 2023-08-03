@@ -14,7 +14,7 @@
 	--bg-image="url(pam-dressage-slider.jpg)"
 	--bg-opacity="0.5"
 />
-<div class="container grid">
+<div class="container grid flow">
 	<div class="what">
 		<h1>Services Offered at German Magic Farm</h1>
 
@@ -72,8 +72,7 @@
 	h3 {
 		padding-bottom: 0.5em;
 		margin-bottom: 0.5em;
-		font-size: 2em;
-		font-weight: 500;
+
 		border-bottom: 1px solid #ddd;
 	}
 
@@ -103,7 +102,6 @@
 	}
 
 	.content {
-		line-height: 1.6;
 		/*box-shadow: var(--shadow-4); */
 	}
 </style>

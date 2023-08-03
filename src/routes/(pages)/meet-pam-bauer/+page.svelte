@@ -72,10 +72,9 @@
 	}   */
 
 	h3 {
-		padding-bottom: 0.5em;
-		margin-bottom: 0.5em;
-		font-size: 2em;
-		font-weight: 500;
+		/* padding-bottom: 0.5em;
+		margin-bottom: 0.5em; */
+
 		border-bottom: 1px solid #ddd;
 	}
 </style>

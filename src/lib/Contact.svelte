@@ -12,11 +12,11 @@
     grid-column: span 4;
   } */
 	h3 {
-		padding-bottom: 0.5em;
+		/* padding-bottom: 0.5em;
 		margin-bottom: 0.5em;
 		font-size: 2em;
 		font-weight: 500;
-		border-bottom: 1px solid #ddd;
+		border-bottom: 1px solid #ddd; */
 	}
 	a {
 		text-decoration: none;

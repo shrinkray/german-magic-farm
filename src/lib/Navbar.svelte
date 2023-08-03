@@ -144,9 +144,8 @@
 		padding-block: 0.4em;
 	}
 	h1 {
-		margin: 0;
-		font-size: 1.3em;
-		font-weight: normal;
+		/* font-size: 1.3em;
+		font-weight: normal; */
 	}
 	a {
 		text-decoration: none;

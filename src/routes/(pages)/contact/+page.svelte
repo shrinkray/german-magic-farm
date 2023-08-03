@@ -100,8 +100,6 @@
 		padding: 2em 0;
 	}
 	h2 {
-		font-weight: 500;
-		font-size: 2em;
 	}
 	input,
 	textarea {
