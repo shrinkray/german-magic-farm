@@ -111,6 +111,10 @@
 		padding-left: 8px;
 	}
 
+	.moon {
+		color: var(--primary-color);
+	}
+
 	.move-moon {
 		margin-left: auto;
 		padding-right: 1em;
