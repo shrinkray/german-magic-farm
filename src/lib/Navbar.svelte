@@ -126,6 +126,7 @@
 		border-bottom: 3px solid #ffcd02;
 		z-index: 5;
 		position: absolute;
+		margin-top: 20px;
 	}
 
 	.relative {
