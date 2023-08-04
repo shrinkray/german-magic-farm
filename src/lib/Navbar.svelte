@@ -71,26 +71,25 @@
 			</a>
 		{/if}
 	</div>
+	{#if open}
+		<div class="relative">
+			<!-- show menu -->
+			<nav class="color-border">
+				<ul>
+					{#each navs as { title, href }}
+						<li>
+							<a {href} class:active={href === '/' ? routeId === '/' : url.includes(href)} {title}
+								>{title}</a
+							>
+						</li>
+					{/each}
+				</ul>
+			</nav>
+		</div>
+	{/if}
+
+	<Hamburger bind:open />
 </div>
-
-{#if open}
-	<div class="relative">
-		<!-- show menu -->
-		<nav class="color-border">
-			<ul>
-				{#each navs as { title, href }}
-					<li>
-						<a {href} class:active={href === '/' ? routeId === '/' : url.includes(href)} {title}
-							>{title}</a
-						>
-					</li>
-				{/each}
-			</ul>
-		</nav>
-	</div>
-{/if}
-
-<Hamburger bind:open />
 
 <style>
 	.flex {
