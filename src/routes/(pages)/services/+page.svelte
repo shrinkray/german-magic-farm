@@ -26,47 +26,54 @@
 			</div>
 		{/each}
 	</article>
-	<article class="lessons">
-		<h2>Types Of Lessons and Pricing</h2>
-		{#each lessons as { kindOfLesson, firstPrice, firstDescription, secondPrice, secondDescription, thirdPrice, thirdDescription }}
-			<div class="flexible-grid">
-				<h3>{kindOfLesson}</h3>
-				<div class="">
-					<p>{firstPrice} {firstDescription}</p>
-					<p>{secondPrice} {secondDescription}</p>
-					{#if showThird}
-						<p class="symbol">{thirdPrice} {thirdDescription}</p>
-					{/if}
-				</div>
-			</div>
-		{/each}
-	</article>
-
-	<Contact />
 </div>
-<div />
+<article class="lessons larger-wrapper">
+	<h2>Types Of Lessons and Pricing</h2>
+	{#each lessons as { kindOfLesson, firstPrice, firstDescription, secondPrice, secondDescription, thirdPrice, thirdDescription }}
+		<div class="flexible-grid">
+			<h3>{kindOfLesson}</h3>
+			<div class="">
+				<p>{firstPrice} {firstDescription}</p>
+				<p>{secondPrice} {secondDescription}</p>
+				{#if showThird}
+					<p class="symbol">{thirdPrice} {thirdDescription}</p>
+				{/if}
+			</div>
+		</div>
+	{/each}
+</article>
+
 <Seo title="Services | German Magic Farm" description="This is about page" type="WebPage" />
 
 <style>
-	.flexible-grid {
-		display: flex;
-		flex-wrap: wrap;
-	}
-
-	h3 {
-		border-bottom: 1px solid #ddd;
-	}
-
-	.lessons {
-		padding-block: var(--size-7);
-	}
-
 	article.alt-color-band * {
 		padding-inline: var(--size-2);
 	}
 
 	article.alt-color-band > div:nth-child(odd) {
 		background-color: var(--accent-fade);
+	}
+	.flexible-grid {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1.5em;
+	}
+
+	h3 {
+		border-bottom: 1px solid #ddd;
+	}
+
+	.larger-wrapper {
+		width: min(100% - 3rem, 90ch);
+		margin-inline: auto;
+	}
+
+	article.larger-wrapper > * {
+		padding: 1em;
+	}
+
+	.lessons {
+		padding-block: var(--size-7);
 	}
 
 	.bold {
