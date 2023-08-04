@@ -4,19 +4,20 @@
 			title: 'SERVICES',
 			photo: './pam-bauer-horseshow-kid.jpg',
 			link: './services',
-			excerpt: 'quia et suscipit suscipit recusandae consequuntur expedita et cum reprehenderit'
+			excerpt:
+				'Group and individual lessons, training for your OR your horse, or test out new skills at a horse show!'
 		},
 		{
 			title: 'MEET PAM',
 			photo: './pam-bauer-teaching.jpg',
 			link: '#',
-			excerpt: 'quia et suscipit suscipit recusandae consequuntur expedita et cum reprehenderit'
+			excerpt: 'Meet Pam Bauer, resident trainer & owner at German Magic Farm'
 		},
 		{
 			title: 'CLINICS',
 			photo: './jumping-clinic.jpg',
 			link: './clinics',
-			excerpt: 'quia et suscipit suscipit recusandae consequuntur expedita et cum reprehenderit'
+			excerpt: 'Learn, practice and have fun training at a clinic with different clinicians!'
 		}
 	];
 </script>

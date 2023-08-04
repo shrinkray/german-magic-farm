@@ -10,8 +10,10 @@
 </script>
 
 <Hero />
-<div class="fade"><What /></div>
 
+<article class="">
+	<div class="fade"><What /></div>
+</article>
 <PhotoCard />
 
 <CheckItOut />

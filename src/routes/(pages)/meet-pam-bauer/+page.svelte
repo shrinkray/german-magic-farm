@@ -4,7 +4,7 @@
 </script>
 
 <PhotoCluster />
-<div class="container">
+<div class="container flow">
 	<h3>Meet Pam Bauer</h3>
 
 	<p>
@@ -76,5 +76,9 @@
 		margin-bottom: 0.5em; */
 
 		border-bottom: 1px solid #ddd;
+	}
+
+	.container {
+		margin-block: 1em;
 	}
 </style>

@@ -18,6 +18,9 @@
 		font-weight: 500;
 		border-bottom: 1px solid #ddd; */
 	}
+	.contact > * {
+		padding: 0.5em;
+	}
 	a {
 		text-decoration: none;
 		color: var(--primary-color);

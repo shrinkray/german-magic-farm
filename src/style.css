@@ -79,7 +79,6 @@ h3 {
 /* all items but fist one */
 .flow>*+* {
 
-
   /* this was margin-top but switched it */
   margin: 1em;
 }

@@ -38,6 +38,10 @@
 		flex: 1;
 	}
 
+	.what > * {
+		padding: 1em;
+	}
+
 	h3 {
 		/* padding-bottom: 0.5em;
 		margin-bottom: 0.5em;

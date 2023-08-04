@@ -27,7 +27,7 @@
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: var(--bg-size);
-
+		margin-block: 1em;
 		position: relative;
 		isolation: isolate;
 	}

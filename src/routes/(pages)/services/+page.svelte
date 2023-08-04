@@ -15,7 +15,7 @@
 	--bg-opacity="0.5"
 />
 <div class="container grid">
-	<div class="alt-color-band flow">
+	<article class="alt-color-band flow">
 		<h1>Services Offered at German Magic Farm</h1>
 
 		{#each services as { content, title, amount }, index}
@@ -25,8 +25,9 @@
 				<p class="">{content}</p>
 			</div>
 		{/each}
-	</div>
-	<div class="lessons">
+	</article>
+	<article class="lessons">
+		<h2>Types Of Lessons and Pricing</h2>
 		{#each lessons as { kindOfLesson, firstPrice, firstDescription, secondPrice, secondDescription, thirdPrice, thirdDescription }}
 			<div class="flexible-grid">
 				<h3>{kindOfLesson}</h3>
@@ -39,7 +40,7 @@
 				</div>
 			</div>
 		{/each}
-	</div>
+	</article>
 
 	<Contact />
 </div>
@@ -50,13 +51,9 @@
 	.flexible-grid {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 2.8rem;
 	}
 
 	h3 {
-		padding-bottom: 0.5em;
-		margin-bottom: 0.5em;
-
 		border-bottom: 1px solid #ddd;
 	}
 
@@ -64,11 +61,11 @@
 		padding-block: var(--size-7);
 	}
 
-	div.alt-color-band * {
+	article.alt-color-band * {
 		padding-inline: var(--size-2);
 	}
 
-	div.alt-color-band > div:nth-child(odd) {
+	article.alt-color-band > div:nth-child(odd) {
 		background-color: var(--accent-fade);
 	}
 
