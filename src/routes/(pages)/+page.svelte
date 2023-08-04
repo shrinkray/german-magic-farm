@@ -15,8 +15,7 @@
 	<div class="fade"><What /></div>
 </article>
 <PhotoCard />
-
-<CheckItOut />
+<div class="fade"><CheckItOut /></div>
 
 <Seo title="German Magic Farm" description="This is homepage" type="WebSite" />
 

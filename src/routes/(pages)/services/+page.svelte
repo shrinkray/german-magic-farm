@@ -4,6 +4,7 @@
 	import services from '$lib/data/services.json';
 	import Hero from '$lib/Hero.svelte';
 	import lessons from '$lib/data/lessons.json';
+	import SmallLogo from '$lib/SmallLogo.svelte';
 
 	let showThird = true;
 </script>
@@ -43,6 +44,7 @@
 	{/each}
 </article>
 
+<div class="center-w-grid"><SmallLogo /></div>
 <Seo title="Services | German Magic Farm" description="This is about page" type="WebPage" />
 
 <style>

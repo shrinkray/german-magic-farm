@@ -75,6 +75,11 @@ h3 {
   font-size: var(--fs-400);
 }
 
+.center-w-grid {
+  display: grid;
+  justify-content: center;
+}
+
 
 /* all items but fist one */
 .flow>*+* {
@@ -97,6 +102,11 @@ h3 {
 
 .container {
   width: min(100% - 3rem, 65ch);
+  margin-inline: auto;
+}
+
+.larger-wrapper {
+  width: min(100% - 3rem, 90ch);
   margin-inline: auto;
 }
 

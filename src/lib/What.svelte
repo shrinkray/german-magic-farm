@@ -3,7 +3,7 @@
 	import Contact from '$lib/Contact.svelte';
 </script>
 
-<div class="container flexible-grid">
+<div class="larger-wrapper flexible-grid">
 	<div class="what">
 		<h3>Willkommen!</h3>
 

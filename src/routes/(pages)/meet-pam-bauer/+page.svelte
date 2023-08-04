@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Seo from '$lib/Seo.svelte';
 	import PhotoCluster from '$lib/PhotoCluster.svelte';
+	import SmallLogo from '$lib/SmallLogo.svelte';
 </script>
 
 <PhotoCluster />
@@ -59,6 +60,7 @@
 	<p>Pam happily provides a fun, relaxed atmosphere for her students and equine friends!</p>
 	<br />
 </div>
+<div class="center-w-grid"><SmallLogo /></div>
 <Seo title="Meet Pam Bauer" description="This is service page" type="WebPage" />
 
 <style>
