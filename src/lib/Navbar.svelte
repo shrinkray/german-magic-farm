@@ -59,6 +59,20 @@
 		<span>German Magic Farm</span>
 	</a>
 
+	<!-- begin dark light toggle code -->
+	<div class="relative move-moon">
+		{#if currentTheme == 'light'}
+			<a class="moon" href={'#'} on:click={() => setTheme('dark')}>
+				<Moon />
+			</a>
+		{:else}
+			<a class="sun" href={'#'} on:click={() => setTheme('light')}>
+				<Sun />
+			</a>
+		{/if}
+	</div>
+</div>
+<div class="menu-toggle-btn">
 	{#if open}
 		<div class="relative">
 			<!-- show menu -->
@@ -77,18 +91,6 @@
 	{/if}
 
 	<Hamburger bind:open />
-	<!-- begin dark light toggle code -->
-	<div class="relative move-moon">
-		{#if currentTheme == 'light'}
-			<a class="moon" href={'#'} on:click={() => setTheme('dark')}>
-				<Moon />
-			</a>
-		{:else}
-			<a class="sun" href={'#'} on:click={() => setTheme('light')}>
-				<Sun />
-			</a>
-		{/if}
-	</div>
 </div>
 
 <style>
@@ -126,7 +128,9 @@
 		border-bottom: 3px solid #ffcd02;
 		z-index: 5;
 		position: absolute;
-		margin-top: 20px;
+		margin-top: 60px;
+		width: 100%;
+		height: 100vh;
 	}
 
 	.relative {
