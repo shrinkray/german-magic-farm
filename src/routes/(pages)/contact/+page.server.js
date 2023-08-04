@@ -8,6 +8,8 @@ export const actions = {
     const email = formData.get("email");
     const message = formData.get("message");
 
+    console.log(name, email, message);
+
     const contactFormSchema = object({
       name: string().min(2, "too short").required("We only accept named users"),
       email: string().required().email(),
@@ -20,13 +22,14 @@ export const actions = {
         { abortEarly: false }
       );
 
-      const prefilledLink = `https://docs.google.com/forms/d/e/1FAIpQLSeOGNYx08uzHGf3HASA_CDn6z6adFT4_N0w6OvZduCBxMRfEw/formResponse?usp=pp_url&entry.190919771=${name}&entry.543063817=${email}&entry.2120037074=${message}&submit=Submit`;
+      const prefilledLink = `https://docs.google.com/forms/d/e/1FAIpQLSfIccJ6xD8xhG1Ddj98HxT-pXaGI7nCFrgP_0fJmcKA3cOpdg/formResponse?usp=pp_url&entry.781048053=${name}&entry.687608453=${email}&entry.1829882901=${message}&submit=Submit`;
 
       const res = await fetch(prefilledLink);
+      console.log(res);
 
       return {
         success: true,
-        status: "Form is submitted",
+        status: "Thank you for your submission!",
       };
     } catch (error) {
       console.log({ error });

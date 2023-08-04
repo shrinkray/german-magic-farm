@@ -4,6 +4,8 @@
 	import Seo from '$lib/Seo.svelte';
 
 	export let form;
+
+	$: console.log(form);
 </script>
 
 <div class="container">
@@ -116,7 +118,7 @@
 		padding-bottom: 0.5em;
 	}
 	.success {
-		color: lightgreen;
+		color: rgb(8, 115, 8);
 	}
 	.error {
 		border: 1px solid red;
