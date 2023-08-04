@@ -27,7 +27,7 @@
 		{/each}
 	</article>
 </div>
-<article class="lessons larger-wrapper">
+<article class="lessons larger-wrapper fade">
 	<h2>Types Of Lessons and Pricing</h2>
 	{#each lessons as { kindOfLesson, firstPrice, firstDescription, secondPrice, secondDescription, thirdPrice, thirdDescription }}
 		<div class="flexible-grid">
