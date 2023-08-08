@@ -21,4 +21,8 @@
 	.spl-wrapper {
 		width: 100%;
 	}
+
+	div.container {
+		padding-block: var(--size-7);
+	}
 </style>
