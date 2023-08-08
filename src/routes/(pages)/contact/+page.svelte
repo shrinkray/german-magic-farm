@@ -1,6 +1,7 @@
 <script>
 	import { enhance, applyAction } from '$app/forms';
 	import Button from '$lib/Button.svelte';
+	import Contact from '$lib/Contact.svelte';
 	import Seo from '$lib/Seo.svelte';
 
 	export let form;
@@ -84,25 +85,44 @@
 	{/if}
 </div>
 
-<div class="map container">
-	<iframe
-		src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11866.804920549557!2d-83.6402403380172!3d41.96375198592071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1435260600940"
-		width="100%"
-		height="350"
-		frameborder="0"
-		style="border:0"
-		allowfullscreen=""
-	/>
+<div class="larger-wrapper contact-map">
+	<div><Contact /></div>
+	<div class="map">
+		<iframe
+			src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11866.804920549557!2d-83.6402403380172!3d41.96375198592071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1435260600940"
+			width="100%"
+			height="350"
+			frameborder="0"
+			style="border:0"
+			allowfullscreen=""
+		/>
+	</div>
 </div>
+
 <Seo title="Contact | Business Frontpage" description="This is contact page" type="WebPage" />
 
 <style>
-	.container {
-		width: 100%;
-		padding: 2em 0;
-	}
 	h2 {
 	}
+
+	form {
+		padding-block: var(--size-7);
+	}
+	.contact-map {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1.5em;
+		padding-block: var(--size-7);
+	}
+
+	.contact-map {
+		flex: 1;
+	}
+
+	.map {
+		width: 65%;
+	}
+
 	input,
 	textarea {
 		width: 100%;
