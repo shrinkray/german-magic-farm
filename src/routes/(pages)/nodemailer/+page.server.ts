@@ -13,9 +13,9 @@ import { message, superValidate } from "sveltekit-superforms/server";
 
 
 const schema = z.object({
-    name: z.string().default("PH Name"),
+    name: z.string().default(""),
     email: z.string().email(),
-    textfield: z.string().textfield(),
+    body: z.string().default(""),
 });
 
 // ' load '  action
@@ -84,7 +84,7 @@ export const actions = {
             to: SECRET_API_RECEIVER, // list of receivers
             subject: "Hello ✔", // Subject line
             text: `<${form.data.email}>`, // plain text body
-            html: `<b>${form.data.name}</b> <p>${form.data.email}</p>`,
+            html: `<b>${form.data.name}</b> <p>${form.data.email}</p><p>${form.data.body}</p>`,
             //email: `<${form.data.email}>`
         });
 
