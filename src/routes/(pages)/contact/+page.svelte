@@ -120,7 +120,11 @@
 	}
 
 	.map {
-		width: 65%;
+		width: 100%;
+
+		@media (width > 965px) {
+			width: 65%;
+		}
 	}
 
 	input,
