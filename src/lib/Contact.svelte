@@ -4,7 +4,7 @@
 	<p>14082 Rightmire Rd</p>
 	<p>Dundee, Mi 48131</p>
 	<p>P: (734) 652-3775</p>
-	<p>E:<a href="mailto:pam@germanmagicfarm.com">pam@germanmagicfarm.com</a></p>
+	<p>E: <a href="mailto:pam@germanmagicfarm.com">pam@germanmagicfarm.com</a></p>
 </div>
 
 <style>
