@@ -62,6 +62,7 @@ export const actions = {
 
 
         // if pass then run form action below
+        //pretty sure below is with ssl not tls 
         const transporter = nodemailer.createTransport({
             host: SECRET_API_HOST,
             port: 465,
@@ -78,7 +79,7 @@ export const actions = {
         });
 
         const info = await transporter.sendMail({
-            from: '"Amy ⛵" <help@digitalpainkillers.com>',
+            from: '"Pam ⛵" <pam@germanmagicfarm.com>',
 
             // sender address
             to: SECRET_API_RECEIVER, // list of receivers
