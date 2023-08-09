@@ -34,13 +34,15 @@
 		{#if $errors.email}<span class="invalid">{$errors.email}</span>{/if}
 
 		<label for="body">Your message</label>
-		<input
-			type="body"
+		<textarea
 			name="body"
+			cols="30"
+			rows="10"
 			aria-invalid={$errors.body ? 'true' : undefined}
 			bind:value={$form.body}
 			{...$constraints.body}
 		/>
+		<!-- <textarea name="body" id="" cols="30" rows="10" /> -->
 		{#if $errors.body}<span class="invalid">{$errors.body}</span>{/if}
 
 		<div><button>Submit</button></div>
