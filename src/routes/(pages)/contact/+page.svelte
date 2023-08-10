@@ -1,88 +1,58 @@
-<script>
-	import { enhance, applyAction } from '$app/forms';
-	import Button from '$lib/Button.svelte';
+<script lang="ts">
 	import Contact from '$lib/Contact.svelte';
 	import Seo from '$lib/Seo.svelte';
+	import type { PageData } from './$types';
+	import { superForm } from 'sveltekit-superforms/client';
+	import SuperDebug from 'sveltekit-superforms/client/SuperDebug.svelte';
 
-	export let form;
+	export let data: PageData;
 
-	$: console.log(form);
+	// Client API:
+	const { form, message, errors, constraints } = superForm(data.form);
 </script>
 
+<SuperDebug data={$form} />
+
 <div class="container">
-	<h2>Contact us</h2>
-	{#if form?.success}
-		<p class="success">{form?.status || ''}</p>
-	{:else}
-		<form
-			method="POST"
-			use:enhance={() => {
-				return async ({ result }) => {
-					await applyAction(result);
-				};
-			}}
-		>
-			<div class="form-group">
-				<label class="col-md-3 control-label" for="name">Name</label>
-				<div class="col-md-9">
-					<input
-						id="name"
-						name="name"
-						type="text"
-						placeholder="Your name"
-						class="form-control"
-						value={form?.name || ''}
-						class:error={form?.errors?.name}
-					/>
-					{#if form?.errors?.name}
-						<p class="red">{form?.errors?.name}</p>
-					{/if}
-				</div>
-			</div>
+	<form class="form" method="POST">
+		<label for="name">Name</label>
+		<input
+			type="text"
+			name="name"
+			aria-invalid={$errors.name ? 'true' : undefined}
+			bind:value={$form.name}
+			{...$constraints.name}
+		/>
+		{#if $errors.name}<span class="invalid">{$errors.name}</span>{/if}
 
-			<div class="form-group">
-				<label class="col-md-3 control-label" for="email">Your E-mail</label>
-				<div class="col-md-9">
-					<input
-						id="email"
-						name="email"
-						type="text"
-						placeholder="Your email"
-						class="form-control"
-						value={form?.email || ''}
-						class:error={form?.errors?.email}
-					/>
-					{#if form?.errors?.email}
-						<p class="red">{form?.errors?.email}</p>
-					{/if}
-				</div>
-			</div>
+		<label for="email">E-mail</label>
+		<input
+			type="email"
+			name="email"
+			aria-invalid={$errors.email ? 'true' : undefined}
+			bind:value={$form.email}
+			{...$constraints.email}
+		/>
+		{#if $errors.email}<span class="invalid">{$errors.email}</span>{/if}
 
-			<div class="form-group">
-				<label class="col-md-3 control-label" for="message">Your message</label>
-				<div class="col-md-9">
-					<textarea
-						class="form-control"
-						id="message"
-						name="message"
-						placeholder="Please enter your message here..."
-						rows="5"
-						value={form?.message || ''}
-						class:error={form?.errors?.message}
-					/>
-					{#if form?.errors?.message}
-						<p class="red">{form?.errors?.message}</p>
-					{/if}
-				</div>
-			</div>
+		<label for="body">Your message</label>
+		<textarea
+			name="body"
+			cols="30"
+			rows="10"
+			aria-invalid={$errors.body ? 'true' : undefined}
+			bind:value={$form.body}
+			{...$constraints.body}
+		/>
+		<!-- <textarea name="body" id="" cols="30" rows="10" /> -->
+		{#if $errors.body}<span class="invalid">{$errors.body}</span>{/if}
 
-			<div class="form-group">
-				<div class="col-md-12">
-					<Button type="submit">Submit</Button>
-				</div>
-			</div>
-		</form>
-	{/if}
+		<div><button>Submit</button></div>
+
+		<div>
+			{#if $message}<p>{$message}</p>{/if}
+		</div>
+	</form>
 </div>
 
 <div class="larger-wrapper contact-map">
@@ -138,6 +108,10 @@
 		padding: 0.75em 1em;
 		border-radius: 0.25em;
 		border: 1px solid #999;
+	}
+
+	textarea {
+		font-size: var(--fs-300);
 	}
 	.form-group {
 		margin-bottom: 1.5em;
