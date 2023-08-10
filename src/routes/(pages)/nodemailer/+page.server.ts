@@ -79,13 +79,13 @@ export const actions = {
         });
 
         const info = await transporter.sendMail({
-            from: '"Pam ⛵" <pam@germanmagicfarm.com>',
+            from: '"GMF WebSite" <pam@germanmagicfarm.com>',
 
             // sender address
             to: SECRET_API_RECEIVER, // list of receivers
-            subject: "Hello ✔", // Subject line
+            subject: "Question For Pam 🐴", // Subject line
             text: `<${form.data.email}>`, // plain text body
-            html: `<b>${form.data.name}</b> <p>${form.data.email}</p><p>${form.data.body}</p>`,
+            html: `<b>${form.data.name}</b> <p>${form.data.email}</p><p>Click Link to reply!</p>${form.data.body}</p>`,
             //email: `<${form.data.email}>`
         });
 

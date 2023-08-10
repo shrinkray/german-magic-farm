@@ -11,7 +11,7 @@
 	const { form, message, errors, constraints } = superForm(data.form);
 </script>
 
-<SuperDebug data={$form} />
+<!-- <SuperDebug data={$form} /> -->
 
 <div class="container">
 	<form class="form" method="POST">
