@@ -45,7 +45,13 @@
 </article>
 
 <div class="center-w-grid"><SmallLogo /></div>
-<Seo title="Services | German Magic Farm" description="This is about page" type="WebPage" />
+<Seo
+	title="Dressage and jumping Lessons | Training Horseshow Information German Magic
+Farm"
+	description="Information on lessons, training and horse shows with Pam Bauer.  Learn about all the services offered at German Magic Farm in Dundee, Mi"
+	type="WebPage"
+	image="./pam-dressage-slider.jpg"
+/>
 
 <style>
 	article.alt-color-band * {

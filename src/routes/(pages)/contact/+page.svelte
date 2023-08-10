@@ -99,7 +99,12 @@
 	</div>
 </div>
 
-<Seo title="Contact | Business Frontpage" description="This is contact page" type="WebPage" />
+<Seo
+	title="Directions | Contact info German Magic Farm"
+	description="Directions contact and Map to German Magic Farm"
+	type="WebPage"
+	image="./german-magic-farm-logo-short.svg"
+/>
 
 <style>
 	h2 {

@@ -17,7 +17,12 @@
 <PhotoCard />
 <div class="fade"><CheckItOut /></div>
 
-<Seo title="German Magic Farm" description="This is homepage" type="WebSite" />
+<Seo
+	title="Dressage Jumping Cross Country Riding Lessons Dundee Michigan | German Magic Farm"
+	description="Horseback riding lessons in Dundee Mi.  German Dressage and jumping training from traier Pam Bauer located in Dundee, Mi"
+	type="WebPage"
+	image="./german-magic-bg.jpg"
+/>
 
 <style>
 </style>

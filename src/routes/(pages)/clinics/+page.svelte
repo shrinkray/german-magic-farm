@@ -1,5 +1,6 @@
 <script>
 	import Hero from '$lib/Hero.svelte';
+	import Seo from '$lib/Seo.svelte';
 </script>
 
 <div class="spl-wrapper">
@@ -16,6 +17,13 @@
 
 	<p>Stay tuned for our next clinic!</p>
 </div>
+
+<Seo
+	title="Riding jumping, eventing, cross country, and dressage clinics in Dundee, Mi"
+	description="Ride in a dressage or jumping clinic at German Magic Farm with professional riders and trainers from all over the world"
+	type="WebPage"
+	image="./pam-bauer-teaching.jpg"
+/>
 
 <style>
 	.spl-wrapper {

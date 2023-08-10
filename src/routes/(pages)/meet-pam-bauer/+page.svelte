@@ -61,7 +61,12 @@
 	<br />
 </div>
 <div class="center-w-grid"><SmallLogo /></div>
-<Seo title="Meet Pam Bauer" description="This is service page" type="WebPage" />
+<Seo
+	title="Pam Bauer resident trainer and owner German Magic Farm"
+	description="Learn all about resident trainer at German Magic Farm; Pamela Bauer"
+	type="WebPage"
+	image="./pam-bauer-teaching.jpg"
+/>
 
 <style>
 	/*:root {
