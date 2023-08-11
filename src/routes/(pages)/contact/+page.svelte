@@ -129,4 +129,13 @@
 	.red {
 		color: red;
 	}
+
+	button {
+		border: none;
+		border-radius: 0.25em;
+		background-color: var(--primary-color);
+		color: white;
+		font-size: 1em;
+		cursor: pointer;
+	}
 </style>
