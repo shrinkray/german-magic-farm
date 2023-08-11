@@ -9,7 +9,7 @@
 	const { posts } = data;
 </script>
 
-<Hero />
+<Hero --bg-size="95%" />
 
 <article class="">
 	<div class="fade"><What /></div>
