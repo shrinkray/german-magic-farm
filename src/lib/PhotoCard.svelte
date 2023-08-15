@@ -2,20 +2,20 @@
 	const pics = [
 		{
 			title: 'SERVICES',
-			photo: './pam-bauer-horseshow-kid.jpg',
+			photo: './pam-bauer-horseshow-kid.webp',
 			link: './services',
 			excerpt:
 				'Group and individual lessons, training for your OR your horse, or test out new skills at a horse show!'
 		},
 		{
 			title: 'MEET PAM',
-			photo: './pam-bauer-teaching.jpg',
+			photo: './pam-bauer-teaching.webp',
 			link: '#',
 			excerpt: 'Meet Pam Bauer, resident trainer & owner at German Magic Farm'
 		},
 		{
 			title: 'CLINICS',
-			photo: './jumping-clinic.jpg',
+			photo: './jumping-clinic.webp',
 			link: './clinics',
 			excerpt: 'Learn, practice and have fun training at a clinic with different clinicians!'
 		}

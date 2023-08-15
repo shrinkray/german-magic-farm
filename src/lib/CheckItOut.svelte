@@ -9,7 +9,7 @@
 	.bg-wrapper {
 		padding-block: 2em;
 		background-color: var(--accent-fade);
-		background: url('pam-gallop-hill-cp.jpg') no-repeat left top;
+		background: url('pam-gallop-hill-cp.webp') no-repeat left top;
 		background-size: contain;
 	}
 

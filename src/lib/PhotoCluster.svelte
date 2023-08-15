@@ -5,16 +5,16 @@
 			alt: './Pam Bauer riding in winter'
 		},
 		{
-			photo: './pam-bauer-oxer.jpg',
+			photo: './pam-bauer-oxer.webp',
 			alt: './Pam Bauer jumping an oxer'
 		},
 		{
-			photo: './pam-bauer-teaching.jpg',
+			photo: './pam-bauer-teaching.webp',
 			alt: './Pam Bauer teching a lesson'
 		},
 
 		{
-			photo: './spotless-dressage.jpg',
+			photo: './spotless-dressage.webp',
 			alt: './Pam Bauer showing in dressage'
 		}
 	];
