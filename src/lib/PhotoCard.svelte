@@ -10,7 +10,7 @@
 		{
 			title: 'MEET PAM',
 			photo: './pam-bauer-teaching.webp',
-			link: '#',
+			link: './meet-pam-bauer',
 			excerpt: 'Meet Pam Bauer, resident trainer & owner at German Magic Farm'
 		},
 		{
@@ -25,22 +25,42 @@
 <div class="container">
 	<div class="auto-grid">
 		{#each pics as { title, photo, link, excerpt }}
-			<div>
+			<div class="card navflow">
 				<h3>{title}</h3>
 				<a href={link}><img class="square" src={photo} alt={title} /> </a>
-				<p>{excerpt}</p>
+				<div class="excerpt">{excerpt}</div>
+				<a class="button" href={link}>Learn more</a>
 			</div>
 		{/each}
 	</div>
 </div>
 
 <style>
-	/* .grid {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 2em;
-		padding: 2em 0;
-	} */
+	.container {
+		padding-block: 2em;
+	}
+
+	div.navflow > * {
+		margin-bottom: 2em;
+	}
+
+	img {
+		margin-bottom: 2em;
+	}
+
+	.card > *:not(:first-child) {
+	}
+
+	.excerpt {
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+
+	.flow {
+		margin-bottom: 2em;
+	}
 
 	img {
 		width: 100%;
@@ -53,4 +73,27 @@
 		transform: scale(1.08);
 		/* transform: skewX(-3deg); */
 	}
+
+	.button {
+		border: none;
+		border-radius: 0.25em;
+		background-color: var(--primary-color);
+		text-decoration: none;
+		color: white;
+		font-size: 1em;
+		cursor: pointer;
+		padding: 0.5em 1.5em;
+	}
+
+	.button:hover {
+		text-decoration: underline;
+	}
+
+	/* a {
+		text-decoration: none;
+		color: var(--primary-color);
+	}
+	a:hover {
+		text-decoration: underline;
+	} */
 </style>

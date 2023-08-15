@@ -1,5 +1,4 @@
 <script>
-	import Button from '$lib/Button.svelte';
 	import Contact from '$lib/Contact.svelte';
 </script>
 
@@ -22,7 +21,9 @@
 			suit your needs!
 		</p>
 
-		<Button class="secondary" id="a-button" size="medium">Let's Get Started >></Button>
+		<!-- <Button class="secondary" id="a-button" size="medium">Let's Get Started >></Button> -->
+
+		<a href="./contact" class="button"> Let's get started!</a>
 	</div>
 	<Contact />
 </div>
@@ -38,15 +39,30 @@
 		flex: 1;
 	}
 
+	.larger-wrapper {
+		padding-block: 2em;
+	}
+
 	.what > * {
 		padding: 1em;
 	}
 
 	h3 {
-		/* padding-bottom: 0.5em;
-		margin-bottom: 0.5em;
-		font-size: 2em;
-		font-weight: 500; */
 		border-bottom: 1px solid #ddd;
+	}
+
+	.button {
+		border: none;
+		border-radius: 0.25em;
+		background-color: var(--primary-color);
+		text-decoration: none;
+		color: white;
+		font-size: 1em;
+		cursor: pointer;
+		padding: 0.5em 1.5em;
+	}
+
+	.button:hover {
+		text-decoration: underline;
 	}
 </style>
