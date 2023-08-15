@@ -4,6 +4,7 @@
 	import type { PageData } from './$types';
 	import { superForm } from 'sveltekit-superforms/client';
 	import SuperDebug from 'sveltekit-superforms/client/SuperDebug.svelte';
+	import Button from '$lib/Button.svelte';
 
 	export let data: PageData;
 
@@ -47,7 +48,9 @@
 		<!-- <textarea name="body" id="" cols="30" rows="10" /> -->
 		{#if $errors.body}<span class="invalid">{$errors.body}</span>{/if}
 
-		<div><button>Submit</button></div>
+		<!-- <div><button>Submit</button></div> -->
+
+		<div><Button class="secondary" size="medium">Submit >></Button></div>
 
 		<div>
 			{#if $message}<p>{$message}</p>{/if}
