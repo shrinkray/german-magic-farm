@@ -117,11 +117,6 @@ textarea {
   background-color: transparent;
 }
 
-/* orig one but keep for now
-.container-orig {
-  width: min(100% - 2rem, 50rem);
-  margin-inline: auto;
-} */
 
 .fade {
   background-color: var(--accent-fade);
