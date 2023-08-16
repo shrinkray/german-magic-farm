@@ -58,14 +58,6 @@ Farm"
 />
 
 <style>
-	.section {
-		padding-block: var(--size-fluid-3);
-	}
-
-	article.alt-color-band * {
-		padding-inline: var(--size-2);
-	}
-
 	article.alt-color-band > div:nth-child(odd) {
 		background-color: var(--accent-fade);
 	}
