@@ -10,7 +10,7 @@
 	footer {
 		margin-top: auto;
 		padding: 3em 0;
-		background-color: #343a40;
+		background-color: var(--footer-color);
 		color: white;
 	}
 	.container {

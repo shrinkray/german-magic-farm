@@ -4,6 +4,7 @@
 	import Moon from './icons/moon.svelte';
 	import Sun from './icons/sun.svelte';
 	import { Hamburger } from 'svelte-hamburgers';
+	import SmallLogoId from './SmallLogo.svelte';
 
 	let open;
 
@@ -53,49 +54,57 @@
 	$: routeId = $page.url.pathname;
 </script>
 
-<header class="header-wrap">
-	<div class="flex">
-		<a class="logo flex" href="/">
-			<img src="./german-magic-farm-logo-short.svg" alt="" />
-			<span>German Magic Farm</span>
-		</a>
+<div class="bg-color">
+	<header class="header-wrap">
+		<div class="flex">
+			<a class="logo flex" href="/">
+				<img src="./german-magic-farm-logo-short.svg" alt="" />
+				<SmallLogoId />
+				<span>German Magic Farm</span>
+			</a>
 
-		<!-- begin dark light toggle code -->
-		<div class="relative move-moon">
-			{#if currentTheme == 'light'}
-				<a class="moon" href={'#'} on:click={() => setTheme('dark')}>
-					<Moon />
-				</a>
-			{:else}
-				<a class="sun" href={'#'} on:click={() => setTheme('light')}>
-					<Sun />
-				</a>
-			{/if}
-		</div>
-	</div>
-	<div class="menu-toggle-btn">
-		{#if open}
-			<div class="relative">
-				<!-- show menu -->
-				<nav class="color-border">
-					<ul class="flow-bottom">
-						{#each navs as { title, href }}
-							<li>
-								<a {href} class:active={href === '/' ? routeId === '/' : url.includes(href)} {title}
-									>{title}</a
-								>
-							</li>
-						{/each}
-					</ul>
-				</nav>
+			<!-- begin dark light toggle code -->
+			<div class="relative move-moon">
+				{#if currentTheme == 'light'}
+					<a class="moon" href={'#'} on:click={() => setTheme('dark')}>
+						<Moon />
+					</a>
+				{:else}
+					<a class="sun" href={'#'} on:click={() => setTheme('light')}>
+						<Sun />
+					</a>
+				{/if}
 			</div>
-		{/if}
+		</div>
+		<div class="menu-toggle-btn">
+			{#if open}
+				<div class="relative">
+					<!-- show menu -->
+					<nav class="color-border">
+						<ul class="flow-bottom">
+							{#each navs as { title, href }}
+								<li>
+									<a
+										{href}
+										class:active={href === '/' ? routeId === '/' : url.includes(href)}
+										{title}>{title}</a
+									>
+								</li>
+							{/each}
+						</ul>
+					</nav>
+				</div>
+			{/if}
 
-		<Hamburger bind:open />
-	</div>
-</header>
+			<Hamburger bind:open />
+		</div>
+	</header>
+</div>
 
 <style>
+	.bg-color {
+		background-color: var(--header-color);
+	}
 	.header-wrap {
 		width: min(97%, 1230px);
 		margin-inline: auto;
