@@ -53,7 +53,7 @@
 	$: routeId = $page.url.pathname;
 </script>
 
-<header>
+<header class="header-wrap">
 	<div class="flex">
 		<a class="logo flex" href="/">
 			<img src="./german-magic-farm-logo-short.svg" alt="" />
@@ -96,6 +96,11 @@
 </header>
 
 <style>
+	.header-wrap {
+		width: min(97%, 1230px);
+		margin-inline: auto;
+		padding-top: 0.5em;
+	}
 	.flex {
 		display: flex;
 		align-items: center;
