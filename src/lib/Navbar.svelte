@@ -77,7 +77,7 @@
 		<div class="relative">
 			<!-- show menu -->
 			<nav class="color-border">
-				<ul class="navflow">
+				<ul class="flow-bottom">
 					{#each navs as { title, href }}
 						<li>
 							<a {href} class:active={href === '/' ? routeId === '/' : url.includes(href)} {title}
@@ -131,14 +131,6 @@
 		margin-top: 60px;
 		/*width: 100%;
 		height: 80vh;  */
-	}
-
-	.navflow > * + * {
-		margin-bottom: 0.5em;
-	}
-
-	.menu-toggle-btn {
-		/*text-align: center;  */
 	}
 
 	.relative {
