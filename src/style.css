@@ -23,7 +23,8 @@
 }
 
 [data-theme="dark"] {
-  --primary-color: #2b3f63;
+  --primary-color: #d10000;
+  ;
   --bg-color: #000;
   --color: #ddd;
   --heading-color: white;
