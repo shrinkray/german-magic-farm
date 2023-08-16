@@ -83,8 +83,6 @@ h3 {
 
 /* all items but fist one */
 .flow>*+* {
-
-  /* this was margin-top but switched it */
   margin: 1em;
 }
 
@@ -93,12 +91,9 @@ h3 {
 
 } */
 
-
-/* .container way I had it be4 Kevin's styles added {
-  max-width: var(--size-md);
-  margin: 0 auto;
-  padding-inline: 2em;
-} */
+.flow-bottom>* {
+  margin-bottom: .5em;
+}
 
 .container {
   width: min(100% - 3rem, 65ch);

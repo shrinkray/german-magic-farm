@@ -14,63 +14,67 @@
 
 <!-- <SuperDebug data={$form} /> -->
 
-<div class="container">
-	<form class="form" method="POST">
-		<label for="name">Name</label>
-		<input
-			type="text"
-			name="name"
-			aria-invalid={$errors.name ? 'true' : undefined}
-			bind:value={$form.name}
-			{...$constraints.name}
-		/>
-		{#if $errors.name}<span class="invalid">{$errors.name}</span>{/if}
+<section class="section">
+	<div class="container">
+		<form class="form" method="POST">
+			<label for="name">Name</label>
+			<input
+				type="text"
+				name="name"
+				aria-invalid={$errors.name ? 'true' : undefined}
+				bind:value={$form.name}
+				{...$constraints.name}
+			/>
+			{#if $errors.name}<span class="invalid">{$errors.name}</span>{/if}
 
-		<label for="email">E-mail</label>
-		<input
-			type="email"
-			name="email"
-			aria-invalid={$errors.email ? 'true' : undefined}
-			bind:value={$form.email}
-			{...$constraints.email}
-		/>
-		{#if $errors.email}<span class="invalid">{$errors.email}</span>{/if}
+			<label for="email">E-mail</label>
+			<input
+				type="email"
+				name="email"
+				aria-invalid={$errors.email ? 'true' : undefined}
+				bind:value={$form.email}
+				{...$constraints.email}
+			/>
+			{#if $errors.email}<span class="invalid">{$errors.email}</span>{/if}
 
-		<label for="body">Your message</label>
-		<textarea
-			name="body"
-			cols="30"
-			rows="10"
-			aria-invalid={$errors.body ? 'true' : undefined}
-			bind:value={$form.body}
-			{...$constraints.body}
-		/>
-		<!-- <textarea name="body" id="" cols="30" rows="10" /> -->
-		{#if $errors.body}<span class="invalid">{$errors.body}</span>{/if}
+			<label for="body">Your message</label>
+			<textarea
+				name="body"
+				cols="30"
+				rows="10"
+				aria-invalid={$errors.body ? 'true' : undefined}
+				bind:value={$form.body}
+				{...$constraints.body}
+			/>
+			<!-- <textarea name="body" id="" cols="30" rows="10" /> -->
+			{#if $errors.body}<span class="invalid">{$errors.body}</span>{/if}
 
-		<!-- <div><button>Submit</button></div> -->
+			<!-- <div><button>Submit</button></div> -->
 
-		<div><Button class="secondary" size="medium">Submit >></Button></div>
+			<div><Button class="secondary" size="medium">Submit >></Button></div>
 
-		<div>
-			{#if $message}<p>{$message}</p>{/if}
-		</div>
-	</form>
-</div>
-
-<div class="larger-wrapper contact-map">
-	<div><Contact /></div>
-	<div class="map">
-		<iframe
-			src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11866.804920549557!2d-83.6402403380172!3d41.96375198592071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1435260600940"
-			width="100%"
-			height="350"
-			frameborder="0"
-			style="border:0"
-			allowfullscreen=""
-		/>
+			<div>
+				{#if $message}<p>{$message}</p>{/if}
+			</div>
+		</form>
 	</div>
-</div>
+</section>
+
+<section class="section">
+	<div class="larger-wrapper contact-map">
+		<div><Contact /></div>
+		<div class="map">
+			<iframe
+				src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11866.804920549557!2d-83.6402403380172!3d41.96375198592071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1435260600940"
+				width="100%"
+				height="350"
+				frameborder="0"
+				style="border:0"
+				allowfullscreen=""
+			/>
+		</div>
+	</div>
+</section>
 
 <Seo
 	title="Directions | Contact info German Magic Farm"
@@ -80,6 +84,9 @@
 />
 
 <style>
+	.section {
+		padding-block: var(--size-fluid-3);
+	}
 	h2 {
 	}
 

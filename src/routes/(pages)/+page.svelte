@@ -11,11 +11,11 @@
 
 <Hero --bg-size="95%" />
 
-<article class="">
-	<div class="fade"><What /></div>
+<article>
+	<What />
 </article>
 <PhotoCard />
-<div class="fade"><CheckItOut /></div>
+<CheckItOut />
 
 <Seo
 	title="Dressage Jumping Cross Country Riding Lessons Dundee Michigan | German Magic Farm"

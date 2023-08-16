@@ -1,13 +1,17 @@
-<div class="bg-wrapper check-it-out">
-	<div class="center-box">
-		Browse the rest of our site to learn more about Pam Bauer and the services and fun activities
-		offered to the horses and riders of German Magic Farm!
+<section class="fade | section">
+	<div class="bg-wrapper check-it-out">
+		<div class="center-box">
+			Browse the rest of our site to learn more about Pam Bauer and the services and fun activities
+			offered to the horses and riders of German Magic Farm!
+		</div>
 	</div>
-</div>
+</section>
 
 <style>
+	.section {
+		padding-block: var(--size-fluid-5);
+	}
 	.bg-wrapper {
-		padding-block: 2em;
 		background-color: var(--accent-fade);
 		background: url('pam-gallop-hill-cp.webp') no-repeat left top;
 		background-size: contain;

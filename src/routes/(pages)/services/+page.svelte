@@ -15,36 +15,40 @@
 	--bg-image="url(pam-dressage-slider.webp)"
 	--bg-opacity="0.5"
 />
-<div class="container grid">
-	<article class="alt-color-band flow">
-		<h1>Services Offered at German Magic Farm</h1>
+<section class="section">
+	<div class="container grid">
+		<article class="alt-color-band flow">
+			<h1>Services Offered at German Magic Farm</h1>
 
-		{#each services as { content, title, amount }, index}
-			<div class="">
-				<h2>{title}</h2>
-				<p class="bold">{amount}</p>
-				<p class="">{content}</p>
+			{#each services as { content, title, amount }, index}
+				<div class="">
+					<h2>{title}</h2>
+					<p class="bold">{amount}</p>
+					<p class="">{content}</p>
+				</div>
+			{/each}
+		</article>
+	</div>
+</section>
+<div class="center-w-grid"><SmallLogo /></div>
+<section class="section">
+	<article class="lessons larger-wrapper fade">
+		<h2>Types Of Lessons and Pricing</h2>
+		{#each lessons as { kindOfLesson, firstPrice, firstDescription, secondPrice, secondDescription, thirdPrice, thirdDescription }}
+			<div class="flexible-grid">
+				<h3>{kindOfLesson}</h3>
+				<div class="">
+					<p>{firstPrice} {firstDescription}</p>
+					<p>{secondPrice} {secondDescription}</p>
+					{#if showThird}
+						<p class="symbol">{thirdPrice} {thirdDescription}</p>
+					{/if}
+				</div>
 			</div>
 		{/each}
 	</article>
-</div>
-<article class="lessons larger-wrapper fade">
-	<h2>Types Of Lessons and Pricing</h2>
-	{#each lessons as { kindOfLesson, firstPrice, firstDescription, secondPrice, secondDescription, thirdPrice, thirdDescription }}
-		<div class="flexible-grid">
-			<h3>{kindOfLesson}</h3>
-			<div class="">
-				<p>{firstPrice} {firstDescription}</p>
-				<p>{secondPrice} {secondDescription}</p>
-				{#if showThird}
-					<p class="symbol">{thirdPrice} {thirdDescription}</p>
-				{/if}
-			</div>
-		</div>
-	{/each}
-</article>
+</section>
 
-<div class="center-w-grid"><SmallLogo /></div>
 <Seo
 	title="Dressage and jumping Lessons | Training Horseshow Information German Magic
 Farm"
@@ -54,6 +58,10 @@ Farm"
 />
 
 <style>
+	.section {
+		padding-block: var(--size-fluid-3);
+	}
+
 	article.alt-color-band * {
 		padding-inline: var(--size-2);
 	}

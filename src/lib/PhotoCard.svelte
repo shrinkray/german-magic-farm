@@ -22,25 +22,27 @@
 	];
 </script>
 
-<div class="container">
-	<div class="auto-grid">
-		{#each pics as { title, photo, link, excerpt }}
-			<div class="card navflow">
-				<h3>{title}</h3>
-				<a href={link}><img class="square" src={photo} alt={title} /> </a>
-				<div class="excerpt">{excerpt}</div>
-				<a class="button" href={link}>Learn more</a>
-			</div>
-		{/each}
+<section class="section">
+	<div class="container">
+		<div class="auto-grid">
+			{#each pics as { title, photo, link, excerpt }}
+				<div class="card flow-bottom">
+					<h3>{title}</h3>
+					<a href={link}><img class="square" src={photo} alt={title} /> </a>
+					<div class="excerpt">{excerpt}</div>
+					<a class="button" href={link}>Learn more</a>
+				</div>
+			{/each}
+		</div>
 	</div>
-</div>
+</section>
 
 <style>
-	.container {
-		padding-block: 2em;
+	.section {
+		padding-block: var(--size-fluid-5);
 	}
 
-	div.navflow > * {
+	.flow-bottom > * {
 		margin-bottom: 2em;
 	}
 
@@ -48,18 +50,14 @@
 		margin-bottom: 2em;
 	}
 
-	.card > *:not(:first-child) {
-	}
+	/*.card > *:not(:first-child) {
+	} */
 
 	.excerpt {
 		display: -webkit-box;
 		-webkit-line-clamp: 3;
 		-webkit-box-orient: vertical;
 		overflow: hidden;
-	}
-
-	.flow {
-		margin-bottom: 2em;
 	}
 
 	img {
@@ -88,12 +86,4 @@
 	.button:hover {
 		text-decoration: underline;
 	}
-
-	/* a {
-		text-decoration: none;
-		color: var(--primary-color);
-	}
-	a:hover {
-		text-decoration: underline;
-	} */
 </style>

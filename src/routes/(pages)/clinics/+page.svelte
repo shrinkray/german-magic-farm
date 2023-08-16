@@ -12,11 +12,13 @@
 	/>
 </div>
 
-<div class="container">
-	<h1>Clinics Offered at German Magic Farm</h1>
+<section class="section">
+	<div class="container">
+		<h1>Clinics Offered at German Magic Farm</h1>
 
-	<p>Stay tuned for our next clinic!</p>
-</div>
+		<p>Stay tuned for our next clinic!</p>
+	</div>
+</section>
 
 <Seo
 	title="Riding jumping, eventing, cross country, and dressage clinics in Dundee, Mi"
@@ -26,11 +28,11 @@
 />
 
 <style>
-	.spl-wrapper {
-		width: 100%;
+	.section {
+		padding-block: var(--size-fluid-5);
 	}
 
-	div.container {
-		padding-block: var(--size-7);
+	.spl-wrapper {
+		width: 100%;
 	}
 </style>

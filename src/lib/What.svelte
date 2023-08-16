@@ -2,33 +2,39 @@
 	import Contact from '$lib/Contact.svelte';
 </script>
 
-<div class="larger-wrapper flexible-grid">
-	<div class="what">
-		<h3>Willkommen!</h3>
+<section class="fade | section">
+	<div class="larger-wrapper flexible-grid">
+		<div class="what">
+			<h3>Willkommen!</h3>
 
-		<p>
-			German Magic Farm is a private training and lesson facility located in historic, Dundee
-			Michigan. Our tranquil farm offers a huge outdoor arena, grass pastures, and access to trail
-			riding. Resident trainer and owner; Pamela Bauer, is a German native who has traveled the
-			world teaching and training dressage and jumping to horses and riders. From beginner to Grand
-			Prix; German Magic Farm is happy to provide riders of all ages a relaxed fun atmosphere for
-			perfecting riding skills; or for training your next equine star!
-		</p>
+			<p>
+				German Magic Farm is a private training and lesson facility located in historic, Dundee
+				Michigan. Our tranquil farm offers a huge outdoor arena, grass pastures, and access to trail
+				riding. Resident trainer and owner; Pamela Bauer, is a German native who has traveled the
+				world teaching and training dressage and jumping to horses and riders. From beginner to
+				Grand Prix; German Magic Farm is happy to provide riders of all ages a relaxed fun
+				atmosphere for perfecting riding skills; or for training your next equine star!
+			</p>
 
-		<p>
-			Whether it's lessons in dressage, hunters, jumpers; or even a program suited to eventing
-			horses, German Magic Farm can provide the perfect mixture of German and American training to
-			suit your needs!
-		</p>
+			<p>
+				Whether it's lessons in dressage, hunters, jumpers; or even a program suited to eventing
+				horses, German Magic Farm can provide the perfect mixture of German and American training to
+				suit your needs!
+			</p>
 
-		<!-- <Button class="secondary" id="a-button" size="medium">Let's Get Started >></Button> -->
+			<!-- <Button class="secondary" id="a-button" size="medium">Let's Get Started >></Button> -->
 
-		<a href="./contact" class="button"> Let's get started!</a>
+			<a href="./contact" class="button"> Let's get started!</a>
+		</div>
+		<Contact />
 	</div>
-	<Contact />
-</div>
+</section>
 
 <style>
+	.section {
+		padding-block: var(--size-fluid-5);
+	}
+
 	.flexible-grid {
 		display: flex;
 		flex-wrap: wrap;
@@ -37,10 +43,6 @@
 
 	.flexible-grid > * {
 		flex: 1;
-	}
-
-	.larger-wrapper {
-		padding-block: 2em;
 	}
 
 	.what > * {
