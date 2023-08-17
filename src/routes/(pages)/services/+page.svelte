@@ -5,6 +5,7 @@
 	import Hero from '$lib/Hero.svelte';
 	import lessons from '$lib/data/lessons.json';
 	import SmallLogo from '$lib/SmallLogo.svelte';
+	import SmallLogoLayers from '$lib/SmallLogoLayers.svelte';
 
 	let showThird = true;
 </script>
@@ -30,7 +31,7 @@
 		</article>
 	</div>
 </section>
-<div class="center-w-grid"><SmallLogo /></div>
+<div class="center-w-grid"><SmallLogoLayers /></div>
 <section class="section">
 	<article class="lessons larger-wrapper fade">
 		<h2>Types Of Lessons and Pricing</h2>

@@ -2,12 +2,13 @@
 	import Seo from '$lib/Seo.svelte';
 	import PhotoCluster from '$lib/PhotoCluster.svelte';
 	import SmallLogo from '$lib/SmallLogo.svelte';
+	import SmallLogoLayers from '$lib/SmallLogoLayers.svelte';
 </script>
 
 <PhotoCluster />
 <section class="section">
 	<div class="container flow">
-		<h3>Meet Pam Bauer</h3>
+		<h1>Meet Pam Bauer</h1>
 
 		<p>
 			Pam Bauer is the resident trainer & owner here at German Magic Farm. Having ridden for over 31
@@ -61,7 +62,7 @@
 		<p>Pam happily provides a fun, relaxed atmosphere for her students and equine friends!</p>
 		<br />
 	</div>
-	<div class="center-w-grid"><SmallLogo /></div>
+	<div class="center-w-grid"><SmallLogoLayers /></div>
 </section>
 
 <Seo
