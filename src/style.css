@@ -11,8 +11,6 @@
   --footer-color: #343a40;
   --header-color: white;
 
-
-  ;
   --ff-base: '';
   --ff-accent: '';
 
@@ -34,8 +32,8 @@
   --color: #ddd;
   --heading-color: white;
   --hero-lg-heading: white;
-  --header-color: #51565b;
-  --footer-color: #51565b;
+  --header-color: rgba(255, 206, 0, 0.08);
+  --footer-color: var(--accent-fade);
 }
 
 *,
