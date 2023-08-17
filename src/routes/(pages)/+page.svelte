@@ -4,6 +4,7 @@
 	import Hero from '$lib/Hero.svelte';
 	import PhotoCard from '$lib/PhotoCard.svelte';
 	import CheckItOut from '$lib/CheckItOut.svelte';
+	import HomePgPic from '$lib/HomePgPic.svelte';
 	export let data;
 
 	const { posts } = data;
@@ -12,6 +13,8 @@
 <Hero --bg-size="95%" />
 <!-- svelte-ignore a11y-img-redundant-alt -->
 <img src="./german-magic-bg.webp" alt="Large Logo Image" />
+
+<HomePgPic size="small" />
 
 <article>
 	<What />
