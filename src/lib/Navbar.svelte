@@ -4,7 +4,7 @@
 	import Moon from './icons/moon.svelte';
 	import Sun from './icons/sun.svelte';
 	import { Hamburger } from 'svelte-hamburgers';
-	import SmallLogoId from './SmallLogo.svelte';
+	import SmallLogoLayers from './SmallLogoLayers.svelte';
 
 	let open;
 
@@ -58,8 +58,8 @@
 	<header class="header-wrap">
 		<div class="flex">
 			<a class="logo flex" href="/">
-				<img src="./german-magic-farm-logo-short.svg" alt="" />
-				<SmallLogoId />
+				<!-- <img src="./german-magic-farm-logo-short.svg" alt="" /> -->
+				<SmallLogoLayers />
 				<span>German Magic Farm</span>
 			</a>
 
