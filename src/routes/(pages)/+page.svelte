@@ -42,15 +42,11 @@
 <!-- begin experiment -->
 
 {#if currentTheme == 'light'}
-	<a class="moon" href={'#'} on:click={() => setTheme('dark')}>
-		<!-- do something -->
-		<HomePgPic size="small" />
-	</a>
+	<!-- do something -->
+	<HomePgPic size="small" />
 {:else}
-	<a class="sun" href={'#'} on:click={() => setTheme('light')}>
-		<!-- do something -->
-		<img src="./pam-bauer-oxer.webp" alt="test" />
-	</a>
+	<!-- do something -->
+	<img src="./pam-bauer-oxer.webp" alt="test" />
 {/if}
 
 <!-- end experiment -->
