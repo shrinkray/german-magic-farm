@@ -19,6 +19,7 @@
 		<form class="form" method="POST">
 			<label for="name">Name</label>
 			<input
+				class=""
 				type="text"
 				name="name"
 				aria-invalid={$errors.name ? 'true' : undefined}
@@ -29,6 +30,7 @@
 
 			<label for="email">E-mail</label>
 			<input
+				class=""
 				type="email"
 				name="email"
 				aria-invalid={$errors.email ? 'true' : undefined}
@@ -39,6 +41,7 @@
 
 			<label for="body">Your message</label>
 			<textarea
+				class=""
 				name="body"
 				cols="30"
 				rows="10"
@@ -118,6 +121,7 @@
 		padding: 0.75em 1em;
 		border-radius: 0.25em;
 		border: 1px solid #999;
+		color: var(--input-color);
 	}
 
 	textarea {

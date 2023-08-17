@@ -3,6 +3,7 @@
 
 :root {
   --primary-color: #d10000;
+  --input-color: #333;
   --bg-color: white;
   --color: #333;
   --heading-color: white;
@@ -27,6 +28,7 @@
 
 [data-theme="dark"] {
   --primary-color: #d10000;
+  --input-color: yellow;
   ;
   --bg-color: #000;
   --color: #ddd;
