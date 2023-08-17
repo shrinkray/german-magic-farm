@@ -62,9 +62,11 @@
 		font-size: 1em;
 		cursor: pointer;
 		padding: 0.5em 1.5em;
+		transition: 0.2s ease-in-out 0s;
 	}
 
 	.button:hover {
 		text-decoration: underline;
+		transform: scale(1.25);
 	}
 </style>
