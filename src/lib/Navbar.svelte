@@ -58,7 +58,6 @@
 	<header class="header-wrap">
 		<div class="flex">
 			<a class="logo flex" href="/">
-				<img class="currentcolor" src="./german-magic-farm-logo-short.svg" alt="" />
 				<SmallLogoLayers />
 				<span>German Magic Farm</span>
 			</a>
