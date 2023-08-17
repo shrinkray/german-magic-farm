@@ -4,6 +4,7 @@
 	import Hero from '$lib/Hero.svelte';
 	import PhotoCard from '$lib/PhotoCard.svelte';
 	import CheckItOut from '$lib/CheckItOut.svelte';
+	import SmallLogoLayers from '$lib/SmallLogoLayers.svelte';
 
 	export let data;
 
@@ -13,8 +14,9 @@
 <!-- hero component like I orig had below commented out 4 experiment 
 <Hero --bg-size="95%" />
 <!-- svelte-ignore a11y-img-redundant-alt -->
-<img src="./german-magic-bg.webp" alt="Large Logo Image" />
+<!-- <img src="./german-magic-bg.webp" alt="Large Logo Image" /> -->
 
+<div class="lg-home-image | section"><SmallLogoLayers width="300" /></div>
 <!-- begin experiment -->
 
 <!-- end experiment -->
@@ -37,5 +39,15 @@
 <style>
 	img {
 		margin-inline: auto;
+	}
+
+	.section {
+		padding-block: var(--size-fluid-5);
+	}
+
+	.lg-home-image {
+		display: flex;
+
+		justify-content: center;
 	}
 </style>

@@ -16,6 +16,7 @@
 
 <section class="section">
 	<div class="container">
+		<h1>Questions?</h1>
 		<form class="form" method="POST">
 			<label for="name">Name</label>
 			<input
