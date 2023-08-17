@@ -83,6 +83,10 @@ h3 {
   font-size: var(--fs-400);
 }
 
+.currentcolor {
+  fill: currentColor;
+}
+
 .center-w-grid {
   display: grid;
   justify-content: center;
