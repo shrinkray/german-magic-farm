@@ -10,6 +10,8 @@
 </script>
 
 <Hero --bg-size="95%" />
+<!-- svelte-ignore a11y-img-redundant-alt -->
+<img src="./german-magic-bg.webp" alt="Large Logo Image" />
 
 <article>
 	<What />
@@ -25,4 +27,7 @@
 />
 
 <style>
+	img {
+		margin-inline: auto;
+	}
 </style>
