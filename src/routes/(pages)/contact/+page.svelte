@@ -122,6 +122,7 @@
 		border-radius: 0.25em;
 		border: 1px solid #999;
 		color: var(--input-color);
+		font-size: var(--fs-300);
 	}
 
 	textarea {
