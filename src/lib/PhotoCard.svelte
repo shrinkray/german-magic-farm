@@ -50,8 +50,9 @@
 		margin-bottom: 2em;
 	}
 
-	/*.card > *:not(:first-child) {
-	} */
+	.auto-grid {
+		gap: 2em;
+	}
 
 	.excerpt {
 		display: -webkit-box;
@@ -64,6 +65,7 @@
 		width: 100%;
 		object-fit: cover;
 		object-position: center;
+		border-radius: 6px;
 		transition: all 1s ease;
 	}
 
