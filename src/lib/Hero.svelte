@@ -14,7 +14,7 @@
 
 <style>
 	:root {
-		--bg-image: url('https://64e3abf8a7eb7b07d262d7df--imaginative-fox-7b8539.netlify.app/pam-dressage-slider.webp');
+		--bg-image: url('./german-magic-bg.webp');
 		--bg-opacity: 0;
 		--visibility: visible;
 		--bg-size: cover;
