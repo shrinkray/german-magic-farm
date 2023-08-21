@@ -13,7 +13,6 @@
 <Hero
 	herotitle="Services:  German Magic Farm"
 	tagline="Training, Lessons, Leasing, Showing and Fun!"
-	--bg-image="url(https://64e3abf8a7eb7b07d262d7df--imaginative-fox-7b8539.netlify.app/pam-dressage-slider.webp)"
 	--bg-opacity="0.5"
 />
 <section class="section">
