@@ -13,7 +13,7 @@
 <Hero
 	herotitle="Services:  German Magic Farm"
 	tagline="Training, Lessons, Leasing, Showing and Fun!"
-	--bg-image="url(pam-dressage-slider.webp)"
+	--bg-image="url('/pam-dressage-slider.webp')"
 	--bg-opacity="0.5"
 />
 <section class="section">
@@ -55,7 +55,7 @@
 Farm"
 	description="Information on lessons, training and horse shows with Pam Bauer.  Learn about all the services offered at German Magic Farm in Dundee, Mi"
 	type="WebPage"
-	image="./pam-dressage-slider.webp"
+	image="/pam-dressage-slider.webp"
 />
 
 <style>
