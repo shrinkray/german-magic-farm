@@ -14,7 +14,7 @@
 
 <style>
 	:root {
-		--bg-image: url('/german-magic-bg.webp');
+		--bg-image: url('./german-magic-bg.webp');
 		--bg-opacity: 0;
 		--visibility: visible;
 		--bg-size: cover;
