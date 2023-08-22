@@ -43,7 +43,8 @@
 	}
 
 	.flow-bottom > * {
-		margin-bottom: 2em;
+		/* margin-bottom: 2em; */
+		margin-block: 2em;
 	}
 
 	img {
@@ -51,7 +52,11 @@
 	}
 
 	.auto-grid {
-		gap: 2em;
+		gap: 1em;
+
+		@media (width < 395px) {
+			display: block;
+		}
 	}
 
 	.excerpt {
@@ -82,10 +87,11 @@
 		color: white;
 		font-size: 1em;
 		cursor: pointer;
-		padding: 0.5em 1.5em;
+		padding: 0.5em 1em;
 	}
 
 	.button:hover {
 		text-decoration: underline;
+		transform: scale(0.2);
 	}
 </style>
