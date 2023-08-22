@@ -7,7 +7,7 @@
 	<Hero
 		herotitle="Clinics:  German Magic Farm"
 		tagline="learn, practice & have fun at a clinic"
-		--bg-image="url(clinic-collage.webp)"
+		--bg-image="url('./clinic-collage.webp')"
 		--bg-opacity="0.5"
 	/>
 </div>
