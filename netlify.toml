@@ -6,7 +6,7 @@ status = 301
 
 [[redirects]]
 from = "/services.html"
-to = "/services"
+to = "/https://www.germanmagicfarm.com/services.com"
 status = 301
 
 
