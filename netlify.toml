@@ -1,0 +1,39 @@
+# Redirect with a 301 home page
+[[redirects]]
+from = "/index.html"
+to = "/"
+status = 301
+
+# Redirect with a 301 inner page
+[[redirects]]
+from = "/services.html"
+to = "/services"
+status = 301
+
+# Redirect with a 301 inner page
+[[redirects]]
+from = "/contact.html"
+to = "/contact"
+status = 301
+
+# Redirect with a 301 inner page
+[[redirects]]
+from = "/sales.html"
+to = "/"
+status = 301
+
+# Redirect with a 301 inner page
+[[redirects]]
+from = "/meet-pam-bauer.html"
+to = "/meet-pam-bauer"
+status = 301
+
+# Redirect with a 301 inner page
+[[redirects]]
+from = "/photo-gallery.html"
+to = "/"
+status = 301
+
+
+
+
