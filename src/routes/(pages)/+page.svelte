@@ -11,6 +11,16 @@
 	const { posts } = data;
 </script>
 
+<svelte:head
+	><meta
+		property="og:image"
+		content="https://imaginative-fox-7b8539.netlify.app/german-magic-bg.jpg"
+	/><meta property="og:image:width" content="1200" /><meta
+		property="og:image:height"
+		content="480"
+	/><meta property="og:image:alt" content="German Magic Farm" /></svelte:head
+>
+
 <!-- hero component like I orig had below commented out 4 experiment 
 <Hero --bg-size="95%" />
 <!-- svelte-ignore a11y-img-redundant-alt -->
