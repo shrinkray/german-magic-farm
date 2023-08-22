@@ -12,6 +12,12 @@ status = 301
 
 # Redirect with a 301 inner page
 [[redirects]]
+from = "/clinics.html"
+to = "/clinics"
+status = 301
+
+# Redirect with a 301 inner page
+[[redirects]]
 from = "/contact.html"
 to = "/contact"
 status = 301
