@@ -3,42 +3,35 @@ from = "/index.html"
 to = "/"
 status = 301
 
-
 [[redirects]]
 from = "/services.html"
 to = "https://germanmagicfarm.com/services"
 status = 301
-
 
 [[redirects]]
 from = "/clinics.html"
 to = "/clinics"
 status = 301
 
-
 [[redirects]]
 from = "/contact.html"
 to = "/contact"
 status = 301
-
 
 [[redirects]]
 from = "/sales.html"
 to = "/"
 status = 301
 
-
 [[redirects]]
 from = "/for-lease.html"
 to = "/"
 status = 301
 
-
 [[redirects]]
 from = "/meet-pam-bauer.html"
 to = "/meet-pam-bauer"
 status = 301
-
 
 [[redirects]]
 from = "/photo-gallery.html"
