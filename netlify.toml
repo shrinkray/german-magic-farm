@@ -30,6 +30,12 @@ status = 301
 
 # Redirect with a 301 inner page
 [[redirects]]
+from = "/for-lease.html"
+to = "/"
+status = 301
+
+# Redirect with a 301 inner page
+[[redirects]]
 from = "/meet-pam-bauer.html"
 to = "/meet-pam-bauer"
 status = 301
