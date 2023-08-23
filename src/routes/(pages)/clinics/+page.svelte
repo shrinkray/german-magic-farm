@@ -7,9 +7,9 @@
 	><meta
 		property="og:image"
 		content="https://www.germanmagicfarm.com/pam-gallop-hill-cp.webp"
-	/><meta property="og:image:width" content="600" /><meta
+	/><meta property="og:image:width" content="740" /><meta
 		property="og:image:height"
-		content="600"
+		content="423"
 	/><meta property="og:image:alt" content="Pam Bauer riding in winter" /></svelte:head
 >
 

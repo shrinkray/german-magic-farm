@@ -43,7 +43,7 @@
 	title="Dressage Jumping Cross Country Riding Lessons Dundee Michigan | German Magic Farm"
 	description="Horseback riding lessons in Dundee Mi.  German Dressage and jumping training from trainer Pam Bauer located in Dundee, Mi"
 	type="WebPage"
-	image="https://imaginative-fox-7b8539.netlify.app/german-magic-bg.jpg"
+	image="https://www.germanmagicfarm.com/german-magic-bg.jpg"
 />
 
 <style>

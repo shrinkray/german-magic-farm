@@ -14,9 +14,9 @@
 	><meta
 		property="og:image"
 		content="https://www.germanmagicfarm.com/pam-bauer-teaching.webp"
-	/><meta property="og:image:width" content="600" /><meta
+	/><meta property="og:image:width" content="663" /><meta
 		property="og:image:height"
-		content="600"
+		content="477"
 	/><meta property="og:image:alt" content="Pam Bauer riding in winter" /></svelte:head
 >
 
