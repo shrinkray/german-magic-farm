@@ -85,7 +85,7 @@ export const actions = {
             to: SECRET_API_RECEIVER, // list of receivers
             subject: "Question For Pam 🐴", // Subject line
             text: `<${form.data.email}>`, // plain text body
-            html: `<b>${form.data.name}</b> <p>${form.data.email}</p><p>Click Link to reply!</p><p>${form.data.body}</p>`,
+            html: `<b>${form.data.name}</b> <p>${form.data.email}</p><p><b>PAM:  Click or copy Link to reply!</b></p><p>${form.data.body}</p>`,
             //email: `<${form.data.email}>`
         });
 
