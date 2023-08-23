@@ -4,12 +4,6 @@ to = "/"
 status = 301
 
 [[redirects]]
-  from = "*"
-  to = "https://www.germanmagicfarm.com/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
 from = "https://www.germanmagicfarm.com/services.html"
 to = "https://www.germanmagicfarm.com/services"
 status = 301
