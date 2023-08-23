@@ -18,6 +18,7 @@
 		--bg-opacity: 0;
 		--visibility: visible;
 		--bg-size: cover;
+		--margin-block: 1em;
 	}
 	.hero {
 		padding: 11em 0;
@@ -27,7 +28,7 @@
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: var(--bg-size);
-		margin-block: 1em;
+		margin-block: var(--margin-block);
 		position: relative;
 		isolation: isolate;
 	}

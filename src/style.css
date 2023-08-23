@@ -87,6 +87,10 @@ h3 {
   fill: currentColor;
 }
 
+.center {
+  text-align: center;
+}
+
 .center-w-grid {
   display: grid;
   justify-content: center;
