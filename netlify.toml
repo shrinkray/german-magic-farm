@@ -4,8 +4,14 @@ to = "/"
 status = 301
 
 [[redirects]]
+  from = "*"
+  to = "https://www.germanmagicfarm.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
 from = "/services.html"
-to = "https://germanmagicfarm.com/services"
+to = "https://www.germanmagicfarm.com/services"
 status = 301
 
 [[redirects]]
