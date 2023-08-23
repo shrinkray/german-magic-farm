@@ -10,7 +10,7 @@ status = 301
   force = true
 
 [[redirects]]
-from = "/services.html"
+from = "https://www.germanmagicfarm.com/services.html"
 to = "https://www.germanmagicfarm.com/services"
 status = 301
 
