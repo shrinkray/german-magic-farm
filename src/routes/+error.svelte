@@ -5,7 +5,7 @@
 <section class="section | fade">
 	<div class="container | flow | center">
 		<h1>Opps you landed on old link!</h1>
-		<h2>Don't worry, just use menu link above!</h2>
+		<h2>Don't worry, just use the menu above!</h2>
 		<p>... and get a jump on our new site 😀</p>
 	</div>
 </section>
