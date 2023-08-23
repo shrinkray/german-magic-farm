@@ -5,6 +5,15 @@
 	import SmallLogoLayers from '$lib/SmallLogoLayers.svelte';
 </script>
 
+<svelte:head
+	><meta
+		property="og:image"
+		content="https://www.germanmagicfarm.com/pam-bauer-winter-trot.webp"
+	/><meta property="og:image:width" content="600" /><meta
+		property="og:image:height"
+		content="600"
+	/><meta property="og:image:alt" content="Pam Bauer riding in winter" /></svelte:head
+>
 <PhotoCluster />
 <section class="section">
 	<div class="container flow">
