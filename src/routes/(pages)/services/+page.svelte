@@ -31,6 +31,15 @@
 		</article>
 	</div>
 </section>
+<section class="section">
+	<div class="container italics">
+		<h4>** Note About Late Fees</h4>
+		<p>
+			Late Fees: a $50 late fee will be charged 10 days after payment is late, and every additional
+			10 days thereafter.
+		</p>
+	</div>
+</section>
 <div class="center-w-grid"><SmallLogoLayers /></div>
 <section class="section">
 	<article class="lessons larger-wrapper fade">
@@ -59,6 +68,15 @@ Farm"
 />
 
 <style>
+	.italics {
+		font-style: italic;
+		font-size: var(--fs-300);
+	}
+
+	.section {
+		padding-block: var(--size-fluid-1);
+	}
+
 	article.alt-color-band > div:nth-child(odd) {
 		background-color: var(--accent-fade);
 	}
