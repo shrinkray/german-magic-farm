@@ -4,6 +4,11 @@
 
 <footer class="wave">
 	<div class="container">Copyright © German Magic Farm {year}</div>
+	<div class="container created-by">
+		Site created by DigitalPainKillers. <span
+			><a href="mailto:help@digitalpainkillers.com">Interested?</a></span
+		>
+	</div>
 </footer>
 
 <style>
@@ -23,5 +28,21 @@
 	}
 	.container {
 		text-align: center;
+	}
+
+	.created-by {
+		font-size: var(--fs--1);
+		padding-top: var(--size-fluid-2);
+	}
+
+	span a {
+		color: white;
+		text-decoration: none;
+	}
+
+	span a:hover {
+		text-decoration-line: underline;
+		text-decoration-style: wavy;
+		color: #fecf0a;
 	}
 </style>
