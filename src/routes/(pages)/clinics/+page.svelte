@@ -23,10 +23,14 @@
 </div>
 
 <section class="section">
-	<div class="container">
+	<div class="container flow">
 		<h1>Clinics Offered at German Magic Farm</h1>
 
-		<p>Stay tuned for our next clinic!</p>
+		<h2>Josef Maier Clinic September 2023</h2>
+		<h3>Josef Maier will be teaching at German Magic Farm on September 9th and 10th</h3>
+		<p>If you are interested in this clinic please inquire below.</p>
+
+		<a href="./contact" class="button"> Interested?</a>
 	</div>
 </section>
 
@@ -44,5 +48,21 @@
 
 	.spl-wrapper {
 		width: 100%;
+	}
+
+	.button {
+		border: none;
+		border-radius: 0.25em;
+		background-color: var(--primary-color);
+		text-decoration: none;
+		color: white;
+		font-size: 1em;
+		cursor: pointer;
+		padding: 0.5em 1em;
+	}
+
+	.button:hover {
+		text-decoration: underline;
+		transform: scale(0.2);
 	}
 </style>

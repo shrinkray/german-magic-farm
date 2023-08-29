@@ -17,7 +17,7 @@
 			title: 'CLINICS',
 			photo: './jumping-clinic.webp',
 			link: './clinics',
-			excerpt: 'Learn, practice and have fun training at a clinic with different clinicians!'
+			excerpt: 'Josef Maier clinic Sept 9-10! Learn, practice and have fun at a clinic! '
 		}
 	];
 </script>
