@@ -50,7 +50,8 @@
 		color: var(--heading-color);
 	}
 	p {
-		color: #ddd;
-		font-size: 1.1em;
+		color: var(--heading-color);
+		font-size: var(--fs-300);
+		font-weight: bold;
 	}
 </style>

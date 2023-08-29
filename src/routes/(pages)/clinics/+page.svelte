@@ -18,7 +18,7 @@
 		herotitle="Clinics:  German Magic Farm"
 		tagline="learn, practice & have fun at a clinic"
 		--bg-image="url('/clinic-collage.webp')"
-		--bg-opacity="0.5"
+		--bg-opacity="0.6"
 	/>
 </div>
 
