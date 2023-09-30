@@ -5,7 +5,7 @@
 
 <div class="hero">
 	<div class="container">
-		<h2>{herotitle}</h2>
+		<h2 class="highlighted-text-shadow">{herotitle}</h2>
 		<p>
 			{tagline}
 		</p>
@@ -20,6 +20,25 @@
 		--bg-size: cover;
 		--margin-block: 1em;
 	}
+
+	@layer demo {
+		.highlighted-text-shadow {
+			text-shadow:
+      /* regular text-shadow */ 0 0.15ch 15px var(--shadow),
+				/* text-shadow highlight */ 0 -2px 0 var(--highlight);
+		}
+	}
+
+	@layer demo {
+		:root {
+			--hue: 0; /* change me */
+			--bg: oklch(59% 0 var(--hue));
+			--text: oklch(94% 0 var(--hue));
+			--shadow: oklch(35% 0 var(--hue));
+			--highlight: oklch(98% 0 var(--hue));
+		}
+	}
+
 	.hero {
 		padding: 11em 0;
 
@@ -51,7 +70,10 @@
 	}
 	p {
 		color: var(--heading-color);
-		font-size: var(--fs-300);
+		font-size: var(--fs-400);
 		font-weight: bold;
+		/* line height from open props */
+		line-height: var(--font-lineheight-4);
+		margin-block: 1em;
 	}
 </style>
