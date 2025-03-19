@@ -1,22 +1,23 @@
-<script>
+<script lang="ts">
 	import Hero from '$lib/Hero.svelte';
 	import Seo from '$lib/Seo.svelte';
+	import clinicsData from '$lib/data/clinics.json';
+	import type { ClinicsData } from '$lib/types/clinics';
+
+	const data = clinicsData as ClinicsData;
 </script>
 
-<svelte:head
-	><meta
-		property="og:image"
-		content="https://www.germanmagicfarm.com/pam-gallop-hill-cp.webp"
-	/><meta property="og:image:width" content="740" /><meta
-		property="og:image:height"
-		content="423"
-	/><meta property="og:image:alt" content="Pam Bauer riding in winter" /></svelte:head
->
+<svelte:head>
+	<meta property="og:image" content={data.seo.image} />
+	<meta property="og:image:width" content="740" />
+	<meta property="og:image:height" content="423" />
+	<meta property="og:image:alt" content="Pam Bauer riding in winter" />
+</svelte:head>
 
 <div class="spl-wrapper">
 	<Hero
-		herotitle="Clinics:  German Magic Farm"
-		tagline="learn, practice & have fun at a clinic"
+		herotitle={data.pageTitle}
+		tagline={data.pageTagline}
 		--bg-image="url('/clinic-collage.webp')"
 		--bg-opacity="0.6"
 	/>
@@ -26,19 +27,30 @@
 	<div class="container flow">
 		<h1>Clinics Offered at German Magic Farm</h1>
 
-		<h2>Josef Maier Clinic September 2023</h2>
-		<h3>Josef Maier will be teaching at German Magic Farm on September 9th and 10th</h3>
-		<p>If you are interested in this clinic please inquire below.</p>
+		{#each data.clinics as clinic}
+			<article class="clinic-card">
+				<h2>{clinic.title}</h2>
+				<h3>{clinic.subtitle}</h3>
+				<div class="clinic-details">
+					<p><strong>Date:</strong> {clinic.date}</p>
+					<p><strong>Instructor:</strong> {clinic.instructor}</p>
+					<p><strong>Type:</strong> {clinic.type}</p>
+				</div>
+				<p>{clinic.description}</p>
 
-		<a href="./contact" class="button"> Interested?</a>
+				{#if clinic.status === 'upcoming'}
+					<a href="./contact" class="button">Interested?</a>
+				{/if}
+			</article>
+		{/each}
 	</div>
 </section>
 
 <Seo
-	title="Riding jumping, eventing, cross country, and dressage clinics in Dundee, Mi"
-	description="Ride in a dressage or jumping clinic at German Magic Farm with professional riders and trainers from all over the world"
-	type="WebPage"
-	image="./pam-bauer-teaching.jpg"
+	title={data.seo.title}
+	description={data.seo.description}
+	type={data.seo.type}
+	image={data.seo.image}
 />
 
 <style>
@@ -48,6 +60,19 @@
 
 	.spl-wrapper {
 		width: 100%;
+	}
+
+	.clinic-card {
+		padding: var(--size-fluid-3);
+		border: 1px solid var(--primary-color);
+		border-radius: var(--radius-2);
+		margin-block: var(--size-fluid-3);
+	}
+
+	.clinic-details {
+		display: grid;
+		gap: var(--size-2);
+		margin-block: var(--size-2);
 	}
 
 	.button {

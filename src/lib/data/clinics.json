@@ -1,0 +1,23 @@
+{
+  "clinics": [
+    {
+      "id": "josef-maier-sept-2023",
+      "title": "Josef Maier Clinic September 2023",
+      "subtitle": "Josef Maier will be teaching at German Magic Farm on September 9th and 10th",
+      "description": "If you are interested in this clinic please inquire below.",
+      "date": "September 9-10, 2023",
+      "instructor": "Josef Maier",
+      "type": "dressage",
+      "status": "upcoming",
+      "image": "/clinic-collage.webp"
+    }
+  ],
+  "pageTitle": "Clinics: German Magic Farm",
+  "pageTagline": "learn, practice & have fun at a clinic",
+  "seo": {
+    "title": "Riding jumping, eventing, cross country, and dressage clinics in Dundee, Mi",
+    "description": "Ride in a dressage or jumping clinic at German Magic Farm with professional riders and trainers from all over the world",
+    "type": "WebPage",
+    "image": "./pam-bauer-teaching.jpg"
+  }
+} 
