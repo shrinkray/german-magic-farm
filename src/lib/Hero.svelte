@@ -5,7 +5,7 @@
 
 <div class="hero">
 	<div class="container">
-		<h2 class="highlighted-text-shadow">{herotitle}</h2>
+		<h1 class="highlighted-text-shadow">{herotitle}</h1>
 		<p>
 			{tagline}
 		</p>
