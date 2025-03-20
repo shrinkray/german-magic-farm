@@ -124,8 +124,8 @@ h3 {
 }
 
 .larger-wrapper {
-  width: min(100% - 3rem, 90ch);
-  margin-inline: auto;
+	width: min(100% - 3rem, 90ch);
+	margin-inline: auto;
 }
 
 .auto-grid {
@@ -149,19 +149,59 @@ textarea {
   aspect-ratio: var(--ratio-square);
 }
 
+.mx-auto {
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .py-10 {
-	padding-top: 2.5rem;
-	padding-bottom: 2.5rem;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
 }
 
 .py-20 {
-	padding-top: 5rem;
-	padding-bottom: 5rem;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
 }
 
 .py-30 {
-	padding-top: 7.5rem;
-	padding-bottom: 7.5rem;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+}
+
+.px-10 {
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.px-20 {
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+.px-30 {
+	padding-left: 3rem;
+	padding-right: 3rem;
+}	
+
+.px-40 {
+	padding-left: 4rem;
+	padding-right: 4rem;
 }
 
 
+.p-10 {
+	padding: 1rem;
+}
+
+.p-20 {
+	padding: 2rem;
+}
+
+.p-30 {
+	padding: 3rem;
+}
+
+.p-40 {
+	padding: 4rem;
+}

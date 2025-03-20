@@ -34,8 +34,8 @@
 			{#each services as { content, title, amount }, index}
 				<div class="service-feature">
 					<h3>{title}</h3>
-					<span class="bold" role="text" aria-label="Cost of service: {amount}">{amount}</span>
-					<p class="service-description">{content}</p>
+					<span class="bold" role="text" aria-label="Cost of service">{amount}</span>
+					<p class="service-description" role="text" aria-label="Description of service">{content}</p>
 				</div>
 			{/each}
 		</article>
@@ -52,20 +52,22 @@
 </section>
 
 <section class="section">
-	<article class="lessons larger-wrapper fade">
-		<h2>Types Of Lessons and Pricing</h2>
-		{#each lessons as { kindOfLesson, firstPrice, firstDescription, secondPrice, secondDescription, thirdPrice, thirdDescription }}
-			<div class="flexible-grid">
-				<h3>{kindOfLesson}</h3>
-				<div class="">
-					<p>{firstPrice} {firstDescription}</p>
-					<p>{secondPrice} {secondDescription}</p>
-					{#if showThird}
-						<p class="symbol">{thirdPrice} {thirdDescription}</p>
-					{/if}
+	<article class="px-20  lessons larger-wrapper fade">
+		<div class="container mx-auto">
+			<h2>Types Of Lessons and Pricing</h2>
+				{#each lessons as { kindOfLesson, firstPrice, firstDescription, secondPrice, secondDescription, thirdPrice, thirdDescription }}
+					<div class="py-20 flexible-grid">
+					<h3>{kindOfLesson}</h3>
+					<div class="">
+						<p>{firstPrice} {firstDescription}</p>
+						<p>{secondPrice} {secondDescription}</p>
+						{#if showThird}
+							<p class="symbol">{thirdPrice} {thirdDescription}</p>
+						{/if}
+					</div>
 				</div>
-			</div>
-		{/each}
+			{/each}
+		</div>
 	</article>
 </section>
 
@@ -102,14 +104,7 @@ Farm"
 		border-bottom: 1px solid #ddd;
 	}
 
-	.larger-wrapper {
-		width: min(100% - 3rem, 90ch);
-		margin-inline: auto;
-	}
 
-	article.larger-wrapper > * {
-		padding: 1em;
-	}
 
 	.lessons {
 		padding-block: var(--size-7);
