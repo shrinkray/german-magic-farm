@@ -29,13 +29,13 @@
 <section class="section">
 	<div class="container grid">
 		<article class="alt-color-band flow">
-			<h1>Services Offered at German Magic Farm</h1>
+			<h2>Services Offered at German Magic Farm</h2>
 
 			{#each services as { content, title, amount }, index}
-				<div class="">
-					<h2>{title}</h2>
-					<p class="bold">{amount}</p>
-					<p class="">{content}</p>
+				<div class="service-feature">
+					<h3>{title}</h3>
+					<span class="bold" role="text" aria-label="Cost of service: {amount}">{amount}</span>
+					<p class="service-description">{content}</p>
 				</div>
 			{/each}
 		</article>
@@ -50,7 +50,7 @@
 		</p>
 	</div>
 </section>
-<div class="center-w-grid"><SmallLogoLayers /></div>
+
 <section class="section">
 	<article class="lessons larger-wrapper fade">
 		<h2>Types Of Lessons and Pricing</h2>
@@ -68,6 +68,8 @@
 		{/each}
 	</article>
 </section>
+
+<div class="py-10 center-w-grid"><SmallLogoLayers /></div> 
 
 <Seo
 	title="Dressage and jumping Lessons | Training Horseshow Information German Magic
