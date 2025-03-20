@@ -22,6 +22,10 @@
 			href: '/meet-pam-bauer'
 		},
 		{
+			title: 'Shows & Competitions',
+			href: '/shows-and-competitions'
+		},
+		{
 			title: 'Clinics',
 			href: '/clinics'
 		},
@@ -80,7 +84,7 @@
 				<div class="relative">
 					<!-- show menu -->
 					<nav class="color-border">
-						<ul class="flow-bottom">
+						<ul class="flow-bottom text-left">
 							{#each navs as { title, href }}
 								<li>
 									<a
@@ -111,7 +115,9 @@
 	}
 	.flex {
 		display: flex;
-		align-items: center;
+	}
+	.text-left {
+		justify-content: flex-start;
 	}
 
 	span {
@@ -181,7 +187,7 @@
 	ul {
 		display: flex;
 		flex-direction: column;
-		text-align: center;
+		text-align: left;
 		padding: 0;
 		list-style: none;
 		font-size: 1.5em;
