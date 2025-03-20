@@ -5,8 +5,8 @@
 <footer class="wave">
 	<div class="container">Copyright © German Magic Farm {year}</div>
 	<div class="container created-by">
-		Site created by DigitalPainKillers. <span
-			><a href="mailto:help@digitalpainkillers.com">Interested?</a></span
+		Site created by Shrinkray Interactive. <span
+			><a href="mailto:help@gregmiller.io">Interested?</a></span
 		>
 	</div>
 </footer>
