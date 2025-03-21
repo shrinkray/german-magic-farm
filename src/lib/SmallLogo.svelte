@@ -8,7 +8,10 @@
 	y="0"
 	version="1.1"
 	viewBox="0 0 444 486"
+	aria-labelledby="svgTitle svgDesc"
 >
+	<title id="svgTitle">German Magic Farm logo</title>
+  	<desc id="svgDesc">Offering equine care and riding skills</desc>
 	<switch>
 		<g>
 			<path

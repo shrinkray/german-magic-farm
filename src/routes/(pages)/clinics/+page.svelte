@@ -1,68 +1,118 @@
-<script>
+<script lang="ts">
 	import Hero from '$lib/Hero.svelte';
 	import Seo from '$lib/Seo.svelte';
+	import clinicData from '$lib/data/clinics.json';
+	import SmallLogoLayers from '$lib/SmallLogoLayers.svelte';
+	import type { ClinicsData } from '$lib/types/clinics';
+
+	const data = clinicData as ClinicsData;
+
+	// Get the current date
+	const currentDate = new Date();
+
+	// Filter the clinics to get upcoming and past events
+	const upcomingClinics = data.clinics.filter(clinic => {
+		const clinicDate = new Date(clinic.date);
+		return clinicDate >= currentDate;
+	});
+
+	const pastClinics = data.clinics.filter(clinic => {
+		const clinicDate = new Date(clinic.date);
+		return clinicDate < currentDate;
+	});
 </script>
 
-<svelte:head
-	><meta
-		property="og:image"
-		content="https://www.germanmagicfarm.com/pam-gallop-hill-cp.webp"
-	/><meta property="og:image:width" content="740" /><meta
-		property="og:image:height"
-		content="423"
-	/><meta property="og:image:alt" content="Pam Bauer riding in winter" /></svelte:head
->
+<svelte:head>
+	<meta property="og:image" content={data.seo.image} />
+	<meta property="og:image:width" content="740" />
+	<meta property="og:image:height" content="423" />
+	<meta property="og:image:alt" content="Shows at German Magic Farm" />
+</svelte:head>
 
-<div class="spl-wrapper">
+<div class="hero-wrapper">
 	<Hero
-		herotitle="Clinics:  German Magic Farm"
-		tagline="learn, practice & have fun at a clinic"
+		herotitle={data.pageTitle}
+		tagline={data.pageTagline}
 		--bg-image="url('/clinic-collage.webp')"
 		--bg-opacity="0.6"
 	/>
 </div>
 
 <section class="section">
-	<div class="container flow">
-		<h1>Clinics Offered at German Magic Farm</h1>
+	<div class="container grid">
+		<h2 class="section-title">What clinics are coming up?</h2>
+		<p>
+			German Magic Farm offers an inspiring place to learn, grow, and enjoy the experience of a clinic—taught by the best instructors you will find. If you are interested in our offering a clinic, please <a href="/contact">contact us</a>.
+		</p>
 
-		<h2>Josef Maier Clinic September 2023</h2>
-		<h3>Josef Maier will be teaching at German Magic Farm on September 9th and 10th</h3>
-		<p>If you are interested in this clinic please inquire below.</p>
-
-		<a href="./contact" class="button"> Interested?</a>
+		{#if upcomingClinics.length > 0}
+			{#each upcomingClinics as clinic}
+				<article class="show-card">
+					<h3 class="show-title">{clinic.title}</h3>
+					<p><strong>Date:</strong> {clinic.date}</p>
+					<p>{clinic.description}</p>
+				</article>
+			{/each}
+		{:else}
+			<p class="py-20">We are sorry, there are currently no upcoming clinics. Please contact us for information about future events.</p>
+		{/if}
 	</div>
 </section>
 
+<section class="section">
+	<div class="container grid">
+		<h2 class="section-title">Past Clinics</h2>
+		<p>
+			Take a look at the types of clinics we have hosted in the past.
+		</p>
+
+		{#if pastClinics.length > 0}
+			{#each pastClinics as clinic}
+				<article class="show-card">
+					<h3 class="show-title">{clinic.title}</h3>
+					<p><strong>Date:</strong> {clinic.date}</p>
+					<p>{clinic.description}</p>
+				</article>
+			{/each}
+		{:else}
+			<p class="py-20">No past clinics found.</p>
+		{/if}
+	</div>
+</section>
+
+<div class="py-10 center-w-grid static-logo"><SmallLogoLayers /></div> 
+
 <Seo
-	title="Riding jumping, eventing, cross country, and dressage clinics in Dundee, Mi"
-	description="Ride in a dressage or jumping clinic at German Magic Farm with professional riders and trainers from all over the world"
-	type="WebPage"
-	image="./pam-bauer-teaching.jpg"
+	title={data.seo.title}
+	description={data.seo.description}
+	type={data.seo.type}
+	image={data.seo.image}
 />
 
 <style>
-	.section {
-		padding-block: var(--size-fluid-5);
-	}
-
-	.spl-wrapper {
+	.hero-wrapper {
 		width: 100%;
 	}
-
-	.button {
-		border: none;
-		border-radius: 0.25em;
-		background-color: var(--primary-color);
-		text-decoration: none;
-		color: white;
-		font-size: 1em;
-		cursor: pointer;
-		padding: 0.5em 1em;
+	.section {
+		padding: var(--size-fluid-4) 0;
+		background-color: var(--surface-2);
 	}
-
-	.button:hover {
-		text-decoration: underline;
-		transform: scale(0.2);
+	.section-title {
+		font-size: var(--font-size-fluid-3);
+		text-align: center;
+		margin-bottom: var(--size-fluid-4);
+		color: var(--text-1);
+	}
+	.show-card {
+		background: var(--surface-1);
+		border-radius: var(--radius-3);
+		box-shadow: var(--shadow-2);
+		padding: var(--size-fluid-3);
+		margin: var(--size-fluid-2);
+	}
+	.show-title {
+		font-size: var(--font-size-fluid-2);
+		color: var(--text-1);
+		margin: 0;
 	}
 </style>

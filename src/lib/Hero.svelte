@@ -5,7 +5,7 @@
 
 <div class="hero">
 	<div class="container">
-		<h2 class="highlighted-text-shadow">{herotitle}</h2>
+		<h1 class="highlighted-text-shadow">{herotitle}</h1>
 		<p>
 			{tagline}
 		</p>
@@ -40,11 +40,10 @@
 	}
 
 	.hero {
-		padding: 11em 0;
-
+		padding: 9em 0;
 		color: white;
 		background-image: var(--bg-image);
-		background-position: center;
+		background-position: center top;
 		background-repeat: no-repeat;
 		background-size: var(--bg-size);
 		margin-block: var(--margin-block);

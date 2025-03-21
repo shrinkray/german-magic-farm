@@ -1,7 +1,8 @@
+import type { Handle } from '@sveltejs/kit';
 import { redirect } from "@sveltejs/kit";
 
 /** @type {import('@sveltejs/kit').Handle} */
-export const handle = async ({ event, resolve }) => {
+export const handle: Handle = async ({ event, resolve }) => {
   const access = event.cookies.get("access") === "true";
 
 if (!access && event.route.id?.startsWith("/(app)")) {

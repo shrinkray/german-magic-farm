@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
 	import Moon from './icons/moon.svelte';
@@ -6,7 +6,7 @@
 	import { Hamburger } from 'svelte-hamburgers';
 	import SmallLogoLayers from './SmallLogoLayers.svelte';
 
-	let open;
+	let open: boolean = false;
 
 	const navs = [
 		{
@@ -17,13 +17,18 @@
 			title: 'Services',
 			href: '/services'
 		},
+
 		{
-			title: 'Meet Pam Bauer',
-			href: '/meet-pam-bauer'
+			title: 'Shows & Competitions',
+			href: '/shows-and-competitions'
 		},
 		{
 			title: 'Clinics',
 			href: '/clinics'
+		},
+		{
+			title: 'Meet Pam Bauer',
+			href: '/meet-pam-bauer'
 		},
 		{
 			title: 'Contact',
@@ -44,7 +49,7 @@
 		}
 	});
 
-	const setTheme = (theme) => {
+	const setTheme = (theme: string) => {
 		document.documentElement.dataset.theme = theme;
 		document.cookie = `siteTheme=${theme};max-age=31536000;path="/"`;
 		currentTheme = theme;
@@ -54,10 +59,10 @@
 	$: routeId = $page.url.pathname;
 </script>
 
-<div class="bg-color">
+<div class="bg-color" data-theme={currentTheme}>
 	<header class="header-wrap">
 		<div class="flex">
-			<a class="logo flex" href="/">
+			<a class="flex logo" href="/">
 				<SmallLogoLayers />
 				<span>German Magic Farm</span>
 			</a>
@@ -80,7 +85,7 @@
 				<div class="relative">
 					<!-- show menu -->
 					<nav class="color-border">
-						<ul class="flow-bottom">
+						<ul class="text-left flow-bottom">
 							{#each navs as { title, href }}
 								<li>
 									<a
@@ -111,7 +116,9 @@
 	}
 	.flex {
 		display: flex;
-		align-items: center;
+	}
+	.text-left {
+		justify-content: flex-start;
 	}
 
 	span {
@@ -120,8 +127,14 @@
 	}
 
 	a.logo {
-		color: var(--color);
+		color: var(--logo-color);
 		align-items: center;
+	}
+
+
+
+	[data-theme="dark"] a.logo {
+		color: var(--heading-color);
 	}
 
 	span {
@@ -129,12 +142,16 @@
 	}
 
 	.moon {
-		color: var(--primary-color);
+		color: var(--interactive-color);
 	}
 
 	.move-moon {
 		margin-left: auto;
 		padding-right: 1em;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 	}
 	nav {
 		padding: 0.5em;
@@ -170,18 +187,11 @@
 		top: 0;
 	}
 
-	.nav-wrapper {
-		display: flex;
-		align-items: center;
-		max-width: var(--size-md);
-		padding-inline: 2em;
-	}
-
 	/* by default this had padding-inline-start: 40px; so at larger sizes it will need that back on think it was 40px or 1em? */
 	ul {
 		display: flex;
 		flex-direction: column;
-		text-align: center;
+		text-align: left;
 		padding: 0;
 		list-style: none;
 		font-size: 1.5em;

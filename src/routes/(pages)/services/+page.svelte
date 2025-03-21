@@ -21,7 +21,7 @@
 >
 
 <Hero
-	herotitle="Services:  German Magic Farm"
+	herotitle="German Magic Farm Services"
 	tagline="Training, Lessons, Leasing, Showing and Fun!"
 	--bg-image="url('/pam-dressage-slider.webp')"
 	--bg-opacity="0.5"
@@ -29,13 +29,13 @@
 <section class="section">
 	<div class="container grid">
 		<article class="alt-color-band flow">
-			<h1>Services Offered at German Magic Farm</h1>
+			<h2>Learn about our services</h2>
 
 			{#each services as { content, title, amount }, index}
-				<div class="">
-					<h2>{title}</h2>
-					<p class="bold">{amount}</p>
-					<p class="">{content}</p>
+				<div class="service-feature">
+					<h3>{title}</h3>
+					<span class="bold" role="text" aria-label="Cost of service">{amount}</span>
+					<p class="service-description" role="text" aria-label="Description of service">{content}</p>
 				</div>
 			{/each}
 		</article>
@@ -50,24 +50,28 @@
 		</p>
 	</div>
 </section>
-<div class="center-w-grid"><SmallLogoLayers /></div>
+
 <section class="section">
-	<article class="lessons larger-wrapper fade">
-		<h2>Types Of Lessons and Pricing</h2>
-		{#each lessons as { kindOfLesson, firstPrice, firstDescription, secondPrice, secondDescription, thirdPrice, thirdDescription }}
-			<div class="flexible-grid">
-				<h3>{kindOfLesson}</h3>
-				<div class="">
-					<p>{firstPrice} {firstDescription}</p>
-					<p>{secondPrice} {secondDescription}</p>
-					{#if showThird}
-						<p class="symbol">{thirdPrice} {thirdDescription}</p>
-					{/if}
+	<article class="px-20 lessons larger-wrapper fade">
+		<div class="container mx-auto">
+			<h2>Types Of Lessons and Pricing</h2>
+				{#each lessons as { kindOfLesson, firstPrice, firstDescription, secondPrice, secondDescription, thirdPrice, thirdDescription }}
+					<div class="py-20 flexible-grid">
+					<h3>{kindOfLesson}</h3>
+					<div class="">
+						<p>{firstPrice} {firstDescription}</p>
+						<p>{secondPrice} {secondDescription}</p>
+						{#if showThird}
+							<p class="symbol">{thirdPrice} {thirdDescription}</p>
+						{/if}
+					</div>
 				</div>
-			</div>
-		{/each}
+			{/each}
+		</div>
 	</article>
 </section>
+
+<div class="py-20 center-w-grid static-logo"><SmallLogoLayers /></div> 
 
 <Seo
 	title="Dressage and jumping Lessons | Training Horseshow Information German Magic
@@ -98,15 +102,6 @@ Farm"
 
 	h3 {
 		border-bottom: 1px solid #ddd;
-	}
-
-	.larger-wrapper {
-		width: min(100% - 3rem, 90ch);
-		margin-inline: auto;
-	}
-
-	article.larger-wrapper > * {
-		padding: 1em;
 	}
 
 	.lessons {

@@ -26,7 +26,7 @@
 <!-- svelte-ignore a11y-img-redundant-alt -->
 <!-- <img src="./german-magic-bg.webp" alt="Large Logo Image" /> -->
 
-<div class="lg-home-image | section"><SmallLogoLayers width="300" /></div>
+<div class="lg-home-image static-logo | section"><SmallLogoLayers width="300" /></div>
 <!-- begin experiment -->
 
 <!-- end experiment -->
