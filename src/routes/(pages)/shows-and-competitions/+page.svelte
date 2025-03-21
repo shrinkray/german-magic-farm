@@ -78,7 +78,7 @@
     </section>
   </div>
 
-  <div class="py-10 center-w-grid"><SmallLogoLayers /></div> 
+  <div class="py-10 center-w-grid static-logo"><SmallLogoLayers /></div> 
 
 </main> 
 

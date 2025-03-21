@@ -71,7 +71,7 @@
 	</article>
 </section>
 
-<div class="py-20 center-w-grid"><SmallLogoLayers /></div> 
+<div class="py-20 center-w-grid static-logo"><SmallLogoLayers /></div> 
 
 <Seo
 	title="Dressage and jumping Lessons | Training Horseshow Information German Magic
@@ -103,8 +103,6 @@ Farm"
 	h3 {
 		border-bottom: 1px solid #ddd;
 	}
-
-
 
 	.lessons {
 		padding-block: var(--size-7);

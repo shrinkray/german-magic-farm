@@ -2,6 +2,7 @@
 	import Hero from '$lib/Hero.svelte';
 	import Seo from '$lib/Seo.svelte';
 	import clinicData from '$lib/data/clinics.json';
+	import SmallLogoLayers from '$lib/SmallLogoLayers.svelte';
 	import type { ClinicsData } from '$lib/types/clinics';
 
 	const data = clinicData as ClinicsData;
@@ -78,6 +79,8 @@
 		{/if}
 	</div>
 </section>
+
+<div class="py-10 center-w-grid static-logo"><SmallLogoLayers /></div> 
 
 <Seo
 	title={data.seo.title}
