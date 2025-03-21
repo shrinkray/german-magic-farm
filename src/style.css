@@ -58,11 +58,23 @@ img {
   display: block;
 }
 
+@font-face {
+  font-family: 'Crimson Pro';
+  src: url('/fonts/CrimsonPro/CrimsonPro[wght].ttf') format('truetype');
+  font-weight: 100 900; /* Full range of variable weights */
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('/fonts/Lato/Lato-Regular.woff2') format('woff2');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto,
-    helvetica neue, Arial, noto sans, sans-serif, apple color emoji,
-    segoe ui emoji, segoe ui symbol, noto color emoji;
+	font-family: 'Lato', sans-serif;
   background-color: var(--bg-color);
   color: var(--color);
   font-size: var(--fs-300);
@@ -78,6 +90,7 @@ h1,
 h2,
 h3 {
   line-height: 1.1;
+  font-family: 'Crimson Pro', serif;
 }
 
 h1 {
