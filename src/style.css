@@ -73,14 +73,20 @@ h3 {
 
 h1 {
   font-size: var(--fs-600);
+  padding-top: 3rem;
+  padding-bottom: 1rem;
 }
 
 h2 {
   font-size: var(--fs-500);
+  padding-top: 3rem;
+  padding-bottom: 1rem;
 }
 
 h3 {
   font-size: var(--fs-400);
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
 }
 
 .service-feature {
