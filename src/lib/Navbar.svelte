@@ -181,14 +181,17 @@
 	}
 	nav {
 		padding: 0.5em;
-		background-color: var(--header-color);
+		background-color: rgb(48 42 36);
 		color: white;
 		border-bottom: 3px solid #ffcd02;
 		z-index: 5;
 		position: absolute;
 		margin-top: 60px;
-		width: 100%;
-		right: 0;
+		left: 0;
+
+		@media (max-width: 480px) {
+			width: 100%;
+		}
 	}
 
 	.relative {
