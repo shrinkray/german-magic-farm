@@ -47,9 +47,6 @@
 />
 
 <style>
-	img {
-		margin-inline: auto;
-	}
 
 	.section {
 		padding-block: var(--size-fluid-5);
