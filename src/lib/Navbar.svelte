@@ -59,7 +59,7 @@
 	$: routeId = $page.url.pathname;
 </script>
 
-<div class="bg-color">
+<div class="bg-color" data-theme={currentTheme}>
 	<header class="header-wrap">
 		<div class="flex">
 			<a class="flex logo" href="/">
@@ -127,8 +127,14 @@
 	}
 
 	a.logo {
-		color: var(--color);
+		color: var(--logo-color);
 		align-items: center;
+	}
+
+
+
+	[data-theme="dark"] a.logo {
+		color: var(--heading-color);
 	}
 
 	span {
@@ -136,12 +142,16 @@
 	}
 
 	.moon {
-		color: var(--primary-color);
+		color: var(--interactive-color);
 	}
 
 	.move-moon {
 		margin-left: auto;
 		padding-right: 1em;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 	}
 	nav {
 		padding: 0.5em;
@@ -175,13 +185,6 @@
 		right: 0;
 		left: 0;
 		top: 0;
-	}
-
-	.nav-wrapper {
-		display: flex;
-		align-items: center;
-		max-width: var(--size-md);
-		padding-inline: 2em;
 	}
 
 	/* by default this had padding-inline-start: 40px; so at larger sizes it will need that back on think it was 40px or 1em? */

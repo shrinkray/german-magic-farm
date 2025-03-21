@@ -5,6 +5,7 @@
   --primary-color: #d10000;
   --input-color: #333;
   --bg-color: white;
+  --logo-color:rgb(23, 16, 5);
   --color: #333;
   --heading-color: white;
   --accent-fade: rgba(255, 206, 0, 0.08);
@@ -28,15 +29,18 @@
 }
 
 [data-theme="dark"] {
+  --accent-fade: rgb(255 206 0 / 7%);
   --primary-color: #d10000;
   --input-color: #FECF0A;
-  --bg-color: #000;
-  --color: #ddd;
-  --heading-color: white;
-  --hero-lg-heading: white;
-  --header-color: rgba(255, 206, 0, 0.08);
-  --footer-color: var(--accent-fade);
-  --visited-link-color: #ff8c00;
+  --bg-color: #1c1917;
+  --logo-color:rgb(246, 240, 229);
+  --color: #d5c4a1;
+  --heading-color: #f0e5d1;
+  --hero-lg-heading: #f0e5d1;
+  --header-color: rgb(94 84 74 / 30%);
+  --footer-color: rgb(94 84 74 / 30%);
+  --visited-link-color: #d65d0e;
+  --interactive-color: #FECF0A;
 }
 
 *,
@@ -138,6 +142,10 @@ h3 {
 	width: min(100% - 3rem, 90ch);
 	margin-inline: auto;
 }
+	.static-logo {
+		color: var(--logo-color);
+		align-items: center;
+	}
 
 .auto-grid {
   --min-column-size: 9rem;
@@ -219,4 +227,8 @@ textarea {
 
 a:visited {
   color: var(--visited-link-color);
+}
+
+.moon {
+  color: var(--interactive-color);
 }
