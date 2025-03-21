@@ -11,6 +11,7 @@
   --hero-lg-heading: white;
   --footer-color: #343a40;
   --header-color: white;
+  --visited-link-color: #800080;
 
   --ff-base: '';
   --ff-accent: '';
@@ -29,13 +30,13 @@
 [data-theme="dark"] {
   --primary-color: #d10000;
   --input-color: #FECF0A;
-  ;
   --bg-color: #000;
   --color: #ddd;
   --heading-color: white;
   --hero-lg-heading: white;
   --header-color: rgba(255, 206, 0, 0.08);
   --footer-color: var(--accent-fade);
+  --visited-link-color: #ff8c00;
 }
 
 *,
@@ -62,6 +63,10 @@ body {
   color: var(--color);
   font-size: var(--fs-300);
   line-height: 1.6;
+}
+
+.bold {
+	font-weight: bold;
 }
 
 /* larger font sizes have less line height */
@@ -210,4 +215,8 @@ textarea {
 
 .p-40 {
 	padding: 4rem;
+}
+
+a:visited {
+  color: var(--visited-link-color);
 }
