@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
 	import Moon from './icons/moon.svelte';
@@ -6,7 +6,7 @@
 	import { Hamburger } from 'svelte-hamburgers';
 	import SmallLogoLayers from './SmallLogoLayers.svelte';
 
-	let open;
+	let open: boolean = false;
 
 	const navs = [
 		{
@@ -17,10 +17,7 @@
 			title: 'Services',
 			href: '/services'
 		},
-		{
-			title: 'Meet Pam Bauer',
-			href: '/meet-pam-bauer'
-		},
+
 		{
 			title: 'Shows & Competitions',
 			href: '/shows-and-competitions'
@@ -28,6 +25,10 @@
 		{
 			title: 'Clinics',
 			href: '/clinics'
+		},
+		{
+			title: 'Meet Pam Bauer',
+			href: '/meet-pam-bauer'
 		},
 		{
 			title: 'Contact',
@@ -48,7 +49,7 @@
 		}
 	});
 
-	const setTheme = (theme) => {
+	const setTheme = (theme: string) => {
 		document.documentElement.dataset.theme = theme;
 		document.cookie = `siteTheme=${theme};max-age=31536000;path="/"`;
 		currentTheme = theme;
@@ -61,7 +62,7 @@
 <div class="bg-color">
 	<header class="header-wrap">
 		<div class="flex">
-			<a class="logo flex" href="/">
+			<a class="flex logo" href="/">
 				<SmallLogoLayers />
 				<span>German Magic Farm</span>
 			</a>
@@ -84,7 +85,7 @@
 				<div class="relative">
 					<!-- show menu -->
 					<nav class="color-border">
-						<ul class="flow-bottom text-left">
+						<ul class="text-left flow-bottom">
 							{#each navs as { title, href }}
 								<li>
 									<a
