@@ -34,8 +34,8 @@
 			{#each services as { content, title, amount }, index}
 				<div class="service-feature">
 					<h3>{title}</h3>
-					<span class="bold" role="text" aria-label="Cost of service">{amount}</span>
-					<p class="service-description" role="text" aria-label="Description of service">{content}</p>
+					<span class="bold" aria-label="Cost of service">{amount}</span>
+					<p class="service-description" aria-label="Description of service">{content}</p>
 				</div>
 			{/each}
 		</article>
