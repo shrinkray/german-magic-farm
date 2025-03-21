@@ -7,6 +7,8 @@
 	import SmallLogoLayers from './SmallLogoLayers.svelte';
 
 	let open: boolean = false;
+	let nav: HTMLElement;
+	let hamburgerBtn: HTMLDivElement;
 
 	const navs = [
 		{
@@ -38,6 +40,19 @@
 
 	let currentTheme = '';
 
+	// Close menu when clicking outside
+	function handleClickOutside(event: MouseEvent) {
+		const target = event.target as Node;
+		if (open && nav && !nav.contains(target) && !hamburgerBtn.contains(target)) {
+			open = false;
+		}
+	}
+
+	// Close menu when clicking a link
+	function handleLinkClick() {
+		open = false;
+	}
+
 	onMount(() => {
 		// currentTheme = document.documentElement.dataset.theme;
 		const userPrefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -47,6 +62,11 @@
 		if (!hasUserSetDarkModeManually) {
 			setTheme(userPrefersDarkMode ? 'dark' : 'light');
 		}
+
+		document.addEventListener('click', handleClickOutside);
+		return () => {
+			document.removeEventListener('click', handleClickOutside);
+		};
 	});
 
 	const setTheme = (theme: string) => {
@@ -83,16 +103,18 @@
 		<div class="menu-toggle-btn">
 			{#if open}
 				<div class="relative">
-					<!-- show menu -->
-					<nav class="color-border">
+					<nav class="color-border" bind:this={nav}>
 						<ul class="text-left flow-bottom">
 							{#each navs as { title, href }}
 								<li>
 									<a
 										{href}
 										class:active={href === '/' ? routeId === '/' : url.includes(href)}
-										{title}>{title}</a
+										{title}
+										on:click={handleLinkClick}
 									>
+										{title}
+									</a>
 								</li>
 							{/each}
 						</ul>
@@ -100,7 +122,9 @@
 				</div>
 			{/if}
 
-			<Hamburger bind:open />
+			<div bind:this={hamburgerBtn}>
+				<Hamburger bind:open />
+			</div>
 		</div>
 	</header>
 </div>
