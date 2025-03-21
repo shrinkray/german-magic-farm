@@ -1,8 +1,7 @@
 <script lang="ts">
-  import type { PageData } from './$types';
+  
   import Hero from '$lib/Hero.svelte';
   import SmallLogoLayers from '$lib/SmallLogoLayers.svelte';
-  export let data: PageData;
 </script>
 
 <svelte:head>
@@ -83,14 +82,5 @@
 </main> 
 
 <style>
-	.hero-wrapper {
-		width: 100%;
-	}
-	
-	.hero {
-		background-image: var(--bg-image);
-		background-position: center top; /* Aligns the image to the top */
-		background-repeat: no-repeat;
-		background-size: cover; /* Ensures the image covers the entire area */
-	}
+
 </style>
