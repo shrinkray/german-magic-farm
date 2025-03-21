@@ -55,7 +55,7 @@
 
 			<!-- <div><button>Submit</button></div> -->
 
-			<div><Button class="secondary" size="medium">Submit >></Button></div>
+			<div><Button class="secondary bold" size="medium">Submit »</Button></div>
 
 			<div>
 				{#if $message}<p>{$message}</p>{/if}
@@ -69,12 +69,13 @@
 		<div><Contact /></div>
 		<div class="map">
 			<iframe
+				title="Map showing location of German Magic Farm"
 				src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11866.804920549557!2d-83.6402403380172!3d41.96375198592071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1435260600940"
 				width="100%"
 				height="350"
 				frameborder="0"
 				style="border:0"
-				allowfullscreen=""
+				allowfullscreen
 			/>
 		</div>
 	</div>
@@ -91,11 +92,14 @@
 	.section {
 		padding-block: var(--size-fluid-3);
 	}
-	h2 {
-	}
 
 	form {
 		padding-block: var(--size-7);
+	}
+
+	label {
+		font-family: 'Lato-Bold';
+		margin-top: 1rem;
 	}
 	.contact-map {
 		display: flex;
