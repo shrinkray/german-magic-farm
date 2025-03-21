@@ -41,7 +41,7 @@
 	let currentTheme = '';
 
 	// Close menu when clicking outside
-	function handleClickOutside(event: MouseEvent) {
+	function handleClickOutside(event: MouseEvent | TouchEvent) {
 		const target = event.target as Node;
 		if (open && nav && !nav.contains(target) && !hamburgerBtn.contains(target)) {
 			open = false;
@@ -64,8 +64,10 @@
 		}
 
 		document.addEventListener('click', handleClickOutside);
+		document.addEventListener('touchstart', handleClickOutside);
 		return () => {
 			document.removeEventListener('click', handleClickOutside);
+			document.removeEventListener('touchstart', handleClickOutside);
 		};
 	});
 
@@ -179,14 +181,14 @@
 	}
 	nav {
 		padding: 0.5em;
-		background-color: #343a40;
+		background-color: var(--header-color);
 		color: white;
 		border-bottom: 3px solid #ffcd02;
 		z-index: 5;
 		position: absolute;
 		margin-top: 60px;
-		/*width: 100%;
-		height: 80vh;  */
+		width: 100%;
+		right: 0;
 	}
 
 	.relative {
@@ -211,7 +213,6 @@
 		top: 0;
 	}
 
-	/* by default this had padding-inline-start: 40px; so at larger sizes it will need that back on think it was 40px or 1em? */
 	ul {
 		display: flex;
 		flex-direction: column;
