@@ -5,7 +5,7 @@
 <section class="fade | section">
 	<div class="larger-wrapper flexible-grid">
 		<div class="what">
-			<h3>Willkommen!</h3>
+			<h1>Willkommen!</h1>
 
 			<p>
 				German Magic Farm is a private training and lesson facility located in historic, Dundee
@@ -22,9 +22,9 @@
 				suit your needs!
 			</p>
 
-			<!-- <Button class="secondary" id="a-button" size="medium">Let's Get Started >></Button> -->
+			<div class="spacer"></div>
 
-			<a href="./contact" class="button"> Let's get started!</a>
+			<a href="./contact" class="button my-20"> Let's get started!</a>
 		</div>
 		<Contact />
 	</div>
@@ -44,21 +44,16 @@
 	.flexible-grid > * {
 		flex: 1;
 	}
-
-	.what > * {
-		padding: 1em;
+	.spacer {
+		margin-bottom: 3rem;
 	}
-
-	h3 {
-		border-bottom: 1px solid #ddd;
-	}
-
 	.button {
 		border: none;
 		border-radius: 0.25em;
 		background-color: var(--primary-color);
 		text-decoration: none;
 		color: white;
+		font-family: 'Lato-Bold';
 		font-size: 1em;
 		cursor: pointer;
 		padding: 0.5em 1.5em;
