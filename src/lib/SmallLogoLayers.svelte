@@ -1,5 +1,5 @@
 <script>
-	export let width = '60';
+	export let width = '100';
 	export let height = 'auto';
 </script>
 

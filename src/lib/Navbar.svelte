@@ -86,7 +86,7 @@
 		<div class="flex">
 			<a class="flex logo" href="/">
 				<SmallLogoLayers />
-				<span class="serif">German Magic Farm</span>
+				<span class="serif site-title">German Magic Farm</span>
 			</a>
 
 			<!-- begin dark light toggle code -->
@@ -150,6 +150,8 @@
 	span {
 		font-size: var(--fs-400);
 		font-weight: 700;
+		line-height: 1;
+		margin-left: 0.5em;
 	}
 
 	a.logo {
@@ -157,7 +159,10 @@
 		align-items: center;
 	}
 
-
+	.site-title {
+		font-size: var(--fs-600);
+		font-weight: 700;
+	}
 
 	[data-theme="dark"] a.logo {
 		color: var(--heading-color);
@@ -193,7 +198,6 @@
 			width: 100%;
 		}
 	}
-
 	.relative {
 		position: relative;
 	}

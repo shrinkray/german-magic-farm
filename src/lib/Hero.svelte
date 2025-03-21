@@ -3,15 +3,16 @@
 	export let tagline = '';
 </script>
 
-<div class="hero">
-	<div class="container">
-		<h1 class="highlighted-text-shadow">{herotitle}</h1>
-		<p>
-			{tagline}
-		</p>
+<div class="hero-container">
+	<div class="hero">
+		<div class="value-prop">
+			<h1 class="highlighted-text-shadow">{herotitle}</h1>
+			<p class="hero-tagline">
+				{tagline}
+			</p>
+		</div>
 	</div>
-</div>
-
+</div>	
 <style>
 	:root {
 		--bg-image: url('./german-magic-bg.webp');
@@ -39,6 +40,11 @@
 		}
 	}
 
+	.hero-container {
+		max-height: 500px;
+		overflow: hidden;
+		margin-bottom: 2rem;
+	}
 	.hero {
 		padding: 9em 0;
 		color: white;
@@ -61,12 +67,14 @@
 		opacity: var(--bg-opacity);
 	}
 
-	h2 {
-		margin: 0;
-		/* font-size: 3.5em;
-		font-weight: 500; */
-		color: var(--heading-color);
+	.hero-tagline {
+		font-size: var(--fs-400);
+		font-family: Lato-Bold;
+		color: white;
+		line-height: 1.2;
+		margin-top: 0;
 	}
+
 	p {
 		color: var(--heading-color);
 		font-size: var(--fs-400);

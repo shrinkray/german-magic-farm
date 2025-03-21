@@ -32,10 +32,10 @@
       <p class="mb-4 text-lg">
         While winning is always exciting, our main focus is on enjoying the journey with their horse and continuing to improve their skills. We emphasize the horse and rider partnership as a whole.
       </p>
-      <p class="mb-6 text-lg italic">Our motto: "Smile and Enjoy the Ride!"</p>
+      <p class="mb-6 mt-4 text-lg italic"><span class="bold">Our motto:</span> "Smile and Enjoy the Ride!"</p> 
     </section>
 
-    <section class="mb-8">
+    <section class="mb-8 show-feature">
       <h3 class="mb-4 font-semibold">Training at Shows Includes:</h3>
       <ul class="pl-6 mb-6 space-y-2 list-disc">
         <li>Warm-up sessions and in-class coaching as needed</li>
@@ -45,7 +45,7 @@
       </ul>
     </section>
 
-    <section class="mb-8">
+    <section class="mb-8 show-feature">
       <h3 class="mb-4 font-semibold">Training at Show Pricing:</h3>
       <ul class="pl-6 mb-6 space-y-2 list-disc">
         <li>$100 per day – for up to 2 horses</li>
@@ -55,8 +55,8 @@
       </ul>
     </section>
 
-    <section class="mb-8">
-      <h3 class="mb-4 font-semibold">Hauling Services</h3>
+    <section class="mb-8 show-feature">
+      <h3 class="mb-4 font-semibold ">Hauling Services</h3>
       <p class="mb-4">
         Trailering to shows is available for all training horses, whether they are owned by German Magic Farm or by students.
       </p>
@@ -66,12 +66,12 @@
       </ul>
     </section>
 
-    <section class="mb-8">
+    <section class="mb-8 show-feature">
       <h3 class="mb-4 font-semibold">Upcoming Events</h3>
       <p>Check back soon for our upcoming show and competition schedule.</p>
     </section>
 
-    <section class="mb-8">
+    <section class="mb-8 show-feature">
       <h3 class="mb-4 font-semibold">How to Participate</h3>
       <p>Details about participation requirements and registration will be available soon.</p>
     </section>
@@ -82,5 +82,7 @@
 </main> 
 
 <style>
-
+.show-feature h3 {
+  margin-top: 2rem;
+}
 </style>

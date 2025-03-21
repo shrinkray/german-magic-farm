@@ -86,7 +86,5 @@
 		padding-block: var(--size-fluid-5);
 	}
 
-	h3 {
-		border-bottom: 1px solid #ddd;
-	}
+
 </style>

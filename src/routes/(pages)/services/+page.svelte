@@ -34,7 +34,7 @@
 			{#each services as { content, title, amount }, index}
 				<div class="service-feature">
 					<h3>{title}</h3>
-					<span class="bold" aria-label="Cost of service">{amount}</span>
+					<span class="bold price-offset" aria-label="Cost of service">{amount}</span>
 					<p class="service-description" aria-label="Description of service">{content}</p>
 				</div>
 			{/each}
@@ -56,13 +56,13 @@
 		<div class="container mx-auto">
 			<h2>Types Of Lessons and Pricing</h2>
 				{#each lessons as { kindOfLesson, firstPrice, firstDescription, secondPrice, secondDescription, thirdPrice, thirdDescription }}
-					<div class="py-20 flexible-grid">
+					<div class="flexible-grid">
 					<h3>{kindOfLesson}</h3>
 					<div class="">
-						<p>{firstPrice} {firstDescription}</p>
-						<p>{secondPrice} {secondDescription}</p>
+						<p class=""><span class="bold mr-5">{firstPrice}</span> {firstDescription}</p>
+						<p class=""><span class="bold mr-5">{secondPrice}</span> {secondDescription}</p>
 						{#if showThird}
-							<p class="symbol">{thirdPrice} {thirdDescription}</p>
+							<p class="symbol"><span class="bold mr-5">{thirdPrice}</span> {thirdDescription}</p>
 						{/if}
 					</div>
 				</div>
@@ -96,12 +96,15 @@ Farm"
 	}
 	.flexible-grid {
 		display: flex;
-		flex-wrap: wrap;
 		gap: 1.5em;
+		@media (max-width: 600px) {
+			flex-wrap: wrap;
+		}
 	}
 
 	h3 {
 		border-bottom: 1px solid #ddd;
+		min-width: 12rem;
 	}
 
 	.lessons {
@@ -111,4 +114,15 @@ Farm"
 	.bold {
 		font-weight: bold;
 	}
+	.service-description {
+		margin-top: 0.5rem;
+	}
+	.mr-5 {
+		margin-right: 0.5rem;
+	}
+	.service-title {
+		margin-top: 2rem;
+	}
+
+
 </style>
