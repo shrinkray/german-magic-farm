@@ -64,7 +64,7 @@
 		<div class="flex">
 			<a class="flex logo" href="/">
 				<SmallLogoLayers />
-				<span>German Magic Farm</span>
+				<span class="serif">German Magic Farm</span>
 			</a>
 
 			<!-- begin dark light toggle code -->

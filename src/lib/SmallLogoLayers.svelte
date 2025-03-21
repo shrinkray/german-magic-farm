@@ -4,7 +4,7 @@
 </script>
 
 <svg
-	class="currentcolor py-30"
+	class="currentcolor py-20"
 	{width}
 	{height}
 	viewBox="0 0 60 64"

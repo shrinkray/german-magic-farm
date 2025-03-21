@@ -71,7 +71,7 @@
 		<p>Pam happily provides a fun, relaxed atmosphere for her students and equine friends!</p>
 		<br />
 	</div>
-	<div class="center-w-grid"><SmallLogoLayers /></div>
+	<div class="center-w-grid static-logo"><SmallLogoLayers /></div>
 </section>
 
 <Seo

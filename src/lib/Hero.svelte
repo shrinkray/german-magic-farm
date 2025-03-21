@@ -18,7 +18,7 @@
 		--bg-opacity: 0;
 		--visibility: visible;
 		--bg-size: cover;
-		--margin-block: 1em;
+		--margin-block: 1rem;
 	}
 
 	@layer demo {
