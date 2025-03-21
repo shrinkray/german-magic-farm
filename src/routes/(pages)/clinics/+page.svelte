@@ -9,10 +9,15 @@
 	// Get the current date
 	const currentDate = new Date();
 
-	// Filter the clinics to get only upcoming events
+	// Filter the clinics to get upcoming and past events
 	const upcomingClinics = data.clinics.filter(clinic => {
 		const clinicDate = new Date(clinic.date);
 		return clinicDate >= currentDate;
+	});
+
+	const pastClinics = data.clinics.filter(clinic => {
+		const clinicDate = new Date(clinic.date);
+		return clinicDate < currentDate;
 	});
 </script>
 
@@ -36,7 +41,7 @@
 	<div class="container grid">
 		<h2 class="section-title">What clinics are coming up?</h2>
 		<p>
-			German Magic Farm offers an inspiring place to learn, grow, and enjoy the experience of a clinic—taught by the best instructors you will find.
+			German Magic Farm offers an inspiring place to learn, grow, and enjoy the experience of a clinic—taught by the best instructors you will find. If you are interested in our offering a clinic, please <a href="/contact">contact us</a>.
 		</p>
 
 		{#if upcomingClinics.length > 0}
@@ -48,7 +53,28 @@
 				</article>
 			{/each}
 		{:else}
-			<p>There are currently no upcoming clinics. Please contact us for information about future events.</p>
+			<p class="py-20">We are sorry, there are currently no upcoming clinics. Please contact us for information about future events.</p>
+		{/if}
+	</div>
+</section>
+
+<section class="section">
+	<div class="container grid">
+		<h2 class="section-title">Past Clinics</h2>
+		<p>
+			Take a look at the types of clinics we have hosted in the past.
+		</p>
+
+		{#if pastClinics.length > 0}
+			{#each pastClinics as clinic}
+				<article class="show-card">
+					<h3 class="show-title">{clinic.title}</h3>
+					<p><strong>Date:</strong> {clinic.date}</p>
+					<p>{clinic.description}</p>
+				</article>
+			{/each}
+		{:else}
+			<p class="py-20">No past clinics found.</p>
 		{/if}
 	</div>
 </section>
