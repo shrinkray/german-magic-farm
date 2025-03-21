@@ -1,20 +1,20 @@
 <script lang="ts">
 	import Hero from '$lib/Hero.svelte';
 	import Seo from '$lib/Seo.svelte';
-	import clinicsData from '$lib/data/clinics.json';
+	import clinicData from '$lib/data/clinics.json';
 	import type { ClinicsData } from '$lib/types/clinics';
 
-	const data = clinicsData as ClinicsData;
+	const data = clinicData as ClinicsData;
 </script>
 
 <svelte:head>
 	<meta property="og:image" content={data.seo.image} />
 	<meta property="og:image:width" content="740" />
 	<meta property="og:image:height" content="423" />
-	<meta property="og:image:alt" content="Pam Bauer riding in winter" />
+	<meta property="og:image:alt" content="Shows at German Magic Farm" />
 </svelte:head>
 
-<div class="spl-wrapper">
+<div class="hero-wrapper">
 	<Hero
 		herotitle={data.pageTitle}
 		tagline={data.pageTagline}
@@ -24,23 +24,17 @@
 </div>
 
 <section class="section">
-	<div class="container flow">
-		<h1>Clinics Offered at German Magic Farm</h1>
+	<div class="container grid">
+		<h2 class="section-title">What clinics are coming up?</h2>
+		<p>
+			German Magic Farm offers an inspiring place to learn, grow, and enjoy the experience of a clinic—taught by the best instructors you will find.
+		</p>
 
 		{#each data.clinics as clinic}
-			<article class="clinic-card">
-				<h2>{clinic.title}</h2>
-				<h3>{clinic.subtitle}</h3>
-				<div class="clinic-details">
-					<p><strong>Date:</strong> {clinic.date}</p>
-					<p><strong>Instructor:</strong> {clinic.instructor}</p>
-					<p><strong>Type:</strong> {clinic.type}</p>
-				</div>
+			<article class="show-card">
+				<h3 class="show-title">{clinic.title}</h3>
+				<p><strong>Date:</strong> {clinic.date}</p>
 				<p>{clinic.description}</p>
-
-				{#if clinic.status === 'upcoming'}
-					<a href="./contact" class="button">Interested?</a>
-				{/if}
 			</article>
 		{/each}
 	</div>
@@ -54,40 +48,29 @@
 />
 
 <style>
-	.section {
-		padding-block: var(--size-fluid-5);
-	}
-
-	.spl-wrapper {
+	.hero-wrapper {
 		width: 100%;
 	}
-
-	.clinic-card {
+	.section {
+		padding: var(--size-fluid-4) 0;
+		background-color: var(--surface-2);
+	}
+	.section-title {
+		font-size: var(--font-size-fluid-3);
+		text-align: center;
+		margin-bottom: var(--size-fluid-4);
+		color: var(--text-1);
+	}
+	.show-card {
+		background: var(--surface-1);
+		border-radius: var(--radius-3);
+		box-shadow: var(--shadow-2);
 		padding: var(--size-fluid-3);
-		border: 1px solid var(--primary-color);
-		border-radius: var(--radius-2);
-		margin-block: var(--size-fluid-3);
+		margin: var(--size-fluid-2);
 	}
-
-	.clinic-details {
-		display: grid;
-		gap: var(--size-2);
-		margin-block: var(--size-2);
-	}
-
-	.button {
-		border: none;
-		border-radius: 0.25em;
-		background-color: var(--primary-color);
-		text-decoration: none;
-		color: white;
-		font-size: 1em;
-		cursor: pointer;
-		padding: 0.5em 1em;
-	}
-
-	.button:hover {
-		text-decoration: underline;
-		transform: scale(0.2);
+	.show-title {
+		font-size: var(--font-size-fluid-2);
+		color: var(--text-1);
+		margin: 0;
 	}
 </style>
