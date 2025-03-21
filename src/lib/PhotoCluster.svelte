@@ -20,7 +20,7 @@
 	];
 </script>
 
-<div class="auto-grid">
+<div class="hero auto-grid">
 	{#each cluster as { photo, alt }}
 		<div>
 			<img class="square" src={photo} {alt} />
@@ -33,5 +33,22 @@
 		object-fit: cover;
 		object-position: center;
 		border-radius: 6px;
+	}
+		.hero {
+		
+		color: white;
+		margin-block: var(--margin-block);
+		position: relative;
+		isolation: isolate;
+	}
+
+	.hero::after {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		/* shorthaand for top btm left right) */
+		inset: 0;
+		background: grey;
+		opacity: var(--bg-opacity);
 	}
 </style>
