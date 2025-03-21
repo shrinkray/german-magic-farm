@@ -8,7 +8,8 @@
 		"resolveJsonModule": true,
 		"skipLibCheck": true,
 		"sourceMap": true,
-		"strict": true
+		"strict": true,
+		"verbatimModuleSyntax": true
 	},
 	"include": [
 		".svelte-kit/ambient.d.ts",
@@ -19,7 +20,8 @@
 		"src/**/*.svelte",
 		"tests/**/*.js",
 		"tests/**/*.ts",
-		"tests/**/*.svelte"
+		"tests/**/*.svelte",
+		"src/routes/(pages)/+page.server.js"
 	],
 	"exclude": [
 		"node_modules/**",
@@ -28,6 +30,9 @@
 		"src/service-worker.ts",
 		"src/service-worker.d.ts",
 		"src/routes/**/*.server.js",
-		"src/routes/**/*.server.ts"
+		"src/routes/**/*.server.ts",
+		"src/routes/**/+page.server.js",
+		"src/routes/**/+server.js",
+		"src/routes/(pages)/+page.server.js"
 	]
 }
