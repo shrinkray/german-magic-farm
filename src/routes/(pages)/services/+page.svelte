@@ -21,7 +21,7 @@
 >
 
 <Hero
-	herotitle="Services:  German Magic Farm"
+	herotitle="German Magic Farm Services"
 	tagline="Training, Lessons, Leasing, Showing and Fun!"
 	--bg-image="url('/pam-dressage-slider.webp')"
 	--bg-opacity="0.5"
@@ -29,7 +29,7 @@
 <section class="section">
 	<div class="container grid">
 		<article class="alt-color-band flow">
-			<h2>Services Offered at German Magic Farm</h2>
+			<h2>Learn about our services</h2>
 
 			{#each services as { content, title, amount }, index}
 				<div class="service-feature">
@@ -52,7 +52,7 @@
 </section>
 
 <section class="section">
-	<article class="px-20  lessons larger-wrapper fade">
+	<article class="px-20 lessons larger-wrapper fade">
 		<div class="container mx-auto">
 			<h2>Types Of Lessons and Pricing</h2>
 				{#each lessons as { kindOfLesson, firstPrice, firstDescription, secondPrice, secondDescription, thirdPrice, thirdDescription }}
@@ -71,7 +71,7 @@
 	</article>
 </section>
 
-<div class="py-10 center-w-grid"><SmallLogoLayers /></div> 
+<div class="py-20 center-w-grid"><SmallLogoLayers /></div> 
 
 <Seo
 	title="Dressage and jumping Lessons | Training Horseshow Information German Magic
