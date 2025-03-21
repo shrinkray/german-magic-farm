@@ -5,6 +5,15 @@
 	import type { ClinicsData } from '$lib/types/clinics';
 
 	const data = clinicData as ClinicsData;
+
+	// Get the current date
+	const currentDate = new Date();
+
+	// Filter the clinics to get only upcoming events
+	const upcomingClinics = data.clinics.filter(clinic => {
+		const clinicDate = new Date(clinic.date);
+		return clinicDate >= currentDate;
+	});
 </script>
 
 <svelte:head>
@@ -30,13 +39,17 @@
 			German Magic Farm offers an inspiring place to learn, grow, and enjoy the experience of a clinic—taught by the best instructors you will find.
 		</p>
 
-		{#each data.clinics as clinic}
-			<article class="show-card">
-				<h3 class="show-title">{clinic.title}</h3>
-				<p><strong>Date:</strong> {clinic.date}</p>
-				<p>{clinic.description}</p>
-			</article>
-		{/each}
+		{#if upcomingClinics.length > 0}
+			{#each upcomingClinics as clinic}
+				<article class="show-card">
+					<h3 class="show-title">{clinic.title}</h3>
+					<p><strong>Date:</strong> {clinic.date}</p>
+					<p>{clinic.description}</p>
+				</article>
+			{/each}
+		{:else}
+			<p>There are currently no upcoming clinics. Please contact us for information about future events.</p>
+		{/if}
 	</div>
 </section>
 
