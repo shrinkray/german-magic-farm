@@ -82,9 +82,9 @@
 />
 
 <style>
-	.section {
-		padding-block: var(--size-fluid-5);
-	}
 
+p {
+	padding-block: var(--size-fluid-1);
+}
 
 </style>

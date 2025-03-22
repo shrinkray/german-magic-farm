@@ -120,9 +120,11 @@ Farm"
 	.mr-5 {
 		margin-right: 0.5rem;
 	}
-	.service-title {
-		margin-top: 2rem;
+@media (max-width: 770px) {
+	.px-20 {
+		padding-left: 0;
+		padding-right: 0;
 	}
-
+}
 
 </style>
