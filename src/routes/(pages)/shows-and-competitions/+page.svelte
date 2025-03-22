@@ -1,5 +1,4 @@
 <script lang="ts">
-  
   import Hero from '$lib/Hero.svelte';
   import SmallLogoLayers from '$lib/SmallLogoLayers.svelte';
 </script>
@@ -22,22 +21,21 @@
   
   
   <div class="prose max-w-none">
-    <p class="mb-6 text-lg">
-      Welcome to our Shows & Competitions page. Here you'll find information about upcoming events, 
-      competition schedules, and how to participate in our shows.
-    </p>
+    
 
     <section class="mb-8">
-      <h2 class="mb-4 font-semibold">Our Philosophy</h2>
-      <p class="mb-4 text-lg">
-        While winning is always exciting, our main focus is on enjoying the journey with their horse and continuing to improve their skills. We emphasize the horse and rider partnership as a whole.
-      </p>
-      <p class="mb-6 mt-4 text-lg italic"><span class="bold">Our motto:</span> "Smile and Enjoy the Ride!"</p> 
+	<h2 class="section-title">Our Philosophy</h2>
+		<p class="text-lg">
+			While winning is always exciting, our main focus is on enjoying the journey with their horse and continuing to improve their skills. We emphasize the horse and rider partnership as a whole.
+		</p>
+		<p class="py-10 text-lg italic">
+			<span class="bold">Our motto:</span> "Smile and Enjoy the Ride!"
+		</p> 
     </section>
 
     <section class="mb-8 show-feature">
-      <h3 class="mb-4 font-semibold">Training at Shows Includes:</h3>
-      <ul class="pl-6 mb-6 space-y-2 list-disc">
+      <h3 class="">Training at Shows Includes:</h3>
+      <ul class="pl-6 space-y-2 list-disc">
         <li>Warm-up sessions and in-class coaching as needed</li>
         <li>Course walks and test reading assistance</li>
         <li>One-on-one support from a trainer or staff member to address any challenges</li>
@@ -84,5 +82,7 @@
 <style>
 .show-feature h3 {
   margin-top: 2rem;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 1rem;
 }
 </style>

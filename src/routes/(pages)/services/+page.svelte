@@ -29,7 +29,7 @@
 <section class="section">
 	<div class="container grid">
 		<article class="alt-color-band flow">
-			<h2>Learn about our services</h2>
+			<h2 class="section-title">Learn about our services</h2>
 
 			{#each services as { content, title, amount }, index}
 				<div class="service-feature">
