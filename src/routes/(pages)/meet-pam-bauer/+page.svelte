@@ -17,58 +17,32 @@
 <PhotoCluster />
 <section class="section">
 	<div class="container flow">
-		<h1>Meet Pam Bauer</h1>
+		<h1>Meet Pam Bauer – Owner & Head Trainer at German Magic Farm</h1>
 
 		<p>
-			Pam Bauer is the resident trainer & owner here at German Magic Farm. Having ridden for over 31
-			years she brings to her farm the collective experiences from working in various countries like
-			Germany, Austria, Japan and now here in the US.
+			Pam Bauer, owner and resident trainer at German Magic Farm, brings over 32 years of international riding and teaching experience to her training program. Her journey has taken her through Germany, Austria, Japan, and now the United States, where she shares her deep knowledge and passion for horses with riders of all levels.
 		</p>
 
 		<p>
-			Pam began her teaching career in Germany where she taught jumping and dressage to all ages and
-			levels of riders and horses. She earned her training license in Germany and also her judging
-			license up through dressage Level 3 and up through 1.30m for judging jumping.
+			Pam began her teaching career in Germany, where she earned her official training license and judging credentials—up to Level 3 in dressage and 1.30m in jumping. She taught both disciplines to riders and horses of all ages and skill levels, and during her 15 years of teaching there, she earned her Silver Medal and coached the Bavarian Pony Team to multiple national championship victories.
 		</p>
 
 		<p>
-			At home in Germany, Pam earned her Silver Medal; and taught for 15 years. She coached the
-			Bavarian Pony Team to winning their national championships several times.
-		</p>
-
-		<p>Pam trained and taught in Austria for a year after working in Germany.</p>
-
-		<p>
-			Next it was off to Japan for Pam where she showed dressage up through FEI 5th level and rode
-			for the well known Mieko Yagi who represented Japan at the Olympics in dressage.
+			Following her success in Germany, Pam spent a year training and teaching in Austria before heading to Japan. There, she competed in dressage up to the FEI 5th level and rode for Olympic dressage rider Mieko Yagi. She served as Chief Instructor at the prestigious Tokyo Riding Club, where she trained horses and students all the way to Grand Prix level. In addition to her competitive and training work, Pam also volunteered at a hypotherapy facility, offering therapeutic riding support for individuals with disabilities.
 		</p>
 
 		<p>
-			Pam was Chief Instructor for the famous Tokyo Riding Club and trained horses and students up
-			through Grand Prix. Once again in Japan she taught and trained dressage & jumping to various
-			horses and riders. In Japan Pam also volunteered at a hypotherapie facility (similar to USA
-			handicapped riding).
+			Now based in the U.S., Pam runs her own training business, dividing her time between her home base at German Magic Farm, nearby farms, and the many horse shows she attends with her students and training horses.
 		</p>
 
 		<p>
-			In recent years Pam moved to the USA and began her own training business. She spends her time
-			between training at her own German Magic Farm, at various nearby farms, and of course the many
-			different shows she attends with students and training horses.
+			Pam specializes in building strong partnerships between horse and rider. She emphasizes correct and effective body positioning and aids in both dressage and jumping disciplines, helping her students become confident, capable riders.
 		</p>
 
 		<p>
-			Specializing in developing that vital partnership between horse and rider; she helps her
-			students learn the necessary effective body positions for both dressage and jumping
-			disciplines & educating them in giving correct and effective aids.
+			With her diverse international background, years of professional experience, and ability to connect with horses and riders of all types, Pam creates a supportive, relaxed, and fun learning environment for everyone at German Magic Farm.
 		</p>
 
-		<p>
-			Pam's vast array of experience from working for several professionals in addition the
-			knowledge gained from traveling to different countries, gives her the ability to successfully
-			work with all breeds of horses and all types of riders!.
-		</p>
-
-		<p>Pam happily provides a fun, relaxed atmosphere for her students and equine friends!</p>
 		<br />
 	</div>
 	<div class="center-w-grid static-logo"><SmallLogoLayers /></div>
