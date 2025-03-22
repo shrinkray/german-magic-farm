@@ -22,11 +22,13 @@
 				suit your needs!
 			</p>
 
-			<div class="spacer"></div>
+			<div class="space-y-20"></div>
 
 			<a href="./contact" class="button my-20"> Let's get started!</a>
 		</div>
-		<Contact />
+		<div class="contact-col">
+			<Contact />
+		</div>
 	</div>
 </section>
 
@@ -44,8 +46,10 @@
 	.flexible-grid > * {
 		flex: 1;
 	}
-	.spacer {
-		margin-bottom: 3rem;
+	.contact-col {
+		display: flex;
+		flex-direction: column;
+		justify-content: center; /* centers vertically */
 	}
 	.button {
 		border: none;

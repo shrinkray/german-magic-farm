@@ -53,7 +53,7 @@
 			<!-- <textarea name="body" id="" cols="30" rows="10" /> -->
 			{#if $errors.body}<span class="invalid">{$errors.body}</span>{/if}
 
-			<!-- <div><button>Submit</button></div> -->
+			 <div class="space-y-20"></div>
 
 			<div><Button class="secondary bold" size="medium">Submit »</Button></div>
 

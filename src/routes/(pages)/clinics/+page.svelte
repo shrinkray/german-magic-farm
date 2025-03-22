@@ -38,12 +38,13 @@
 	/>
 </div>
 
+<div class="container px-4 py-8">
 <section class="section">
-	<div class="container grid">
-		<h2 class="section-title">What clinics are coming up?</h2>
+	<h2 class="section-title">What clinics are coming up?</h2>
 		<p>
 			German Magic Farm offers an inspiring place to learn, grow, and enjoy the experience of a clinic—taught by the best instructors you will find. If you are interested in our offering a clinic, please <a href="/contact">contact us</a>.
 		</p>
+	<div class="grid">
 
 		{#if upcomingClinics.length > 0}
 			{#each upcomingClinics as clinic}
@@ -54,21 +55,22 @@
 				</article>
 			{/each}
 		{:else}
-			<p class="py-20">We are sorry, there are currently no upcoming clinics. Please contact us for information about future events.</p>
+			<p class="py-20">We are sorry, there are currently no upcoming clinics. Please <a href="/contact">contact us</a> for information about future events.</p>
 		{/if}
 	</div>
 </section>
 
-<section class="section">
+<section class="section past-clinics">
 	<div class="container grid">
 		<h2 class="section-title">Past Clinics</h2>
 		<p>
 			Take a look at the types of clinics we have hosted in the past.
 		</p>
+		<div class="space-y-20"></div>
 
 		{#if pastClinics.length > 0}
 			{#each pastClinics as clinic}
-				<article class="show-card">
+				<article class="show-card past-clinic prose">
 					<h3 class="show-title">{clinic.title}</h3>
 					<p><strong>Date:</strong> {clinic.date}</p>
 					<p>{clinic.description}</p>
@@ -78,8 +80,12 @@
 			<p class="py-20">No past clinics found.</p>
 		{/if}
 	</div>
+	<div class="container">
+		<!-- Check out my list on Chat GPT -->
+	</div>
 </section>
 
+</div>
 <div class="py-10 center-w-grid static-logo"><SmallLogoLayers /></div> 
 
 <Seo
@@ -97,12 +103,6 @@
 		padding: var(--size-fluid-4) 0;
 		background-color: var(--surface-2);
 	}
-	.section-title {
-		font-size: var(--font-size-fluid-3);
-		text-align: center;
-		margin-bottom: var(--size-fluid-4);
-		color: var(--text-1);
-	}
 	.show-card {
 		background: var(--surface-1);
 		border-radius: var(--radius-3);
@@ -112,7 +112,12 @@
 	}
 	.show-title {
 		font-size: var(--font-size-fluid-2);
+		padding-top: 0;
 		color: var(--text-1);
 		margin: 0;
+	}
+	.past-clinics,
+	.past-clinic {
+		background-color: var(--accent-fade);
 	}
 </style>
