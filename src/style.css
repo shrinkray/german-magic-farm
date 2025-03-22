@@ -77,6 +77,12 @@ img {
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Lato-Italic';
+  src: url('/fonts/Lato/Lato-Italic.woff2') format('woff2');
+  font-display: swap;
+}
+
 body {
   margin: 0;
 	font-family: 'Lato', sans-serif;
@@ -88,6 +94,10 @@ body {
 
 .bold {
 	font-family: 'Lato-Bold';
+}
+
+.italic {
+	font-family: 'Lato-Italic';
 }
 
 .serif {
@@ -114,14 +124,19 @@ h1 {
 
 h2 {
   font-size: var(--fs-500);
-  padding-top: 3rem;
-  padding-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
 }
 
 h3 {
   font-size: var(--fs-400);
   padding-top: 1.5rem;
   padding-bottom: 1rem;
+}
+
+.section-title {
+	font-size: var(--font-size-fluid-3);
+	color: var(--text-1);
 }
 
 .service-feature {
@@ -144,7 +159,9 @@ h3 {
   justify-content: center;
 }
 
-
+.space-y-20 {
+	margin-bottom: 3rem;
+}
 /* all items but fist one 
 .flow>*+* {
   margin: 1em;
