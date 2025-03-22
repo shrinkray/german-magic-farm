@@ -1,6 +1,6 @@
 <script>
 	export let width = '100';
-	export let height = 'auto';
+	export let height = '170.66';
 </script>
 
 <svg
