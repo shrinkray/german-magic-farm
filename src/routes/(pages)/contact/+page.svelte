@@ -66,8 +66,8 @@
 
 <section class="section">
 	<div class="larger-wrapper contact-map">
-		<div><Contact /></div>
-		<div class="map">
+		<div class="contact-info col"><Contact /></div>
+		<div class="map col">
 			<iframe
 			title="Map showing location of German Magic Farm in Dundee, Michigan"
 			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1027.3392084379652!2d-83.63739278065546!3d41.96147313325206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883c9dcaecb22297%3A0x9a8a3080e9bc5486!2sGerman%20Magic%20Farm!5e0!3m2!1sen!2sus!4v1742695523556!5m2!1sen!2sus"
@@ -103,14 +103,21 @@
 		flex-wrap: wrap;
 		gap: 1.5em;
 		padding-block: var(--size-7);
+		background-color: var(--accent-fade);
+		margin-bottom: 2rem;
+		border-radius: 1rem;
 	}
 
-	.contact-map {
-		flex: 1;
+	.contact-info {
+		padding-left: 2.5rem;
 	}
 
 	.map {
 		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: 1px solid var(--interactive-color);
 
 		@media (width > 965px) {
 			width: 65%;

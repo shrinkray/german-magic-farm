@@ -32,7 +32,7 @@
   --accent-fade: rgb(255 206 0 / 7%);
   --primary-color: #d10000;
   --input-color: #FECF0A;
-  --bg-color: #1c1917;
+  --bg-color:rgb(43, 38, 35);
   --logo-color:rgb(246, 240, 229);
   --color:rgb(251, 233, 198);
   --heading-color: #f0e5d1;
@@ -118,12 +118,11 @@ h3 {
 
 h1 {
   font-size: var(--fs-600);
-  padding-top: 3rem;
   padding-bottom: 1rem;
 }
 
 h2 {
-  font-size: var(--fs-500);
+  font-size: 2.5rem !important;
   padding-top: 1rem;
   padding-bottom: 0.5rem;
 }
@@ -166,16 +165,6 @@ h3 {
 .space-y-20 {
 	margin-bottom: 3rem;
 }
-/* all items but fist one 
-.flow>*+* {
-  margin: 1em;
-}
-*/
-
-/* same as above
-.flow > :where(:not(:first-child)) {
-
-} */
 
 .flow-bottom>* {
   margin-bottom: .5em;
@@ -214,6 +203,19 @@ textarea {
   background-color: transparent;
 }
 
+.rounded {
+	border-radius: 1rem;
+}
+
+	.inset {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+
+		.italics {
+		font-style: italic;
+		font-size: var(--fs-300);
+	}
 
 .fade {
   background-color: var(--accent-fade);
@@ -221,6 +223,10 @@ textarea {
 
 .square {
   aspect-ratio: var(--ratio-square);
+}
+
+.pb-8 {
+	padding-bottom: 2rem;
 }
 
 .mx-auto {

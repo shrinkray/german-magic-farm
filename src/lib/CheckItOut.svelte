@@ -35,5 +35,6 @@
 		opacity: 0.75;
 		border: 2px solid var(--primary-color);
 		border-radius: 6px;
+		margin-bottom: 1rem;
 	}
 </style>

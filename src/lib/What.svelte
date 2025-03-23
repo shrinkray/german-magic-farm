@@ -38,6 +38,17 @@
 		display: flex;
 		gap: 1.5rem;
 		margin-bottom: 4rem;
+
+		@media (width < 660px) {
+			flex-wrap: wrap;
+		}
+	}
+
+	.col {
+		@media (width < 660px) {
+			padding-top: 2rem;	
+			padding-bottom: 2rem;
+		}
 	}
 
 	.intro {

@@ -23,7 +23,7 @@
   <div class="prose max-w-none">
     
 
-    <section class="mb-8">
+    <section class="">
 	<h2 class="section-title">Our Philosophy</h2>
 		<p class="text-lg">
 			While winning is always exciting, our main focus is on enjoying the journey with their horse and continuing to improve their skills. We emphasize the horse and rider partnership as a whole.
@@ -33,8 +33,8 @@
 		</p> 
     </section>
 
-    <section class="mb-8 show-feature">
-      <h3 class="">Training at Shows Includes:</h3>
+    <section class="show-feature pb-8">
+      <h3 class="inset">Training at Shows Includes:</h3>
       <ul class="pl-6 space-y-2 list-disc">
         <li>Warm-up sessions and in-class coaching as needed</li>
         <li>Course walks and test reading assistance</li>
@@ -43,9 +43,9 @@
       </ul>
     </section>
 
-    <section class="mb-8 show-feature">
-      <h3 class="mb-4 font-semibold">Training at Show Pricing:</h3>
-      <ul class="pl-6 mb-6 space-y-2 list-disc">
+    <section class="show-feature fade rounded pb-8">
+      <h3 class="inset">Training at Show Pricing:</h3>
+      <ul class="pl-6 space-y-2 list-disc">
         <li>$100 per day – for up to 2 horses</li>
         <li>$75 per day – for up to 4 horses</li>
         <li>$60 per day – for 5 or more horses</li>
@@ -53,25 +53,25 @@
       </ul>
     </section>
 
-    <section class="mb-8 show-feature">
-      <h3 class="mb-4 font-semibold ">Hauling Services</h3>
-      <p class="mb-4">
+    <section class="show-feature pb-8">
+      <h3 class="inset">Hauling Services</h3>
+      <p class="inset">
         Trailering to shows is available for all training horses, whether they are owned by German Magic Farm or by students.
       </p>
-      <ul class="pl-6 space-y-2 list-disc">
+      <ul class="space-y-2 list-disc pl-6">
         <li>Minimum hook fee: $75 per trip to the venue (can be split if multiple horses share a trailer)</li>
         <li>Mileage fee: $3+ per mile (dependent on current fuel prices)</li>
       </ul>
     </section>
 
-    <section class="mb-8 show-feature">
-      <h3 class="mb-4 font-semibold">Upcoming Events</h3>
-      <p>Check back soon for our upcoming show and competition schedule.</p>
+    <section class="show-feature fade rounded pb-8">
+      <h3 class="inset">Upcoming Events</h3>
+      <p class="inset">Check back soon for our upcoming show and competition schedule.</p>
     </section>
 
-    <section class="mb-8 show-feature">
-      <h3 class="mb-4 font-semibold">How to Participate</h3>
-      <p>Details about participation requirements and registration will be available soon.</p>
+    <section class="show-feature pb-8">
+      <h3 class="inset">How to Participate</h3>
+      <p class="inset">Details about participation requirements and registration will be available soon.</p>
     </section>
   </div>
 

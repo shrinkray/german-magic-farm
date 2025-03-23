@@ -60,7 +60,7 @@
 	</div>
 </section>
 
-<section class="section past-clinics">
+<section class="section past-clinics rounded">
 	<div class="container grid">
 		<h2 class="section-title">Past Clinics</h2>
 		<p>
