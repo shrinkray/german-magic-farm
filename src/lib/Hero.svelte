@@ -52,7 +52,6 @@
 		background-position: center top;
 		background-repeat: no-repeat;
 		background-size: var(--bg-size);
-		margin-block: var(--margin-block);
 		position: relative;
 		isolation: isolate;
 	}

@@ -35,9 +35,7 @@
 		border-radius: 6px;
 	}
 		.hero {
-		
 		color: white;
-		margin-block: var(--margin-block);
 		position: relative;
 		isolation: isolate;
 	}

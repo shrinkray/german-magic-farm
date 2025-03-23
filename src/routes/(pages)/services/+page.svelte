@@ -87,10 +87,6 @@ Farm"
 		font-size: var(--fs-300);
 	}
 
-	.section {
-		padding-block: var(--size-fluid-1);
-	}
-
 	article.alt-color-band > div:nth-child(odd) {
 		background-color: var(--accent-fade);
 	}

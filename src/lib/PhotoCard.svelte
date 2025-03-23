@@ -38,10 +38,6 @@
 </section>
 
 <style>
-	.section {
-		padding-block: var(--size-fluid-5);
-	}
-
 	.flow-bottom > * {
 		/* margin-bottom: 2em; */
 		margin-block: 2rem;

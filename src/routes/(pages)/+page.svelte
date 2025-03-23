@@ -47,11 +47,6 @@
 />
 
 <style>
-
-	.section {
-		padding-block: var(--size-fluid-5);
-	}
-
 	.lg-home-image {
 		display: flex;
 

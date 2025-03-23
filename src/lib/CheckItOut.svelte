@@ -9,7 +9,6 @@
 
 <style>
 	.section {
-		padding-block: var(--size-fluid-5);
 		background: url('/pam-gallop-hill-cp.webp') no-repeat left top;
 		background-color: var(--accent-fade);
 		background-size: contain;

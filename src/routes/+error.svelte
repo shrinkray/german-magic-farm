@@ -17,10 +17,6 @@
 />
 
 <style>
-	.section {
-		padding-block: var(--size-fluid-5);
-	}
-
 	.hero {
 		margin: 0;
 	}
