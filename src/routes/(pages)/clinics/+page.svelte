@@ -55,7 +55,7 @@
 				</article>
 			{/each}
 		{:else}
-			<p class="py-20">We are sorry, there are currently no upcoming clinics. Please <a href="/contact">contact us</a> for information about future events.</p>
+			<p class="py-20">We are sorry, there are currently no clinics to show. Please let us know what types of training you need.</p>
 		{/if}
 	</div>
 </section>
