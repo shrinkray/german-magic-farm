@@ -34,7 +34,7 @@
 			{#each services as { content, title, amount }, index}
 				<div class="service-feature">
 					<h3>{title}</h3>
-					<span class="bold price-offset" aria-label="Cost of service">{amount}</span>
+					<span class="bold inset" aria-label="Cost of service">{amount}</span>
 					<p class="service-description" aria-label="Description of service">{content}</p>
 				</div>
 			{/each}
@@ -52,7 +52,7 @@
 </section>
 
 <section class="section">
-	<article class="px-20 lessons larger-wrapper fade">
+	<article class="px-20 lessons larger-wrapper fade rounded">
 		<div class="container mx-auto">
 			<h2>Types Of Lessons and Pricing</h2>
 				{#each lessons as { kindOfLesson, firstPrice, firstDescription, secondPrice, secondDescription, thirdPrice, thirdDescription }}
@@ -61,7 +61,7 @@
 					<div class="">
 						<p class=""><span class="bold mr-5">{firstPrice}</span> {firstDescription}</p>
 						<p class=""><span class="bold mr-5">{secondPrice}</span> {secondDescription}</p>
-						{#if showThird}
+						{#if thirdPrice && thirdDescription}
 							<p class="symbol"><span class="bold mr-5">{thirdPrice}</span> {thirdDescription}</p>
 						{/if}
 					</div>
@@ -82,17 +82,13 @@ Farm"
 />
 
 <style>
-	.italics {
-		font-style: italic;
-		font-size: var(--fs-300);
-	}
-
 	article.alt-color-band > div:nth-child(odd) {
 		background-color: var(--accent-fade);
 	}
 	.flexible-grid {
 		display: flex;
 		gap: 1.5em;
+		margin-bottom: 1rem;
 		@media (max-width: 600px) {
 			flex-wrap: wrap;
 		}
@@ -101,6 +97,14 @@ Farm"
 	h3 {
 		border-bottom: 1px solid #ddd;
 		min-width: 12rem;
+		padding-left: 1rem;
+		padding-top: 0;
+
+		@media (width < 660px) {
+			padding-left: 0;
+			width: 100%;
+			margin-top: 1rem;
+		}
 	}
 
 	.lessons {
@@ -112,7 +116,15 @@ Farm"
 	}
 	.service-description {
 		margin-top: 0.5rem;
+		padding-left: 1rem;
+		padding-right: 1rem;
 	}
+	.service-feature {
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+		border-radius: 1rem;
+	}
+
 	.mr-5 {
 		margin-right: 0.5rem;
 	}
