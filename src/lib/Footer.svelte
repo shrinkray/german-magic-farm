@@ -3,9 +3,9 @@
 </script>
 
 <footer class="wave">
-	<div class="container serif">Copyright © German Magic Farm {year}</div>
+	<div class="container serif">© {year} German Magic Farm</div>
 	<div class="container created-by">
-		Site created by Shrinkray Interactive. If you are interested in a site redesign, by a developer who cares, give us a shout! <span
+		Site created by Shrinkray Interactive. If you need help with your website, or are interested in something truly amazing by a developer who cares, give us a shout! <span
 			><a href="mailto:help@gregmiller.io" class="bold">Reach out today!</a></span
 		>
 	</div>
