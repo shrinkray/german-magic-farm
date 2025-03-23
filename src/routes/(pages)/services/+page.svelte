@@ -1,4 +1,4 @@
-<script land="ts">
+<script lang="ts">
 	import Seo from '$lib/Seo.svelte';
 	import Contact from '$lib/Contact.svelte';
 	import services from '$lib/data/services.json';
@@ -6,6 +6,24 @@
 	import lessons from '$lib/data/lessons.json';
 	import SmallLogo from '$lib/SmallLogo.svelte';
 	import SmallLogoLayers from '$lib/SmallLogoLayers.svelte';
+	import { marked } from 'marked';
+
+	marked.use({
+		gfm: true,
+		breaks: true,
+		renderer: {
+			strong(token) {
+				const text = token?.text || token?.raw || '';
+				return text ? `<span class="bold">${text}</span>` : '';
+			},
+			heading(token) {
+				const text = token?.text || token?.raw || '';
+				const level = token.depth;
+				// Use the heading level as is - #### will render as h4
+				return text ? `<h${level}>${text}</h${level}>` : '';
+			}
+		}
+	});
 
 	let showThird = true;
 </script>
@@ -35,7 +53,9 @@
 				<div class="service-feature">
 					<h3>{title}</h3>
 					<span class="bold inset" aria-label="Cost of service">{amount}</span>
-					<p class="service-description" aria-label="Description of service">{content}</p>
+					<div class="service-description" aria-label="Description of service">
+						{@html marked(content)}
+					</div>
 				</div>
 			{/each}
 		</article>
@@ -94,8 +114,6 @@ Farm"
 		}
 	}
 
-
-
 	h3 {
 		border-bottom: 1px solid #ddd;
 		min-width: 12rem;
@@ -135,5 +153,4 @@ Farm"
 		padding-right: 0;
 	}
 }
-
 </style>
