@@ -94,6 +94,8 @@ Farm"
 		}
 	}
 
+
+
 	h3 {
 		border-bottom: 1px solid #ddd;
 		min-width: 12rem;
@@ -101,7 +103,6 @@ Farm"
 		padding-top: 0;
 
 		@media (width < 660px) {
-			padding-left: 0;
 			width: 100%;
 			margin-top: 1rem;
 		}
