@@ -4,7 +4,7 @@
 
 <section class="fade | section">
 	<div class="larger-wrapper flexible-grid">
-		<div class="what">
+		<div class="intro col">
 			<h1>Willkommen!</h1>
 
 			<p>
@@ -26,30 +26,28 @@
 
 			<a href="./contact" class="button my-20"> Let's get started!</a>
 		</div>
-		<div class="contact-col">
+		<div class="contact col">
 			<Contact />
 		</div>
 	</div>
 </section>
 
 <style>
-	.section {
-		padding-block: var(--size-fluid-5);
-	}
 
 	.flexible-grid {
 		display: flex;
-		flex-wrap: wrap;
 		gap: 1.5rem;
+		margin-bottom: 4rem;
 	}
 
-	.flexible-grid > * {
-		flex: 1;
-	}
-	.contact-col {
+	.intro {
+		flex-grow: 1;
+	}	
+	.contact {
 		display: flex;
 		flex-direction: column;
 		justify-content: center; /* centers vertically */
+		flex-shrink: 1;
 	}
 	.button {
 		border: none;
