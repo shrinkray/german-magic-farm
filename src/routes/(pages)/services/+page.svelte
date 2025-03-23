@@ -14,7 +14,7 @@
 		renderer: {
 			strong(token) {
 				const text = token?.text || token?.raw || '';
-				return text ? `<span class="bold">${text}</span>` : '';
+				return text ? `<span class="bold line-height-3">${text}</span>` : '';
 			},
 			heading(token) {
 				const text = token?.text || token?.raw || '';
@@ -144,13 +144,19 @@ Farm"
 		border-radius: 1rem;
 	}
 
+	blockquote {
+		margin-left: 1.5rem;
+		padding-left: 1rem;
+		border-left: 3px solid var(--accent-color);
+	}
+
 	.mr-5 {
 		margin-right: 0.5rem;
 	}
-@media (max-width: 770px) {
-	.px-20 {
-		padding-left: 0;
-		padding-right: 0;
+	@media (max-width: 770px) {
+		.px-20 {
+			padding-left: 0;
+			padding-right: 0;
+		}
 	}
-}
 </style>

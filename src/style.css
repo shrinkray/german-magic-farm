@@ -133,6 +133,23 @@ h3 {
   padding-bottom: 1rem;
 }
 
+h4 {
+	font-weight: bold;
+	font-size: 1.4rem !important;
+}
+
+blockquote p {
+	margin-left: 1.2rem;
+}
+
+blockquote p span {
+	margin-top: .5rem;
+}
+
+.line-height-3 {
+	line-height: 3;
+}
+
 .section {
 	padding-block: var(--size-fluid-2);
 }
@@ -232,6 +249,10 @@ textarea {
 .mx-auto {
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.mt-10 {
+	padding-top: 1rem;
 }
 
 .py-10 {
