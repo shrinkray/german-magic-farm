@@ -138,6 +138,11 @@ h4 {
 	font-size: 1.4rem !important;
 }
 
+blockquote {
+	
+	border-left: 3px solid var(--accent-color);
+}
+
 blockquote p {
 	margin-left: 1.2rem;
 }

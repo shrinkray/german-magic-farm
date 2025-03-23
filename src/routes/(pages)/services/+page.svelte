@@ -63,11 +63,13 @@
 </section>
 <section class="section">
 	<div class="container italics">
-		<h4>** Note About Late Fees</h4>
-		<p>
-			Late Fees: a $50 late fee will be charged 10 days after payment is late, and every additional
-			10 days thereafter.
-		</p>
+		<blockquote>
+			<h4>** Note About Late Fees</h4>
+			<p>
+				Late Fees: a $50 late fee will be charged 10 days after payment is late, and every additional
+				10 days thereafter.
+			</p>
+		</blockquote>
 	</div>
 </section>
 
@@ -130,6 +132,8 @@ Farm"
 		padding-block: var(--size-7);
 	}
 
+	
+
 	.bold {
 		font-weight: bold;
 	}
@@ -143,13 +147,6 @@ Farm"
 		margin-bottom: 1rem;
 		border-radius: 1rem;
 	}
-
-	blockquote {
-		margin-left: 1.5rem;
-		padding-left: 1rem;
-		border-left: 3px solid var(--accent-color);
-	}
-
 	.mr-5 {
 		margin-right: 0.5rem;
 	}
@@ -157,6 +154,9 @@ Farm"
 		.px-20 {
 			padding-left: 0;
 			padding-right: 0;
+		}
+		.lessons h3 {
+			padding-left: 0;
 		}
 	}
 </style>
