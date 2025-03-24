@@ -17,6 +17,9 @@
 <section class="py-30 container">
 	<div class="section">
 		<h1>Questions?</h1>
+		<p>
+			Please fill out the form below to contact us. We will get back to you as soon as possible.
+		</p>
 		<form class="form" method="POST">
 			<label for="name">Name</label>
 			<input
