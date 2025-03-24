@@ -3,7 +3,7 @@
 	export let tagline = '';
 </script>
 
-<div class="hero-container">
+<div class="hero-container bottom-rounded">
 	<div class="hero">
 		<div class="value-prop">
 			<h1 class="highlighted-text-shadow">{herotitle}</h1>

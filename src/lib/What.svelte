@@ -2,7 +2,7 @@
 	import Contact from '$lib/Contact.svelte';
 </script>
 
-<section class="fade | section">
+<section class="fade | section rounded">
 	<div class="larger-wrapper flexible-grid">
 		<div class="intro col">
 			<h1>Willkommen!</h1>
