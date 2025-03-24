@@ -21,6 +21,7 @@
 	.check-it-out {
 		display: grid;
 		place-items: center;
+		padding: 2rem;
 	}
 
 	.center-box {
