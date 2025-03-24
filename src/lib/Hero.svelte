@@ -43,7 +43,7 @@
 	}
 
 	.hero-container {
-		max-height: 500px;
+		max-height: 470px;
 		overflow: hidden;
 		margin-bottom: 2rem;
 	}
