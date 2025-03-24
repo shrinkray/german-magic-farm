@@ -12,7 +12,7 @@
 	aria-labelledby="svgTitle svgDesc"
 >
 	<title id="svgTitle">German Magic Farm logo</title>
-  	<desc id="svgDesc">Offering equine care and riding skills</desc>
+	<desc id="svgDesc">Offering equine care and riding skills</desc>
 	<path
 		id="horse"
 		class="basefill"

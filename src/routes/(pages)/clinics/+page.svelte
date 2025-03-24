@@ -11,12 +11,12 @@
 	const currentDate = new Date();
 
 	// Filter the clinics to get upcoming and past events
-	const upcomingClinics = data.clinics.filter(clinic => {
+	const upcomingClinics = data.clinics.filter((clinic) => {
 		const clinicDate = new Date(clinic.date);
 		return clinicDate >= currentDate;
 	});
 
-	const pastClinics = data.clinics.filter(clinic => {
+	const pastClinics = data.clinics.filter((clinic) => {
 		const clinicDate = new Date(clinic.date);
 		return clinicDate < currentDate;
 	});
@@ -39,54 +39,55 @@
 </div>
 
 <div class="container px-4 py-8">
-<section class="section">
-	<h2 class="section-title">What clinics are coming up?</h2>
-		<p>
-			German Magic Farm offers an inspiring place to learn, grow, and enjoy the experience of a clinic—taught by the best instructors you will find. If you are interested in our offering a clinic, please <a href="/contact">contact us</a>.
+	<section class="section">
+		<h2 class="section-title">What clinics are coming up?</h2>
+		<p class="pull-quote">
+			German Magic Farm offers an inspiring place to learn, grow, and enjoy the experience of a
+			clinic—taught by the best instructors you will find. If you are interested in our offering a
+			clinic, please <a href="/contact">contact us</a>.
 		</p>
-	<div class="grid">
+		<div class="grid">
+			{#if upcomingClinics.length > 0}
+				{#each upcomingClinics as clinic}
+					<article class="show-card">
+						<h3 class="show-title">{clinic.title}</h3>
+						<p><strong>Date:</strong> {clinic.date}</p>
+						<p>{clinic.description}</p>
+					</article>
+				{/each}
+			{:else}
+				<p class="py-20">
+					We are sorry, there are currently no clinics to show. Please let us know what types of
+					training you need.
+				</p>
+			{/if}
+		</div>
+	</section>
 
-		{#if upcomingClinics.length > 0}
-			{#each upcomingClinics as clinic}
-				<article class="show-card">
-					<h3 class="show-title">{clinic.title}</h3>
-					<p><strong>Date:</strong> {clinic.date}</p>
-					<p>{clinic.description}</p>
-				</article>
-			{/each}
-		{:else}
-			<p class="py-20">We are sorry, there are currently no upcoming clinics. Please <a href="/contact">contact us</a> for information about future events.</p>
-		{/if}
-	</div>
-</section>
+	<section class="section past-clinics rounded">
+		<div class="container grid">
+			<h2 class="section-title">Past Clinics</h2>
+			<p>Take a look at the types of clinics we have hosted in the past.</p>
+			<div class="space-y-20"></div>
 
-<section class="section past-clinics rounded">
-	<div class="container grid">
-		<h2 class="section-title">Past Clinics</h2>
-		<p>
-			Take a look at the types of clinics we have hosted in the past.
-		</p>
-		<div class="space-y-20"></div>
-
-		{#if pastClinics.length > 0}
-			{#each pastClinics as clinic}
-				<article class="show-card past-clinic prose">
-					<h3 class="show-title">{clinic.title}</h3>
-					<p><strong>Date:</strong> {clinic.date}</p>
-					<p>{clinic.description}</p>
-				</article>
-			{/each}
-		{:else}
-			<p class="py-20">No past clinics found.</p>
-		{/if}
-	</div>
-	<div class="container">
-		<!-- Check out my list on Chat GPT -->
-	</div>
-</section>
-
+			{#if pastClinics.length > 0}
+				{#each pastClinics as clinic}
+					<article class="show-card past-clinic prose">
+						<h3 class="show-title">{clinic.title}</h3>
+						<p><strong>Date:</strong> {clinic.date}</p>
+						<p>{clinic.description}</p>
+					</article>
+				{/each}
+			{:else}
+				<p class="py-20">No past clinics found.</p>
+			{/if}
+		</div>
+		<div class="container">
+			<!-- Check out my list on Chat GPT -->
+		</div>
+	</section>
 </div>
-<div class="py-10 center-w-grid static-logo"><SmallLogoLayers /></div> 
+<div class="center-w-grid static-logo py-10"><SmallLogoLayers /></div>
 
 <Seo
 	title={data.seo.title}

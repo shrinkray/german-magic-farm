@@ -14,8 +14,8 @@
 
 <!-- <SuperDebug data={$form} /> -->
 
-<section class="section">
-	<div class="container">
+<section class="py-30 container">
+	<div class="section">
 		<h1>Questions?</h1>
 		<form class="form" method="POST">
 			<label for="name">Name</label>
@@ -53,7 +53,7 @@
 			<!-- <textarea name="body" id="" cols="30" rows="10" /> -->
 			{#if $errors.body}<span class="invalid">{$errors.body}</span>{/if}
 
-			 <div class="space-y-20"></div>
+			<div class="space-y-20"></div>
 
 			<div><Button class="secondary bold" size="medium">Submit »</Button></div>
 
@@ -69,14 +69,15 @@
 		<div class="contact-info col"><Contact /></div>
 		<div class="map col">
 			<iframe
-			title="Map showing location of German Magic Farm in Dundee, Michigan"
-			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1027.3392084379652!2d-83.63739278065546!3d41.96147313325206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883c9dcaecb22297%3A0x9a8a3080e9bc5486!2sGerman%20Magic%20Farm!5e0!3m2!1sen!2sus!4v1742695523556!5m2!1sen!2sus"
-			width="100%"
-			height="350"
-			style="border:0;"
-			allowfullscreen
-			loading="lazy"
-			referrerpolicy="no-referrer-when-downgrade" />
+				title="Map showing location of German Magic Farm in Dundee, Michigan"
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1027.3392084379652!2d-83.63739278065546!3d41.96147313325206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883c9dcaecb22297%3A0x9a8a3080e9bc5486!2sGerman%20Magic%20Farm!5e0!3m2!1sen!2sus!4v1742695523556!5m2!1sen!2sus"
+				width="100%"
+				height="350"
+				style="border:0;"
+				allowfullscreen
+				loading="lazy"
+				referrerpolicy="no-referrer-when-downgrade"
+			/>
 		</div>
 	</div>
 </section>
@@ -89,7 +90,6 @@
 />
 
 <style>
-
 	form {
 		padding-block: var(--size-7);
 	}
@@ -111,13 +111,17 @@
 	.contact-info {
 		padding-left: 2.5rem;
 	}
+	@media (width < 965px) {
+		.contact-info {
+			width: 100%;
+		}
+	}
 
 	.map {
 		width: 100%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		border: 1px solid var(--interactive-color);
 
 		@media (width > 965px) {
 			width: 65%;

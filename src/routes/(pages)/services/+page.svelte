@@ -1,4 +1,4 @@
-<script land="ts">
+<script lang="ts">
 	import Seo from '$lib/Seo.svelte';
 	import Contact from '$lib/Contact.svelte';
 	import services from '$lib/data/services.json';
@@ -6,6 +6,24 @@
 	import lessons from '$lib/data/lessons.json';
 	import SmallLogo from '$lib/SmallLogo.svelte';
 	import SmallLogoLayers from '$lib/SmallLogoLayers.svelte';
+	import { marked } from 'marked';
+
+	marked.use({
+		gfm: true,
+		breaks: true,
+		renderer: {
+			strong(token) {
+				const text = token?.text || token?.raw || '';
+				return text ? `<span class="bold line-height-3">${text}</span>` : '';
+			},
+			heading(token) {
+				const text = token?.text || token?.raw || '';
+				const level = token.depth;
+				// Use the heading level as is - #### will render as h4
+				return text ? `<h${level}>${text}</h${level}>` : '';
+			}
+		}
+	});
 
 	let showThird = true;
 </script>
@@ -35,28 +53,32 @@
 				<div class="service-feature">
 					<h3>{title}</h3>
 					<span class="bold inset" aria-label="Cost of service">{amount}</span>
-					<p class="service-description" aria-label="Description of service">{content}</p>
+					<div class="service-description" aria-label="Description of service">
+						{@html marked(content)}
+					</div>
 				</div>
 			{/each}
 		</article>
 	</div>
 </section>
 <section class="section">
-	<div class="container italics">
-		<h4>** Note About Late Fees</h4>
-		<p>
-			Late Fees: a $50 late fee will be charged 10 days after payment is late, and every additional
-			10 days thereafter.
-		</p>
+	<div class="italics container">
+		<blockquote>
+			<h4>** Note About Late Fees</h4>
+			<p>
+				Late Fees: a $50 late fee will be charged 10 days after payment is late, and every
+				additional 10 days thereafter.
+			</p>
+		</blockquote>
 	</div>
 </section>
 
 <section class="section">
-	<article class="px-20 lessons larger-wrapper fade rounded">
+	<article class="lessons larger-wrapper fade rounded px-20">
 		<div class="container mx-auto">
 			<h2>Types Of Lessons and Pricing</h2>
-				{#each lessons as { kindOfLesson, firstPrice, firstDescription, secondPrice, secondDescription, thirdPrice, thirdDescription }}
-					<div class="flexible-grid">
+			{#each lessons as { kindOfLesson, firstPrice, firstDescription, secondPrice, secondDescription, thirdPrice, thirdDescription }}
+				<div class="flexible-grid">
 					<h3>{kindOfLesson}</h3>
 					<div class="">
 						<p class=""><span class="bold mr-5">{firstPrice}</span> {firstDescription}</p>
@@ -71,7 +93,7 @@
 	</article>
 </section>
 
-<div class="py-20 center-w-grid static-logo"><SmallLogoLayers /></div> 
+<div class="center-w-grid static-logo py-20"><SmallLogoLayers /></div>
 
 <Seo
 	title="Dressage and jumping Lessons | Training Horseshow Information German Magic
@@ -101,7 +123,6 @@ Farm"
 		padding-top: 0;
 
 		@media (width < 660px) {
-			padding-left: 0;
 			width: 100%;
 			margin-top: 1rem;
 		}
@@ -124,15 +145,16 @@ Farm"
 		margin-bottom: 1rem;
 		border-radius: 1rem;
 	}
-
 	.mr-5 {
 		margin-right: 0.5rem;
 	}
-@media (max-width: 770px) {
-	.px-20 {
-		padding-left: 0;
-		padding-right: 0;
+	@media (max-width: 770px) {
+		.px-20 {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		.lessons h3 {
+			padding-left: 0;
+		}
 	}
-}
-
 </style>

@@ -21,6 +21,7 @@
 		"eslint-plugin-svelte": "2.35.1",
 		"prettier": "3.2.5",
 		"prettier-plugin-svelte": "3.2.1",
+		"prettier-plugin-tailwindcss": "^0.6.11",
 		"svelte": "4.0.5",
 		"svelte-check": "3.6.7",
 		"sveltekit-superforms": "1.13.2",
@@ -32,6 +33,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"marked": "^15.0.7",
 		"nodemailer": "6.9.12",
 		"svelte-hamburgers": "4.2.0"
 	}
