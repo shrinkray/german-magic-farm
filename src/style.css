@@ -12,7 +12,8 @@
 	--footer-color: #343a40;
 	--header-color: rgb(51 22 0 / 6%);
 	--visited-link-color:rgb(225, 146, 0);
-	
+	--link-color: #d10000;
+
 	--brown-10: #4d3928;
 	
 	--ff-base: '';
@@ -42,6 +43,7 @@
 	--footer-color: rgb(94 84 74 / 30%);
 	--visited-link-color:rgb(255, 157, 91);
 	--interactive-color: #fecf0a;
+	--link-color: white;
 }
 
 *,
@@ -254,6 +256,16 @@ textarea {
 	border-radius: 1rem;
 }
 
+.top-rounded {
+	border-top-left-radius: 1rem;
+	border-top-right-radius: 1rem; 
+}
+
+.bottom-rounded {
+	border-bottom-left-radius: 1rem;
+	border-bottom-right-radius: 1rem;
+}
+
 .inset {
 	padding-left: 1rem;
 	padding-right: 1rem;
@@ -288,7 +300,7 @@ a {
 	text-decoration: none;
 	font-weight: 700;
 	font-family: 'Lato-Bold';
-	color: var(--primary-color);
+	color: var(--link-color);
 }
 a:hover {
 	text-decoration: underline;
