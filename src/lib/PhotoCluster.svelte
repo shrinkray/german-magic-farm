@@ -34,7 +34,7 @@
 		object-position: center;
 		border-radius: 6px;
 	}
-		.hero {
+	.hero {
 		color: white;
 		position: relative;
 		isolation: isolate;

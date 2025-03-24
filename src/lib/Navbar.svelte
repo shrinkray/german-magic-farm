@@ -84,13 +84,13 @@
 <div class="bg-color" data-theme={currentTheme}>
 	<header class="header-wrap">
 		<div class="flex">
-			<a class="flex logo" href="/">
+			<a class="logo flex" href="/">
 				<SmallLogoLayers />
 				<span class="serif site-title">German Magic Farm</span>
 			</a>
 
 			<!-- begin dark light toggle code -->
-			<div class="relative move-moon">
+			<div class="move-moon relative">
 				{#if currentTheme == 'light'}
 					<a class="moon" href={'#'} on:click={() => setTheme('dark')}>
 						<Moon />
@@ -106,7 +106,7 @@
 			{#if open}
 				<div class="relative">
 					<nav class="color-border" bind:this={nav}>
-						<ul class="text-left flow-bottom">
+						<ul class="flow-bottom text-left">
 							{#each navs as { title, href }}
 								<li>
 									<a
@@ -164,7 +164,7 @@
 		font-weight: 700;
 	}
 
-	[data-theme="dark"] a.logo {
+	[data-theme='dark'] a.logo {
 		color: var(--heading-color);
 	}
 

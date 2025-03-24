@@ -12,7 +12,8 @@
 			</p>
 		</div>
 	</div>
-</div>	
+</div>
+
 <style>
 	:root {
 		--bg-image: url('./german-magic-bg.webp');
@@ -25,7 +26,8 @@
 	@layer demo {
 		.highlighted-text-shadow {
 			text-shadow:
-      /* regular text-shadow */ 0 0.15ch 15px var(--shadow),
+      /* regular text-shadow */
+				0 0.15ch 15px var(--shadow),
 				/* text-shadow highlight */ 0 -2px 0 var(--highlight);
 		}
 	}

@@ -8,15 +8,21 @@
 			<h1>Willkommen!</h1>
 
 			<p>
-				German Magic Farm is a private training and lesson facility located in historic, Dundee
-				Michigan. Our tranquil farm offers a huge outdoor arena, grass pastures, and access to trail
-				riding. Resident trainer and owner; Pamela Bauer, is a German native who has traveled the
-				world teaching and training dressage and jumping to horses and riders. From beginner to
-				Grand Prix; German Magic Farm is happy to provide riders of all ages a relaxed fun
-				atmosphere for perfecting riding skills; or for training your next equine star!
+				<span class="pull-quote"
+					>German Magic Farm is a private training and lesson facility located in historic, Dundee
+					Michigan. Our tranquil farm offers a huge outdoor arena, grass pastures, and access to
+					trail riding.</span
+				>
 			</p>
 
-			<p>
+			<p class="grande">
+				Resident trainer and owner; Pamela Bauer, is a German native who has traveled the world
+				teaching and training dressage and jumping to horses and riders. From beginner to Grand
+				Prix; German Magic Farm is happy to provide riders of all ages a relaxed fun atmosphere for
+				perfecting riding skills; or for training your next equine star!
+			</p>
+
+			<p class="grande">
 				Whether it's lessons in dressage, hunters, jumpers; or even a program suited to eventing
 				horses, German Magic Farm can provide the perfect mixture of German and American training to
 				suit your needs!
@@ -33,7 +39,6 @@
 </section>
 
 <style>
-
 	.flexible-grid {
 		display: flex;
 		gap: 1.5rem;
@@ -46,14 +51,14 @@
 
 	.col {
 		@media (width < 660px) {
-			padding-top: 2rem;	
+			padding-top: 2rem;
 			padding-bottom: 2rem;
 		}
 	}
 
 	.intro {
 		flex-grow: 1;
-	}	
+	}
 	.contact {
 		display: flex;
 		flex-direction: column;
