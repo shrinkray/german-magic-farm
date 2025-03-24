@@ -185,10 +185,10 @@
 	}
 	.section {
 		padding: var(--size-fluid-4) 0;
-		background-color: var(--surface-2);
+		
 	}
 	.show-card {
-		background: var(--surface-1);
+		background: var(--brown-10);
 		border-radius: var(--radius-3);
 		box-shadow: var(--shadow-2);
 		padding: var(--size-fluid-3);
@@ -200,8 +200,13 @@
 		color: var(--text-1);
 		margin: 0;
 	}
-	.past-clinics,
+	.past-clinics {
+		/* background-color: #4d3928; I like these browns and am keeping them for now */
+		background-color: var(--stone-10);
+	}
 	.past-clinic {
-		background-color: var(--accent-fade);
+		/* background-color: #6a4e34; */
+		background-color: var(--stone-8);
 	}
 </style>
+ 
