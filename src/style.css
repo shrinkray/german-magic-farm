@@ -90,6 +90,10 @@ body {
 	font-size: var(--fs-300);
 	line-height: 1.6;
 }
+main {
+	max-width: 1200px;
+	margin: 0 auto;
+}
 
 .bold {
 	font-family: 'Lato-Bold';
@@ -222,6 +226,21 @@ blockquote p span {
 	display: grid;
 	gap: 1rem;
 	grid-template-columns: repeat(auto-fit, minmax(min(var(--min-column-size), 100%), 1fr));
+}
+
+.photo-grid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+
+.photo-grid > * {
+    flex: 1 1 calc(25% - 1rem); /* For 4 across */
+    
+    @media (max-width: 635px) {
+        flex: 1 1 calc(50% - 1rem); /* For 2 across */
+        min-width: calc(50% - 1rem);
+    }
 }
 
 input,
