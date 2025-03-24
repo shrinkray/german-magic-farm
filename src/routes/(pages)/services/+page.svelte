@@ -76,7 +76,7 @@
 <section class="section">
 	<article class="lessons larger-wrapper fade rounded px-20">
 		<div class="container mx-auto">
-			<h2>Types Of Lessons and Pricing</h2>
+			<h2 class="section-title">Types Of Lessons and Pricing</h2>
 			{#each lessons as { kindOfLesson, firstPrice, firstDescription, secondPrice, secondDescription, thirdPrice, thirdDescription }}
 				<div class="flexible-grid">
 					<h3>{kindOfLesson}</h3>
