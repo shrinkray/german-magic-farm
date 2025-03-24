@@ -40,7 +40,7 @@
 
 <Hero
 	herotitle="German Magic Farm Services"
-	tagline="Training, Lessons, Leasing, Showing and Fun!"
+	tagline="Training, Lessons, Leasing, Showing & Fun!"
 	--bg-image="url('/pam-dressage-slider.webp')"
 	--bg-opacity="0.5"
 />
