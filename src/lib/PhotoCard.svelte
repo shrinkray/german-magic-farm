@@ -22,7 +22,7 @@
 	];
 </script>
 
-<section class="section">
+<section class="section mb-30">
 	<div class="container">
 		<div class="auto-grid">
 			{#each pics as { title, photo, link, excerpt }}

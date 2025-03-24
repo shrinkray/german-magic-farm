@@ -171,6 +171,10 @@ blockquote p span {
 	}
 }
 
+.section-description {
+	margin-bottom: 2rem;
+}
+
 .currentcolor {
 	fill: currentColor;
 }
@@ -281,7 +285,23 @@ a:hover {
 }
 
 .mt-10 {
-	padding-top: 1rem;
+	margin-top: 1rem;
+}
+
+.mb-10 {
+	margin-bottom: 1rem;
+}
+
+.mb-20 {
+	margin-bottom: 2rem;
+}
+
+.mb-30 {
+	margin-bottom: 3rem;
+}
+
+.mb-40 {
+	margin-bottom: 4rem;
 }
 
 .py-10 {
