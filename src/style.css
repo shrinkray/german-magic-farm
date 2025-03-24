@@ -11,7 +11,7 @@
 	--hero-lg-heading: white;
 	--footer-color: #343a40;
 	--header-color: rgb(51 22 0 / 6%);
-	--visited-link-color: #800080;
+	--visited-link-color:rgb(225, 146, 0);
 
 	--ff-base: '';
 	--ff-accent: '';
@@ -38,7 +38,7 @@
 	--hero-lg-heading: #f0e5d1;
 	--header-color: rgb(94 84 74 / 30%);
 	--footer-color: rgb(94 84 74 / 30%);
-	--visited-link-color: #d65d0e;
+	--visited-link-color:rgb(255, 157, 91);
 	--interactive-color: #fecf0a;
 }
 
@@ -126,7 +126,7 @@ h1 {
 }
 
 h2 {
-	font-size: 1.25rem;
+	font-size: 2.75rem;
 	padding-top: 1rem;
 	padding-bottom: 0.5rem;
 }
@@ -293,6 +293,11 @@ a:hover {
 	text-decoration-style: wavy;
 	color: var(--interactive-color);
 }
+a:visited:hover {
+	text-decoration: underline;
+	text-decoration-style: wavy;
+	color: var(--interactive-color);
+}
 
 .pb-8 {
 	padding-bottom: 2rem;
@@ -305,6 +310,9 @@ a:hover {
 
 .mt-10 {
 	margin-top: 1rem;
+}
+.mt-50 {
+	margin-top: 5rem;
 }
 
 .mb-10 {
@@ -321,6 +329,14 @@ a:hover {
 
 .mb-40 {
 	margin-bottom: 4rem;
+}
+.my-50 {
+	margin-top: 5rem;
+	margin-bottom: 5rem;
+}
+.my-60 {
+	margin-top: 6rem;
+	margin-bottom: 6rem;
 }
 
 .py-10 {
