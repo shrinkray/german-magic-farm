@@ -17,7 +17,7 @@
 <PhotoCluster />
 <section class="py-30 container">
 	<div class="section">
-		<h1>Meet Pam Bauer – Owner & Head Trainer at German Magic Farm</h1>
+		<h1>Meet Pam Bauer – Owner & Trainer at German Magic Farm</h1>
 
 		<p class="pull-quote">
 			Pam Bauer, owner and resident trainer at German Magic Farm, brings over 32 years of
