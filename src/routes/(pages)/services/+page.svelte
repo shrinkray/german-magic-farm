@@ -62,23 +62,23 @@
 	</div>
 </section>
 <section class="section">
-	<div class="container italics">
+	<div class="italics container">
 		<blockquote>
 			<h4>** Note About Late Fees</h4>
 			<p>
-				Late Fees: a $50 late fee will be charged 10 days after payment is late, and every additional
-				10 days thereafter.
+				Late Fees: a $50 late fee will be charged 10 days after payment is late, and every
+				additional 10 days thereafter.
 			</p>
 		</blockquote>
 	</div>
 </section>
 
 <section class="section">
-	<article class="px-20 lessons larger-wrapper fade rounded">
+	<article class="lessons larger-wrapper fade rounded px-20">
 		<div class="container mx-auto">
 			<h2>Types Of Lessons and Pricing</h2>
-				{#each lessons as { kindOfLesson, firstPrice, firstDescription, secondPrice, secondDescription, thirdPrice, thirdDescription }}
-					<div class="flexible-grid">
+			{#each lessons as { kindOfLesson, firstPrice, firstDescription, secondPrice, secondDescription, thirdPrice, thirdDescription }}
+				<div class="flexible-grid">
 					<h3>{kindOfLesson}</h3>
 					<div class="">
 						<p class=""><span class="bold mr-5">{firstPrice}</span> {firstDescription}</p>
@@ -93,7 +93,7 @@
 	</article>
 </section>
 
-<div class="py-20 center-w-grid static-logo"><SmallLogoLayers /></div> 
+<div class="center-w-grid static-logo py-20"><SmallLogoLayers /></div>
 
 <Seo
 	title="Dressage and jumping Lessons | Training Horseshow Information German Magic
@@ -131,8 +131,6 @@ Farm"
 	.lessons {
 		padding-block: var(--size-7);
 	}
-
-	
 
 	.bold {
 		font-weight: bold;
