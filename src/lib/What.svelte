@@ -7,12 +7,10 @@
 		<div class="intro col">
 			<h1>Willkommen!</h1>
 
-			<p>
-				<span class="pull-quote"
-					>German Magic Farm is a private training and lesson facility located in historic, Dundee
-					Michigan. Our tranquil farm offers a huge outdoor arena, grass pastures, and access to
-					trail riding.</span
-				>
+			<p class="pull-quote section-description">
+				German Magic Farm is a private training and lesson facility located in historic, Dundee
+				Michigan. Our tranquil farm offers a huge outdoor arena, grass pastures, and access to
+				trail riding.
 			</p>
 
 			<p class="grande">

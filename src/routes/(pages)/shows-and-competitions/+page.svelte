@@ -27,7 +27,7 @@
 				and continuing to improve their skills. We emphasize the horse and rider partnership as a
 				whole.
 			</p>
-			<p class="py-10 text-lg italic">
+			<p class="py-10 text-lg italic  section-description">
 				<span class="bold">Our motto:</span> "Smile and Enjoy the Ride!"
 			</p>
 		</section>

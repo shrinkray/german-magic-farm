@@ -41,7 +41,7 @@
 <div class="container px-4 py-8">
 	<section class="section">
 		<h2 class="section-title">What clinics are coming up?</h2>
-		<p class="pull-quote">
+		<p class="pull-quote section-description">
 			German Magic Farm offers an inspiring place to learn, grow, and enjoy the experience of a
 			clinic—taught by the best instructors you will find. If you are interested in our offering a
 			clinic, please <a href="/contact">contact us</a>.
