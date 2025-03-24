@@ -22,7 +22,7 @@
 	];
 </script>
 
-<section class="section mb-30">
+<section class="section my-60">
 	<div class="container">
 		<div class="auto-grid">
 			{#each pics as { title, photo, link, excerpt }}
@@ -40,7 +40,7 @@
 <style>
 	.flow-bottom > * {
 		/* margin-bottom: 2em; */
-		margin-block: 2rem;
+		/* margin-block: 2rem; */
 	}
 
 	img {
