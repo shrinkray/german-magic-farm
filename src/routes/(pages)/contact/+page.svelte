@@ -106,6 +106,7 @@
 		flex-wrap: wrap;
 		gap: 1.5em;
 		padding-block: var(--size-7);
+		padding-right: 2rem;
 		background-color: var(--accent-fade);
 		margin-bottom: 2rem;
 		border-radius: 1rem;
