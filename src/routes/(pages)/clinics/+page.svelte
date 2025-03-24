@@ -10,29 +10,29 @@
 	// Get the current date at the start of the day (no time component)
 	const currentDate = new Date();
 	currentDate.setHours(0, 0, 0, 0);
-	console.log('Current date:', currentDate);
+	// console.log('Current date:', currentDate);
 
 	// Helper function to parse dates like "September 9-10, 2023" or "June 12-13, 2024"
 	function parseClinicDate(dateStr: string) {
 		try {
 			// Extract the year from the end of the string
 			const year = dateStr.split(' ').pop();
-			console.log('Year from end:', year);
+			// console.log('Year from end:', year);
 
 			// Split on hyphen and take the first date
 			const firstDate = dateStr.split('-')[0].trim();
-			console.log('First date part:', firstDate);
+			// console.log('First date part:', firstDate);
 			
 			// Parse the date parts
 			const parts = firstDate.split(' ');
-			console.log('Date parts:', parts);
+			// console.log('Date parts:', parts);
 			
 			// Handle cases where the day might have a comma
 			const month = parts[0];
 			const day = parts[1]?.replace(',', '');
 
 			// Log the parsed components
-			console.log('Parsed components:', { month, day, year });
+			// console.log('Parsed components:', { month, day, year });
 			
 			if (!month || !day || !year) {
 				console.error('Missing date components for:', dateStr);
@@ -45,7 +45,7 @@
 			const monthNum = getMonthNumber(month);
 
 			// Log the numeric components
-			console.log('Numeric components:', { monthNum, dayNum, yearNum });
+			// console.log('Numeric components:', { monthNum, dayNum, yearNum });
 
 			// Validate components
 			if (isNaN(dayNum) || isNaN(yearNum) || monthNum === -1) {
@@ -63,7 +63,7 @@
 				return new Date(0);
 			}
 
-			console.log(`Successfully parsed date for ${dateStr}:`, date.toISOString());
+			// console.log(`Successfully parsed date for ${dateStr}:`, date.toISOString());
 			return date;
 		} catch (error) {
 			console.error('Error parsing date:', dateStr, error);
@@ -90,19 +90,19 @@
 	const upcomingClinics = data.clinics.filter((clinic) => {
 		const clinicDate = parseClinicDate(clinic.date);
 		const isUpcoming = clinicDate >= currentDate;
-		console.log(`Clinic ${clinic.title}: ${clinic.date} -> ${clinicDate} is upcoming:`, isUpcoming);
+		// console.log(`Clinic ${clinic.title}: ${clinic.date} -> ${clinicDate} is upcoming:`, isUpcoming);
 		return isUpcoming;
 	});
 
 	const pastClinics = data.clinics.filter((clinic) => {
 		const clinicDate = parseClinicDate(clinic.date);
 		const isPast = clinicDate < currentDate;
-		console.log(`Clinic ${clinic.title}: ${clinic.date} -> ${clinicDate} is past:`, isPast);
+		// console.log(`Clinic ${clinic.title}: ${clinic.date} -> ${clinicDate} is past:`, isPast);
 		return isPast;
 	});
 
-	console.log('Upcoming clinics:', upcomingClinics.length);
-	console.log('Past clinics:', pastClinics.length);
+	// console.log('Upcoming clinics:', upcomingClinics.length);
+	// console.log('Past clinics:', pastClinics.length);
 </script>
 
 <svelte:head>
