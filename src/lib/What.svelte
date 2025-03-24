@@ -56,6 +56,7 @@
 
 	.intro {
 		flex-grow: 1;
+		margin-top: 2rem;
 	}
 	.contact {
 		display: flex;
