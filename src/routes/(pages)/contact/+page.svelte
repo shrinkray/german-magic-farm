@@ -5,7 +5,7 @@
 	import { superForm } from 'sveltekit-superforms/client';
 	import SuperDebug from 'sveltekit-superforms/client/SuperDebug.svelte';
 	import Button from '$lib/Button.svelte';
-
+	import SmallLogoLayers from '$lib/SmallLogoLayers.svelte';
 	export let data: PageData;
 
 	// Client API:
@@ -86,6 +86,7 @@
 			</div>
 		</div>
 	</div>
+	<div class="center-w-grid static-logo"><SmallLogoLayers /></div>
 </section>
 
 <Seo
@@ -131,7 +132,7 @@
 		align-items: center;
 
 		@media (width > 965px) {
-			width: 65%;
+			width: 58%;
 		}
 	}
 
@@ -165,7 +166,7 @@
 		color: red;
 	}
 
-	button {
+	.button {
 		border: none;
 		border-radius: 0.25em;
 		background-color: var(--primary-color);
@@ -178,6 +179,10 @@
 		position: relative;
 		width: 100%;
 		height: 350px;
+		border-radius: 0.5rem;
+		@media (width < 965px) {
+			margin-left: 2rem;
+		}
 	}
 
 	.map-overlay {
