@@ -188,7 +188,7 @@
 		
 	}
 	.show-card {
-		background: var(--brown-10);
+		background: var(--show-card-bg);
 		border-radius: var(--radius-3);
 		box-shadow: var(--shadow-2);
 		padding: var(--size-fluid-3);
@@ -202,11 +202,11 @@
 	}
 	.past-clinics {
 		/* background-color: #4d3928; I like these browns and am keeping them for now */
-		background-color: var(--stone-10);
+		background-color: var(--past-clinics-bg);
 	}
 	.past-clinic {
 		/* background-color: #6a4e34; */
-		background-color: var(--stone-8);
+		background-color: var(--past-clinic-bg);
 	}
 </style>
  

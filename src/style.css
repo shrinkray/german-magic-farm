@@ -10,12 +10,17 @@
 	--accent-fade: rgba(255, 206, 0, 0.08);
 	--hero-lg-heading: white;
 	--footer-color: #343a40;
-	--header-color: rgb(51 22 0 / 6%);
-	--visited-link-color:rgb(225, 146, 0);
-	--link-color: #d10000;
+	--header-color: var(--brown-0);
+	--visited-link-color:var(--red-10);
+	--link-color: var(--primary-color);
+	--interactive-color: #fecf0a;
 
 	--brown-10: #4d3928;
+	--past-clinics-bg: #f2f4f6; /* stone-8 */
+	--past-clinic-bg: #d1d6d8; /* stone-10 */
+	--show-card-bg: #ede0d1;
 	
+
 	--ff-base: '';
 	--ff-accent: '';
 
@@ -32,7 +37,7 @@
 
 [data-theme='dark'] {
 	--accent-fade: rgb(255 206 0 / 7%);
-	--primary-color: #d10000;
+	--primary-color: var(--red-5);
 	--input-color: #fecf0a;
 	--bg-color: rgb(43, 38, 35);
 	--logo-color: rgb(246, 240, 229);
@@ -41,10 +46,14 @@
 	--hero-lg-heading: #f0e5d1;
 	--header-color: rgb(94 84 74 / 30%);
 	--footer-color: rgb(94 84 74 / 30%);
-	--visited-link-color:rgb(255, 157, 91);
+	--visited-link-color:white;
 	--interactive-color: #fecf0a;
 	--link-color: white;
 
+	--past-clinics-bg: #666968; /* stone-8 */
+	--past-clinic-bg: #3a3a37; /* stone-10 */
+	--show-card-bg: #4d3928;
+}
 *,
 *::before,
 *::after {
