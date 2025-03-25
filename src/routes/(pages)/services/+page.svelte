@@ -48,7 +48,7 @@
 	<div class="container grid">
 		<article class="alt-color-band flow">
 			<h2 class="section-title">Learn about our services</h2>
-			<p class="section-description">
+			<p class="section-description pull-quote">
 				German Magic Farm offers professional boarding, training, leasing, and lessons for riders of all levels. From full or partial training to flexible lease options and personalized instruction, we’re here to support both horse and rider every step of the way.
 			</p>
 
