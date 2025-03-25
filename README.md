@@ -8,7 +8,7 @@
 - Typescript sprinkled throughout
 - Form with Superforms
 - Validation with Zod
-- Typography using Utopia
-- Lots of custom properties from Open Props
+- Typography using Google Fonts and Utopia	
+- Lots of custom properties from [Open Props](https://github.com/argyleink/open-props/blob/main/src/props.colors.css)
 - Email script through NodeMailer
 - Svelte Hamburgers pkg
