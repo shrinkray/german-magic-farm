@@ -5,7 +5,7 @@
 	import PhotoCard from '$lib/PhotoCard.svelte';
 	import CheckItOut from '$lib/CheckItOut.svelte';
 	import SmallLogoLayers from '$lib/SmallLogoLayers.svelte';
-
+	import { fade } from 'svelte/transition';
 	export let data;
 
 	const { posts } = data;
@@ -37,7 +37,11 @@
 	<What />
 </article>
 <PhotoCard />
+
+<div class="center-w-grid static-logo"><SmallLogoLayers /></div>
+
 <CheckItOut />
+
 
 <Seo
 	title="Dressage Jumping Cross Country Riding Lessons Dundee Michigan | German Magic Farm"
