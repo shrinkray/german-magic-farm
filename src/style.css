@@ -37,7 +37,7 @@
 
 [data-theme='dark'] {
 	--accent-fade: rgb(255 206 0 / 7%);
-	--primary-color: var(--red-5);
+	--primary-color: var(--red-8);
 	--input-color: #fecf0a;
 	--bg-color: rgb(43, 38, 35);
 	--logo-color: rgb(246, 240, 229);
