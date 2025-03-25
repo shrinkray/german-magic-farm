@@ -44,7 +44,6 @@
 	--visited-link-color:rgb(255, 157, 91);
 	--interactive-color: #fecf0a;
 	--link-color: white;
-}
 
 *,
 *::before,
@@ -61,38 +60,58 @@ img {
 	display: block;
 }
 
+/* Libre Baskerville family */
+
 @font-face {
-	font-family: 'Crimson Pro';
-	src: url('/fonts/CrimsonPro/CrimsonPro-VariableFont_wght.ttf') format('truetype');
-	font-weight: 100 900; /* Full range of variable weights */
-	font-display: swap;
+    font-family: 'Libre Baskerville';
+    src: url('/fonts/LibreBaskerville/LibreBaskerville-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-	font-family: 'Lato';
-	src: url('/fonts/Lato/Lato-Light.woff2') format('woff2');
-	font-display: swap;
+    font-family: 'Libre Baskerville';
+    src: url('/fonts/LibreBaskerville/LibreBaskerville-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-	font-family: 'Lato-Bold';
-	src: url('/fonts/Lato/Lato-Bold.woff2') format('woff2');
-	font-display: swap;
+    font-family: 'Libre Baskerville';
+    src: url('/fonts/LibreBaskerville/LibreBaskerville-Italic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+/* Montserrat family */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat/Montserrat-VariableFont_wght.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-	font-family: 'Lato-Italic';
-	src: url('/fonts/Lato/Lato-Italic.woff2') format('woff2');
-	font-display: swap;
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat/Montserrat-Italic-VariableFont_wght.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
 }
+
+
 
 body {
 	margin: 0;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	background-color: var(--bg-color);
 	color: var(--color);
 	font-size: var(--fs-300);
-	line-height: 1.6;
+	line-height: 1.6; 
+	font-weight: 400;
 }
 main {
 	max-width: 1200px;
@@ -100,20 +119,21 @@ main {
 }
 
 .bold {
-	font-family: 'Lato-Bold';
-	font-weight: 700;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
 }
 
 .italic {
-	font-family: 'Lato-Italic';
+	font-family: 'Montserrat', sans-serif;
+	font-style: italic;
 }
 
 .serif {
-	font-family: 'Crimson Pro', serif;
+	font-family: 'Libre Baskerville',serif;
 }
 
 .sans-serif {
-	font-family: 'Lato', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 }
 
 /* larger font sizes have less line height */
@@ -121,16 +141,16 @@ h1,
 h2,
 h3 {
 	line-height: 1.1;
-	font-family: 'Crimson Pro', serif;
+	font-family: 'Libre Baskerville', serif;
 }
 
 h1 {
-	font-size: var(--fs-600);
+	font-size: var(--fs-500);
 	padding-bottom: 1rem;
 }
 
 h2 {
-	font-size: 2.75rem;
+	font-size: 2.5rem;
 	padding-top: 1rem;
 	padding-bottom: 0.5rem;
 }
@@ -293,19 +313,22 @@ textarea {
 	color: white;
 	text-decoration: none;
 	font-weight: 700;
-	font-family: 'Lato-Bold';
+	font-family: 'Montserrat', sans-serif;
 }
 
 a {
 	text-decoration: none;
-	font-weight: 700;
-	font-family: 'Lato-Bold';
+	font-weight: 600;
+	font-family: 'Montserrat', sans-serif;
 	color: var(--link-color);
 }
 a:hover {
 	text-decoration: underline;
 	text-decoration-style: wavy;
 	color: var(--interactive-color);
+}
+a:visited {
+	color: var(--visited-link-color);
 }
 a:visited:hover {
 	text-decoration: underline;
@@ -402,7 +425,7 @@ a:visited:hover {
 
 .p-40 {
 	padding: 4rem;
-}
+} 
 
 a:visited {
 	color: var(--visited-link-color);
@@ -413,6 +436,7 @@ a:visited:hover {
 
 .pull-quote {
 	font-size: var(--fs-400);
+	font-weight: 400;
 }
 .grande {
 	margin-top: 0.8rem;

@@ -41,7 +41,7 @@
 		color: white;
 		text-decoration: none;
 		font-weight: 700;
-		font-family: 'Lato-Bold';
+		font-family: 'Montserrat', sans-serif;
 	}
 
 	span a:hover {

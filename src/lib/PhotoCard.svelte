@@ -82,7 +82,8 @@
 		background-color: var(--primary-color);
 		text-decoration: none;
 		color: white;
-		font-family: 'Lato-Bold';
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 400;
 		font-size: 1em;
 		cursor: pointer;
 		padding: 0.5em 1em;

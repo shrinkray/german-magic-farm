@@ -70,7 +70,7 @@
 
 	.hero-tagline {
 		font-size: var(--fs-400);
-		font-family: Lato-Bold;
+		font-family: 'Montserrat', sans-serif;
 		color: white;
 		line-height: 1.2;
 		margin-top: 0;
