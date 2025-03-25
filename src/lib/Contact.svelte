@@ -31,7 +31,11 @@
 		font-size: 1.1rem;
 	}
 	.transparent-1 {
-		opacity: 0.2;
+		opacity: 0.6;
+
+		@media (width < 600px) {
+			display: none;
+		}
 	}
 	.contact-container {
 		display: flex;
