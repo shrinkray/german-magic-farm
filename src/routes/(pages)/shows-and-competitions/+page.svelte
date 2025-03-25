@@ -22,12 +22,12 @@
 	<div class="prose max-w-none">
 		<section class="">
 			<h2 class="section-title">Our Philosophy</h2>
-			<p class="text-lg">
+			<p class="pull-quote">
 				While winning is always exciting, our main focus is on enjoying the journey with their horse
 				and continuing to improve their skills. We emphasize the horse and rider partnership as a
 				whole.
 			</p>
-			<p class="py-10 text-lg italic">
+			<p class="py-10 italic  section-description">
 				<span class="bold">Our motto:</span> "Smile and Enjoy the Ride!"
 			</p>
 		</section>

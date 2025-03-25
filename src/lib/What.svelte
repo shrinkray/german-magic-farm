@@ -2,17 +2,15 @@
 	import Contact from '$lib/Contact.svelte';
 </script>
 
-<section class="fade | section">
+<section class="fade | section rounded">
 	<div class="larger-wrapper flexible-grid">
 		<div class="intro col">
 			<h1>Willkommen!</h1>
 
-			<p>
-				<span class="pull-quote"
-					>German Magic Farm is a private training and lesson facility located in historic, Dundee
-					Michigan. Our tranquil farm offers a huge outdoor arena, grass pastures, and access to
-					trail riding.</span
-				>
+			<p class="pull-quote section-description">
+				German Magic Farm is a private training and lesson facility located in historic, Dundee
+				Michigan. Our tranquil farm offers a huge outdoor arena, grass pastures, and access to
+				trail riding.
 			</p>
 
 			<p class="grande">
@@ -58,6 +56,7 @@
 
 	.intro {
 		flex-grow: 1;
+		margin-top: 2rem;
 	}
 	.contact {
 		display: flex;
@@ -71,7 +70,7 @@
 		background-color: var(--primary-color);
 		text-decoration: none;
 		color: white;
-		font-family: 'Lato-Bold';
+		font-family: 'Montserrat', sans-serif;
 		font-size: 1em;
 		cursor: pointer;
 		padding: 0.5em 1.5em;

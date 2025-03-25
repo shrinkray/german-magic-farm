@@ -3,7 +3,7 @@
 	export let tagline = '';
 </script>
 
-<div class="hero-container">
+<div class="hero-container bottom-rounded">
 	<div class="hero">
 		<div class="value-prop">
 			<h1 class="highlighted-text-shadow">{herotitle}</h1>
@@ -43,7 +43,7 @@
 	}
 
 	.hero-container {
-		max-height: 500px;
+		max-height: 470px;
 		overflow: hidden;
 		margin-bottom: 2rem;
 	}
@@ -70,7 +70,7 @@
 
 	.hero-tagline {
 		font-size: var(--fs-400);
-		font-family: Lato-Bold;
+		font-family: 'Montserrat', sans-serif;
 		color: white;
 		line-height: 1.2;
 		margin-top: 0;

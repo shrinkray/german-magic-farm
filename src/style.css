@@ -10,8 +10,16 @@
 	--accent-fade: rgba(255, 206, 0, 0.08);
 	--hero-lg-heading: white;
 	--footer-color: #343a40;
-	--header-color: rgb(51 22 0 / 6%);
-	--visited-link-color: #800080;
+	--header-color: var(--brown-0);
+	--visited-link-color:var(--red-10);
+	--link-color: var(--primary-color);
+	--interactive-color: #fecf0a;
+
+	--brown-10: #4d3928;
+	--past-clinics-bg: #f2f4f6; /* stone-8 */
+	--past-clinic-bg: #d1d6d8; /* stone-10 */
+	--show-card-bg: #ede0d1;
+	
 
 	--ff-base: '';
 	--ff-accent: '';
@@ -29,7 +37,7 @@
 
 [data-theme='dark'] {
 	--accent-fade: rgb(255 206 0 / 7%);
-	--primary-color: #d10000;
+	--primary-color: var(--red-5);
 	--input-color: #fecf0a;
 	--bg-color: rgb(43, 38, 35);
 	--logo-color: rgb(246, 240, 229);
@@ -38,10 +46,14 @@
 	--hero-lg-heading: #f0e5d1;
 	--header-color: rgb(94 84 74 / 30%);
 	--footer-color: rgb(94 84 74 / 30%);
-	--visited-link-color: #d65d0e;
+	--visited-link-color:white;
 	--interactive-color: #fecf0a;
-}
+	--link-color: white;
 
+	--past-clinics-bg: #666968; /* stone-8 */
+	--past-clinic-bg: #3a3a37; /* stone-10 */
+	--show-card-bg: #4d3928;
+}
 *,
 *::before,
 *::after {
@@ -57,55 +69,80 @@ img {
 	display: block;
 }
 
+/* Libre Baskerville family */
+
 @font-face {
-	font-family: 'Crimson Pro';
-	src: url('/fonts/CrimsonPro/CrimsonPro-VariableFont_wght.ttf') format('truetype');
-	font-weight: 100 900; /* Full range of variable weights */
-	font-display: swap;
+    font-family: 'Libre Baskerville';
+    src: url('/fonts/LibreBaskerville/LibreBaskerville-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-	font-family: 'Lato';
-	src: url('/fonts/Lato/Lato-Light.woff2') format('woff2');
-	font-display: swap;
+    font-family: 'Libre Baskerville';
+    src: url('/fonts/LibreBaskerville/LibreBaskerville-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-	font-family: 'Lato-Bold';
-	src: url('/fonts/Lato/Lato-Bold.woff2') format('woff2');
-	font-display: swap;
+    font-family: 'Libre Baskerville';
+    src: url('/fonts/LibreBaskerville/LibreBaskerville-Italic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+/* Montserrat family */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat/Montserrat-VariableFont_wght.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-	font-family: 'Lato-Italic';
-	src: url('/fonts/Lato/Lato-Italic.woff2') format('woff2');
-	font-display: swap;
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat/Montserrat-Italic-VariableFont_wght.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
 }
+
+
 
 body {
 	margin: 0;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	background-color: var(--bg-color);
 	color: var(--color);
 	font-size: var(--fs-300);
-	line-height: 1.6;
+	line-height: 1.6; 
+	font-weight: 400;
+}
+main {
+	max-width: 1200px;
+	margin: 0 auto;
 }
 
 .bold {
-	font-family: 'Lato-Bold';
-	font-weight: 700;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
 }
 
 .italic {
-	font-family: 'Lato-Italic';
+	font-family: 'Montserrat', sans-serif;
+	font-style: italic;
 }
 
 .serif {
-	font-family: 'Crimson Pro', serif;
+	font-family: 'Libre Baskerville',serif;
 }
 
 .sans-serif {
-	font-family: 'Lato', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 }
 
 /* larger font sizes have less line height */
@@ -113,16 +150,16 @@ h1,
 h2,
 h3 {
 	line-height: 1.1;
-	font-family: 'Crimson Pro', serif;
+	font-family: 'Libre Baskerville', serif;
 }
 
 h1 {
-	font-size: var(--fs-600);
+	font-size: var(--fs-500);
 	padding-bottom: 1rem;
 }
 
 h2 {
-	font-size: 2.5rem !important;
+	font-size: 2.5rem;
 	padding-top: 1rem;
 	padding-bottom: 0.5rem;
 }
@@ -159,7 +196,8 @@ blockquote p span {
 }
 
 .section-title {
-	font-size: var(--font-size-fluid-3);
+	font-size: 2.75rem;
+	margin-bottom: 1.5rem;
 	color: var(--text-1);
 }
 
@@ -168,6 +206,10 @@ blockquote p span {
 	h3 {
 		margin-bottom: 1rem;
 	}
+}
+
+.section-description {
+	margin-bottom: 2rem;
 }
 
 .currentcolor {
@@ -219,6 +261,21 @@ blockquote p span {
 	grid-template-columns: repeat(auto-fit, minmax(min(var(--min-column-size), 100%), 1fr));
 }
 
+.photo-grid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+
+.photo-grid > * {
+    flex: 1 1 calc(25% - 1rem); /* For 4 across */
+    
+    @media (max-width: 635px) {
+        flex: 1 1 calc(50% - 1rem); /* For 2 across */
+        min-width: calc(50% - 1rem);
+    }
+}
+
 input,
 textarea {
 	background-color: transparent;
@@ -226,6 +283,16 @@ textarea {
 
 .rounded {
 	border-radius: 1rem;
+}
+
+.top-rounded {
+	border-top-left-radius: 1rem;
+	border-top-right-radius: 1rem; 
+}
+
+.bottom-rounded {
+	border-bottom-left-radius: 1rem;
+	border-bottom-right-radius: 1rem;
 }
 
 .inset {
@@ -255,16 +322,24 @@ textarea {
 	color: white;
 	text-decoration: none;
 	font-weight: 700;
-	font-family: 'Lato-Bold';
+	font-family: 'Montserrat', sans-serif;
 }
 
 a {
 	text-decoration: none;
-	font-weight: 700;
-	font-family: 'Lato-Bold';
-	color: var(--primary-color);
+	font-weight: 600;
+	font-family: 'Montserrat', sans-serif;
+	color: var(--link-color);
 }
 a:hover {
+	text-decoration: underline;
+	text-decoration-style: wavy;
+	color: var(--interactive-color);
+}
+a:visited {
+	color: var(--visited-link-color);
+}
+a:visited:hover {
 	text-decoration: underline;
 	text-decoration-style: wavy;
 	color: var(--interactive-color);
@@ -280,7 +355,34 @@ a:hover {
 }
 
 .mt-10 {
-	padding-top: 1rem;
+	margin-top: 1rem;
+}
+.mt-50 {
+	margin-top: 5rem;
+}
+
+.mb-10 {
+	margin-bottom: 1rem;
+}
+
+.mb-20 {
+	margin-bottom: 2rem;
+}
+
+.mb-30 {
+	margin-bottom: 3rem;
+}
+
+.mb-40 {
+	margin-bottom: 4rem;
+}
+.my-50 {
+	margin-top: 5rem;
+	margin-bottom: 5rem;
+}
+.my-60 {
+	margin-top: 6rem;
+	margin-bottom: 6rem;
 }
 
 .py-10 {
@@ -332,7 +434,7 @@ a:hover {
 
 .p-40 {
 	padding: 4rem;
-}
+} 
 
 a:visited {
 	color: var(--visited-link-color);
@@ -343,6 +445,7 @@ a:visited:hover {
 
 .pull-quote {
 	font-size: var(--fs-400);
+	font-weight: 400;
 }
 .grande {
 	margin-top: 0.8rem;

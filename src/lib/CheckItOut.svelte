@@ -1,4 +1,4 @@
-<section class="fade | section">
+<section class="fade | section top-rounded">
 	<div class="bg-wrapper check-it-out">
 		<div class="center-box">
 			Browse the rest of our site to learn more about Pam Bauer and the services and fun activities
@@ -21,6 +21,7 @@
 	.check-it-out {
 		display: grid;
 		place-items: center;
+		padding: 2rem;
 	}
 
 	.center-box {

@@ -17,9 +17,9 @@
 <PhotoCluster />
 <section class="py-30 container">
 	<div class="section">
-		<h1>Meet Pam Bauer – Owner & Head Trainer at German Magic Farm</h1>
+		<h1>Meet Pam Bauer – Owner & Trainer at German Magic Farm</h1>
 
-		<p class="pull-quote">
+		<p class="pull-quote section-description">
 			Pam Bauer, owner and resident trainer at German Magic Farm, brings over 32 years of
 			international riding and teaching experience to her training program. Her journey has taken
 			her through Germany, Austria, Japan, and now the United States, where she shares her deep

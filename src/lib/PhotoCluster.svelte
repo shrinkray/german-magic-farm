@@ -1,7 +1,7 @@
 <script>
 	const cluster = [
 		{
-			photo: './pam-bauer-winter-trot.png',
+			photo: './pam-bauer-winter-trot1.webp',
 			alt: './Pam Bauer riding in winter'
 		},
 		{
@@ -9,7 +9,7 @@
 			alt: './Pam Bauer jumping an oxer'
 		},
 		{
-			photo: './pam-bauer-teaching.webp',
+			photo: './pam-bauer-teaching-square.webp',
 			alt: './Pam Bauer teching a lesson'
 		},
 
@@ -20,7 +20,7 @@
 	];
 </script>
 
-<div class="hero auto-grid">
+<div class="hero auto-grid photo-grid">
 	{#each cluster as { photo, alt }}
 		<div>
 			<img class="square" src={photo} {alt} />
@@ -49,4 +49,5 @@
 		background: grey;
 		opacity: var(--bg-opacity);
 	}
+
 </style>

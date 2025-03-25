@@ -7,19 +7,102 @@
 
 	const data = clinicData as ClinicsData;
 
-	// Get the current date
+	// Get the current date at the start of the day (no time component)
 	const currentDate = new Date();
+	currentDate.setHours(0, 0, 0, 0);
+	// console.log('Current date:', currentDate);
+
+	// Helper function to parse dates like "September 9-10, 2023" or "June 12-13, 2024"
+	function parseClinicDate(dateStr: string) {
+		try {
+			// Extract the year from the end of the string
+			const year = dateStr.split(' ').pop();
+			// console.log('Year from end:', year);
+
+			// Split on hyphen and take the first date
+			const firstDate = dateStr.split('-')[0].trim();
+			// console.log('First date part:', firstDate);
+			
+			// Parse the date parts
+			const parts = firstDate.split(' ');
+			// console.log('Date parts:', parts);
+			
+			// Handle cases where the day might have a comma
+			const month = parts[0];
+			const day = parts[1]?.replace(',', '');
+
+			// Log the parsed components
+			// console.log('Parsed components:', { month, day, year });
+			
+			if (!month || !day || !year) {
+				console.error('Missing date components for:', dateStr);
+				return new Date(0);
+			}
+
+			// Convert to numbers
+			const dayNum = parseInt(day);
+			const yearNum = parseInt(year);
+			const monthNum = getMonthNumber(month);
+
+			// Log the numeric components
+			// console.log('Numeric components:', { monthNum, dayNum, yearNum });
+
+			// Validate components
+			if (isNaN(dayNum) || isNaN(yearNum) || monthNum === -1) {
+				console.error('Invalid numeric components for:', dateStr);
+				return new Date(0);
+			}
+
+			// Create date object and set to start of day
+			const date = new Date(yearNum, monthNum, dayNum);
+			date.setHours(0, 0, 0, 0);
+
+			// Validate final date
+			if (isNaN(date.getTime())) {
+				console.error('Invalid date created for:', dateStr);
+				return new Date(0);
+			}
+
+			// console.log(`Successfully parsed date for ${dateStr}:`, date.toISOString());
+			return date;
+		} catch (error) {
+			console.error('Error parsing date:', dateStr, error);
+			return new Date(0);
+		}
+	}
+
+	// Helper function to convert month name to number (0-11)
+	function getMonthNumber(month: string): number {
+		const months: { [key: string]: number } = {
+			'January': 0, 'February': 1, 'March': 2, 'April': 3,
+			'May': 4, 'June': 5, 'July': 6, 'August': 7,
+			'September': 8, 'October': 9, 'November': 10, 'December': 11
+		};
+		const monthNum = months[month];
+		if (monthNum === undefined) {
+			console.error('Invalid month:', month);
+			return -1;
+		}
+		return monthNum;
+	}
 
 	// Filter the clinics to get upcoming and past events
 	const upcomingClinics = data.clinics.filter((clinic) => {
-		const clinicDate = new Date(clinic.date);
-		return clinicDate >= currentDate;
+		const clinicDate = parseClinicDate(clinic.date);
+		const isUpcoming = clinicDate >= currentDate;
+		// console.log(`Clinic ${clinic.title}: ${clinic.date} -> ${clinicDate} is upcoming:`, isUpcoming);
+		return isUpcoming;
 	});
 
 	const pastClinics = data.clinics.filter((clinic) => {
-		const clinicDate = new Date(clinic.date);
-		return clinicDate < currentDate;
+		const clinicDate = parseClinicDate(clinic.date);
+		const isPast = clinicDate < currentDate;
+		// console.log(`Clinic ${clinic.title}: ${clinic.date} -> ${clinicDate} is past:`, isPast);
+		return isPast;
 	});
+
+	// console.log('Upcoming clinics:', upcomingClinics.length);
+	// console.log('Past clinics:', pastClinics.length);
 </script>
 
 <svelte:head>
@@ -41,7 +124,7 @@
 <div class="container px-4 py-8">
 	<section class="section">
 		<h2 class="section-title">What clinics are coming up?</h2>
-		<p class="pull-quote">
+		<p class="pull-quote section-description">
 			German Magic Farm offers an inspiring place to learn, grow, and enjoy the experience of a
 			clinic—taught by the best instructors you will find. If you are interested in our offering a
 			clinic, please <a href="/contact">contact us</a>.
@@ -102,10 +185,10 @@
 	}
 	.section {
 		padding: var(--size-fluid-4) 0;
-		background-color: var(--surface-2);
+		
 	}
 	.show-card {
-		background: var(--surface-1);
+		background: var(--show-card-bg);
 		border-radius: var(--radius-3);
 		box-shadow: var(--shadow-2);
 		padding: var(--size-fluid-3);
@@ -117,8 +200,13 @@
 		color: var(--text-1);
 		margin: 0;
 	}
-	.past-clinics,
+	.past-clinics {
+		/* background-color: #4d3928; I like these browns and am keeping them for now */
+		background-color: var(--past-clinics-bg);
+	}
 	.past-clinic {
-		background-color: var(--accent-fade);
+		/* background-color: #6a4e34; */
+		background-color: var(--past-clinic-bg);
 	}
 </style>
+ 
