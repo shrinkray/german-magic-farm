@@ -145,6 +145,11 @@
 						<h3 class="show-title">{clinic.title}</h3>
 						<p><strong>Date:</strong> {clinic.date}</p>
 						<p>{clinic.description}</p>
+						{#if clinic.link}
+							<p class="clinic-link">
+								<a href={clinic.link} target="_blank" rel="noopener noreferrer" class="card-link">Learn More & Register!</a>
+							</p>
+						{/if}
 					</article>
 				{/each}
 			{:else}
@@ -159,7 +164,7 @@
 	<section class="section past-clinics rounded">
 		<div class="container grid">
 			<h2 class="section-title">Past Clinics</h2>
-			<p>Take a look at the types of clinics we have hosted in the past.</p>
+			<p>Take a look at the types of clinics we hosted in the past.</p>
 			<div class="space-y-20"></div>
 
 			{#if pastClinics.length > 0}
@@ -167,7 +172,12 @@
 					<article class="show-card past-clinic prose">
 						<h3 class="show-title">{clinic.title}</h3>
 						<p><strong>Date:</strong> {clinic.date}</p>
-						<p>{clinic.description}</p>
+						<p></p>
+						{#if clinic.link}
+							<p class="clinic-link">
+								Sorry you missed it! <a href={clinic.link} target="_blank" rel="noopener noreferrer" class="">Read about our clinic.</a>
+							</p>
+						{/if}
 					</article>
 				{/each}
 			{:else}
@@ -203,7 +213,7 @@
 		margin: var(--size-fluid-2);
 	}
 	.show-title {
-		font-size: var(--font-size-fluid-2);
+		font-size: var(--font-size-fluid-1);
 		padding-top: 0;
 		color: var(--text-1);
 		margin: 0;
@@ -215,5 +225,13 @@
 	.past-clinic {
 		/* background-color: #6a4e34; */
 		background-color: var(--past-clinic-bg);
+	}
+	.card-link {
+		color: var(--link-color);
+		text-decoration: none;
+		margin-top: var(--size-fluid-2);
+	}
+	.clinic-link {
+		padding-top: var(--size-fluid-2); 
 	}
 </style>
