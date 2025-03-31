@@ -15,6 +15,7 @@
 	--header-color: var(--brown-0);
 	--visited-link-color: var(--red-10);
 	--link-color: var(--primary-color);
+	--primary-color-hover: rgb(184,0,0);
 	--interactive-color: #fecf0a;
 
 	--brown-10: #4d3928;

@@ -2,16 +2,11 @@
 	import Contact from '$lib/Contact.svelte';
 	import Seo from '$lib/Seo.svelte';
 	import type { PageData } from './$types';
-	import { superForm } from 'sveltekit-superforms/client';
-	import Button from '$lib/Button.svelte';
 	import SmallLogoLayers from '$lib/SmallLogoLayers.svelte';
 	export let data: PageData;
 
-	// Client API:
-	const { form, message, errors, constraints } = superForm(data.form);
+	let submitted = false;
 </script>
-
-<!-- <SuperDebug data={$form} /> -->
 
 <section class="py-30 container">
 	<div class="section">
@@ -19,50 +14,28 @@
 		<p class="pull-quote section-description">
 			Please fill out the form below to contact us. We will get back to you as soon as possible.
 		</p>
-		<form class="form" method="POST">
-			<label for="name">Name</label>
-			<input
-				class=""
-				type="text"
-				name="name"
-				aria-invalid={$errors.name ? 'true' : undefined}
-				bind:value={$form.name}
-				{...$constraints.name}
-			/>
-			{#if $errors.name}<span class="invalid">{$errors.name}</span>{/if}
-
-			<label for="email">E-mail</label>
-			<input
-				class=""
-				type="email"
-				name="email"
-				aria-invalid={$errors.email ? 'true' : undefined}
-				bind:value={$form.email}
-				{...$constraints.email}
-			/>
-			{#if $errors.email}<span class="invalid">{$errors.email}</span>{/if}
-
-			<label for="body">Your message</label>
-			<textarea
-				class=""
-				name="body"
-				cols="30"
-				rows="10"
-				aria-invalid={$errors.body ? 'true' : undefined}
-				bind:value={$form.body}
-				{...$constraints.body}
-			/>
-			<!-- <textarea name="body" id="" cols="30" rows="10" /> -->
-			{#if $errors.body}<span class="invalid">{$errors.body}</span>{/if}
-
-			<div class="space-y-20"></div>
-
-			<div><Button class="secondary bold" size="medium">Submit »</Button></div>
-
-			<div>
-				{#if $message}<p>{$message}</p>{/if}
+		{#if submitted}
+			<div class="success-message">
+				Thank you for your message! We'll get back to you soon.
 			</div>
-		</form>
+		{:else}
+			<form method="POST" data-netlify="true" name="contact" on:submit={() => submitted = true}>
+				<input type="hidden" name="form-name" value="contact" />
+				<div class="form-group">
+					<label for="name">Name</label>
+					<input type="text" id="name" name="name" required />
+				</div>
+				<div class="form-group">
+					<label for="email">Email</label>
+					<input type="email" id="email" name="email" required />
+				</div>
+				<div class="form-group">
+					<label for="body">Message</label>
+					<textarea id="body" name="body" required></textarea>
+				</div>
+				<button type="submit">Send Message</button>
+			</form>
+		{/if}
 	</div>
 </section>
 
@@ -96,6 +69,36 @@
 />
 
 <style>
+	.form-group {
+		margin-bottom: 1rem;
+	}
+	label {
+		display: block;
+		margin-bottom: 0.5rem;
+	}
+	input, textarea {
+		width: 100%;
+		padding: 0.5rem;
+		border: 1px solid #ddd;
+		border-radius: 4px;
+	}
+	textarea {
+		min-height: 150px;
+	}
+	button {
+		background: var(--primary-color);
+		color: white;
+		padding: 0.5rem 1rem;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+		font-family: 'Montserrat', sans-serif;
+		font-size: var(--fs-100);
+	}
+	button:hover {
+		background: var(--primary-color-hover);
+	}
+
 	form {
 		padding-block: var(--size-7);
 	}
@@ -155,24 +158,6 @@
 		display: block;
 		padding-bottom: 0.5em;
 	}
-	.success {
-		color: rgb(8, 115, 8);
-	}
-	.error {
-		border: 1px solid red;
-	}
-	.red {
-		color: red;
-	}
-
-	.button {
-		border: none;
-		border-radius: 0.25em;
-		background-color: var(--primary-color);
-		color: white;
-		font-size: 1em;
-		cursor: pointer;
-	}
 
 	.map-container {
 		position: relative;
@@ -201,5 +186,14 @@
 	iframe {
 		position: relative;
 		border-radius: 0.5rem;
+	}
+
+	.success-message {
+		background-color: var(--success-bg, #e6f4ea);
+		color: var(--success-color, #1e7e34);
+		padding: 1rem;
+		border-radius: 4px;
+		margin: 1rem 0;
+		text-align: center;
 	}
 </style>
