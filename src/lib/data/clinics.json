@@ -1,27 +1,6 @@
 {
 	"clinics": [
-		{
-			"id": "dressage-for-jumpers",
-			"title": "Dressage for Jumpers",
-			"subtitle": "",
-			"description": "Show jumping riders learn to use dressage principles to improve balance, rhythm, and control.",
-			"date": "June 12-13, 2024",
-			"instructor": "",
-			"type": "dressage",
-			"status": "upcoming",
-			"image": "/clinic-collage.webp"
-		},
-		{
-			"id": "foundations-of-dressage",
-			"title": "Foundations of Dressage",
-			"subtitle": "A comprehensive guide to the basics of dressage",
-			"description": "Focus on rhythm, relaxation, connection, impulsion, straightness, and collection (the classical training scale).Ideal for new riders or those transitioning into dressage from other disciplines.",
-			"date": "April 12-13, 2025",
-			"instructor": "",
-			"type": "dressage",
-			"status": "upcoming",
-			"image": "/clinic-collage.webp"
-		},
+		
 		{
 			"id": "josef-maier-sept-2023",
 			"title": "Josef Maier Clinic September 2023",
