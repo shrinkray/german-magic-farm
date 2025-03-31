@@ -11,6 +11,7 @@ export interface Clinic {
 	type: ClinicType;
 	status: ClinicStatus;
 	image: string;
+	link?: string;
 }
 
 export interface SeoData {
