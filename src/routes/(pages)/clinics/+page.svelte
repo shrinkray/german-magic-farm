@@ -22,18 +22,18 @@
 			// Split on hyphen and take the first date
 			const firstDate = dateStr.split('-')[0].trim();
 			// console.log('First date part:', firstDate);
-			
+
 			// Parse the date parts
 			const parts = firstDate.split(' ');
 			// console.log('Date parts:', parts);
-			
+
 			// Handle cases where the day might have a comma
 			const month = parts[0];
 			const day = parts[1]?.replace(',', '');
 
 			// Log the parsed components
 			// console.log('Parsed components:', { month, day, year });
-			
+
 			if (!month || !day || !year) {
 				console.error('Missing date components for:', dateStr);
 				return new Date(0);
@@ -74,9 +74,18 @@
 	// Helper function to convert month name to number (0-11)
 	function getMonthNumber(month: string): number {
 		const months: { [key: string]: number } = {
-			'January': 0, 'February': 1, 'March': 2, 'April': 3,
-			'May': 4, 'June': 5, 'July': 6, 'August': 7,
-			'September': 8, 'October': 9, 'November': 10, 'December': 11
+			January: 0,
+			February: 1,
+			March: 2,
+			April: 3,
+			May: 4,
+			June: 5,
+			July: 6,
+			August: 7,
+			September: 8,
+			October: 9,
+			November: 10,
+			December: 11
 		};
 		const monthNum = months[month];
 		if (monthNum === undefined) {
@@ -185,7 +194,6 @@
 	}
 	.section {
 		padding: var(--size-fluid-4) 0;
-		
 	}
 	.show-card {
 		background: var(--show-card-bg);
@@ -209,4 +217,3 @@
 		background-color: var(--past-clinic-bg);
 	}
 </style>
- 

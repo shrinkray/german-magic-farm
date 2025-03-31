@@ -3,7 +3,6 @@
 	import Seo from '$lib/Seo.svelte';
 	import type { PageData } from './$types';
 	import { superForm } from 'sveltekit-superforms/client';
-	import SuperDebug from 'sveltekit-superforms/client/SuperDebug.svelte';
 	import Button from '$lib/Button.svelte';
 	import SmallLogoLayers from '$lib/SmallLogoLayers.svelte';
 	export let data: PageData;
@@ -195,7 +194,7 @@
 		pointer-events: none;
 		z-index: 1;
 		background-color: rgb(156, 156, 156); /* neutral gray */
-    	mix-blend-mode: saturation;
+		mix-blend-mode: saturation;
 		border-radius: 0.5rem;
 	}
 

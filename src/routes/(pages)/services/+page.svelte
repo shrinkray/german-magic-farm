@@ -1,10 +1,8 @@
 <script lang="ts">
 	import Seo from '$lib/Seo.svelte';
-	import Contact from '$lib/Contact.svelte';
 	import services from '$lib/data/services.json';
 	import Hero from '$lib/Hero.svelte';
 	import lessons from '$lib/data/lessons.json';
-	import SmallLogo from '$lib/SmallLogo.svelte';
 	import SmallLogoLayers from '$lib/SmallLogoLayers.svelte';
 	import { marked } from 'marked';
 
@@ -25,7 +23,7 @@
 		}
 	});
 
-	let showThird = true;
+	// let showThird = true;
 </script>
 
 <svelte:head
@@ -49,10 +47,12 @@
 		<article class="alt-color-band flow">
 			<h2 class="section-title">Learn about our services</h2>
 			<p class="section-description pull-quote">
-				German Magic Farm offers professional boarding, training, leasing, and lessons for riders of all levels. From full or partial training to flexible lease options and personalized instruction, we’re here to support both horse and rider every step of the way.
+				German Magic Farm offers professional boarding, training, leasing, and lessons for riders of
+				all levels. From full or partial training to flexible lease options and personalized
+				instruction, we’re here to support both horse and rider every step of the way.
 			</p>
 
-			{#each services as { content, title, amount }, index}
+			{#each services as { content, title, amount }}
 				<div class="service-feature">
 					<h3>{title}</h3>
 					<span class="bold inset" aria-label="Cost of service">{amount}</span>
@@ -114,7 +114,7 @@ Farm"
 		display: flex;
 		gap: 1.5em;
 		margin-bottom: 1rem;
-		@media (max-width: 600px) {
+		@media (max-width: 670px) {
 			flex-wrap: wrap;
 		}
 	}

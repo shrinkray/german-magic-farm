@@ -9,8 +9,8 @@
 
 			<p class="pull-quote section-description">
 				German Magic Farm is a private training and lesson facility located in historic, Dundee
-				Michigan. Our tranquil farm offers a huge outdoor arena, grass pastures, and access to
-				trail riding.
+				Michigan. Our tranquil farm offers a huge outdoor arena, grass pastures, and access to trail
+				riding.
 			</p>
 
 			<p class="grande">

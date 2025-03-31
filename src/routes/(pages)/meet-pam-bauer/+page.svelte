@@ -1,7 +1,6 @@
 <script lang="ts">
 	import Seo from '$lib/Seo.svelte';
 	import PhotoCluster from '$lib/PhotoCluster.svelte';
-	import SmallLogo from '$lib/SmallLogo.svelte';
 	import SmallLogoLayers from '$lib/SmallLogoLayers.svelte';
 </script>
 
@@ -41,8 +40,8 @@
 				target="_blank"
 				rel="noopener noreferrer">FEI</a
 			>
-			5th level and rode for Olympic dressage rider Mieko Yagi. She served as Chief Instructor at
-			the prestigious
+			5th level and rode for Olympic dressage rider Mieko Yagi. She served as Chief Instructor at the
+			prestigious
 			<a href="https://www.okamotoriding.com/" target="_blank" rel="noopener noreferrer"
 				>Tokyo Riding Club</a
 			>, where she trained horses and students all the way to Grand Prix level. In addition to her
