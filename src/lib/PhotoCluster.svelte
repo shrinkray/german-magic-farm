@@ -49,5 +49,4 @@
 		background: grey;
 		opacity: var(--bg-opacity);
 	}
-
 </style>

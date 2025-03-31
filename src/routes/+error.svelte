@@ -17,11 +17,4 @@
 />
 
 <style>
-	.hero {
-		margin: 0;
-	}
-
-	h3 {
-		border-bottom: 1px solid #ddd;
-	}
 </style>

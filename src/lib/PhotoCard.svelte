@@ -38,10 +38,6 @@
 </section>
 
 <style>
-	.flow-bottom > * {
-		/* margin-bottom: 2em; */
-		/* margin-block: 2rem; */
-	}
 
 	img {
 		margin-bottom: 2rem;
