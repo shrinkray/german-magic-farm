@@ -164,7 +164,8 @@
 		align-items: center;
 		border-bottom: 3px solid transparent;
 	}
-	.sun:hover, .moon:hover {
+	.sun:hover,
+	.moon:hover {
 		border-bottom: 3px solid transparent;
 	}
 
@@ -254,6 +255,5 @@
 	.active {
 		color: white;
 		border-bottom: 3px solid var(--interactive-color);
-
 	}
 </style>
