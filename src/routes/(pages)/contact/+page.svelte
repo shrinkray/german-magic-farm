@@ -1,21 +1,7 @@
 <script lang="ts">
 	import Contact from '$lib/Contact.svelte';
 	import Seo from '$lib/Seo.svelte';
-	import type { PageData } from './$types';
 	import SmallLogoLayers from '$lib/SmallLogoLayers.svelte';
-	export let data: PageData;
-
-	let submitted = false;
-
-	function handleSubmit(event: SubmitEvent) {
-		event.preventDefault();
-		submitted = true;
-		// Allow the form to actually submit after showing the message
-		setTimeout(() => {
-			const form = event.target as HTMLFormElement;
-			if (form) form.submit();
-		}, 100);
-	}
 </script>
 
 <section class="py-30 container">
@@ -24,33 +10,32 @@
 		<p class="pull-quote section-description">
 			Please fill out the form below to contact us. We will get back to you as soon as possible.
 		</p>
-		{#if submitted}
-			<div class="success-message">
-				Thank you for your message! We'll get back to you soon.
+		<form 
+			name="contact"
+			method="POST"
+			data-netlify="true"
+			data-netlify-honeypot="bot-field"
+		>
+			<input type="hidden" name="form-name" value="contact" />
+			<p class="hidden">
+				<label>
+					Don't fill this out if you're human: <input name="bot-field" />
+				</label>
+			</p>
+			<div class="form-group">
+				<label for="name">Name</label>
+				<input type="text" id="name" name="name" required />
 			</div>
-		{:else}
-			<form 
-				method="POST" 
-				data-netlify="true" 
-				name="contact" 
-				on:submit={handleSubmit}
-			>
-				<input type="hidden" name="form-name" value="contact" />
-				<div class="form-group">
-					<label for="name">Name</label>
-					<input type="text" id="name" name="name" required />
-				</div>
-				<div class="form-group">
-					<label for="email">Email</label>
-					<input type="email" id="email" name="email" required />
-				</div>
-				<div class="form-group">
-					<label for="body">Message</label>
-					<textarea id="body" name="body" required></textarea>
-				</div>
-				<button type="submit">Send Message</button>
-			</form>
-		{/if}
+			<div class="form-group">
+				<label for="email">Email</label>
+				<input type="email" id="email" name="email" required />
+			</div>
+			<div class="form-group">
+				<label for="message">Message</label>
+				<textarea id="message" name="message" required></textarea>
+			</div>
+			<button type="submit">Send Message</button>
+		</form>
 	</div>
 </section>
 
@@ -210,5 +195,9 @@
 		border-radius: 4px;
 		margin: 1rem 0;
 		text-align: center;
+	}
+
+	.hidden {
+		display: none;
 	}
 </style>
