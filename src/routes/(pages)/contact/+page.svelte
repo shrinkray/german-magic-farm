@@ -6,6 +6,16 @@
 	export let data: PageData;
 
 	let submitted = false;
+
+	function handleSubmit(event: SubmitEvent) {
+		event.preventDefault();
+		submitted = true;
+		// Allow the form to actually submit after showing the message
+		setTimeout(() => {
+			const form = event.target as HTMLFormElement;
+			if (form) form.submit();
+		}, 100);
+	}
 </script>
 
 <section class="py-30 container">
@@ -19,7 +29,12 @@
 				Thank you for your message! We'll get back to you soon.
 			</div>
 		{:else}
-			<form method="POST" data-netlify="true" name="contact" on:submit={() => submitted = true}>
+			<form 
+				method="POST" 
+				data-netlify="true" 
+				name="contact" 
+				on:submit={handleSubmit}
+			>
 				<input type="hidden" name="form-name" value="contact" />
 				<div class="form-group">
 					<label for="name">Name</label>
@@ -190,7 +205,7 @@
 
 	.success-message {
 		background-color: var(--success-bg, #e6f4ea);
-		color: var(--success-color, #1e7e34);
+		color: var(--success-color, #10491d);
 		padding: 1rem;
 		border-radius: 4px;
 		margin: 1rem 0;
