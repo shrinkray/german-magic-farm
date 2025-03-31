@@ -1,5 +1,7 @@
 @import 'https://unpkg.com/open-props';
 
+/* https://github.com/argyleink/open-props/blob/main/src/props.colors.css */
+
 :root {
 	--primary-color: #d10000;
 	--input-color: #333;
@@ -11,7 +13,7 @@
 	--hero-lg-heading: white;
 	--footer-color: #343a40;
 	--header-color: var(--brown-0);
-	--visited-link-color:var(--red-10);
+	--visited-link-color: var(--red-10);
 	--link-color: var(--primary-color);
 	--interactive-color: #fecf0a;
 
@@ -19,7 +21,6 @@
 	--past-clinics-bg: #f2f4f6; /* stone-8 */
 	--past-clinic-bg: #d1d6d8; /* stone-10 */
 	--show-card-bg: #ede0d1;
-	
 
 	--ff-base: '';
 	--ff-accent: '';
@@ -46,7 +47,7 @@
 	--hero-lg-heading: #f0e5d1;
 	--header-color: rgb(94 84 74 / 30%);
 	--footer-color: rgb(94 84 74 / 30%);
-	--visited-link-color:white;
+	--visited-link-color: white;
 	--interactive-color: #fecf0a;
 	--link-color: white;
 
@@ -72,46 +73,44 @@ img {
 /* Libre Baskerville family */
 
 @font-face {
-    font-family: 'Libre Baskerville';
-    src: url('/fonts/LibreBaskerville/LibreBaskerville-Regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+	font-family: 'Libre Baskerville';
+	src: url('/fonts/LibreBaskerville/LibreBaskerville-Regular.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-    font-family: 'Libre Baskerville';
-    src: url('/fonts/LibreBaskerville/LibreBaskerville-Bold.woff2') format('woff2');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
+	font-family: 'Libre Baskerville';
+	src: url('/fonts/LibreBaskerville/LibreBaskerville-Bold.woff2') format('woff2');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-    font-family: 'Libre Baskerville';
-    src: url('/fonts/LibreBaskerville/LibreBaskerville-Italic.woff2') format('woff2');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
+	font-family: 'Libre Baskerville';
+	src: url('/fonts/LibreBaskerville/LibreBaskerville-Italic.woff2') format('woff2');
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
 }
 /* Montserrat family */
 @font-face {
-  font-family: 'Montserrat';
-  src: url('/fonts/Montserrat/Montserrat-VariableFont_wght.woff2') format('woff2');
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
+	font-family: 'Montserrat';
+	src: url('/fonts/Montserrat/Montserrat-VariableFont_wght.woff2') format('woff2');
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-  font-family: 'Montserrat';
-  src: url('/fonts/Montserrat/Montserrat-Italic-VariableFont_wght.woff2') format('woff2');
-  font-weight: 100 900;
-  font-style: italic;
-  font-display: swap;
+	font-family: 'Montserrat';
+	src: url('/fonts/Montserrat/Montserrat-Italic-VariableFont_wght.woff2') format('woff2');
+	font-weight: 100 900;
+	font-style: italic;
+	font-display: swap;
 }
-
-
 
 body {
 	margin: 0;
@@ -119,7 +118,7 @@ body {
 	background-color: var(--bg-color);
 	color: var(--color);
 	font-size: var(--fs-300);
-	line-height: 1.6; 
+	line-height: 1.6;
 	font-weight: 400;
 }
 main {
@@ -138,7 +137,7 @@ main {
 }
 
 .serif {
-	font-family: 'Libre Baskerville',serif;
+	font-family: 'Libre Baskerville', serif;
 }
 
 .sans-serif {
@@ -159,13 +158,13 @@ h1 {
 }
 
 h2 {
-	font-size: 2.5rem;
+	font-size: 2.1rem;
 	padding-top: 1rem;
 	padding-bottom: 0.5rem;
 }
 
 h3 {
-	font-size: var(--fs-400);
+	font-size: var(--fs-300);
 	padding-top: 1.5rem;
 	padding-bottom: 1rem;
 }
@@ -268,12 +267,12 @@ blockquote p span {
 }
 
 .photo-grid > * {
-    flex: 1 1 calc(25% - 1rem); /* For 4 across */
-    
-    @media (max-width: 635px) {
-        flex: 1 1 calc(50% - 1rem); /* For 2 across */
-        min-width: calc(50% - 1rem);
-    }
+	flex: 1 1 calc(25% - 1rem); /* For 4 across */
+
+	@media (max-width: 635px) {
+		flex: 1 1 calc(50% - 1rem); /* For 2 across */
+		min-width: calc(50% - 1rem);
+	}
 }
 
 input,
@@ -287,7 +286,7 @@ textarea {
 
 .top-rounded {
 	border-top-left-radius: 1rem;
-	border-top-right-radius: 1rem; 
+	border-top-right-radius: 1rem;
 }
 
 .bottom-rounded {
@@ -434,7 +433,7 @@ a:visited:hover {
 
 .p-40 {
 	padding: 4rem;
-} 
+}
 
 a:visited {
 	color: var(--visited-link-color);
