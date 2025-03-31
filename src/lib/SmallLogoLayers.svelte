@@ -1,16 +1,18 @@
 <script>
-	export let width = '60';
-	export let height = 'auto';
+	export let width = '100';
+	export let height = '170.66';
 </script>
 
 <svg
-	class="currentcolor"
+	class="currentcolor py-20"
 	{width}
 	{height}
 	viewBox="0 0 60 64"
 	xmlns="http://www.w3.org/2000/svg"
-	alt="German Magic Farm logo icon"
+	aria-labelledby="svgTitle svgDesc"
 >
+	<title id="svgTitle">German Magic Farm logo</title>
+	<desc id="svgDesc">Offering equine care and riding skills</desc>
 	<path
 		id="horse"
 		class="basefill"

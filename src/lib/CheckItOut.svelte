@@ -1,4 +1,4 @@
-<section class="fade | section">
+<section class="fade | section top-rounded">
 	<div class="bg-wrapper check-it-out">
 		<div class="center-box">
 			Browse the rest of our site to learn more about Pam Bauer and the services and fun activities
@@ -9,7 +9,6 @@
 
 <style>
 	.section {
-		padding-block: var(--size-fluid-5);
 		background: url('/pam-gallop-hill-cp.webp') no-repeat left top;
 		background-color: var(--accent-fade);
 		background-size: contain;
@@ -22,6 +21,7 @@
 	.check-it-out {
 		display: grid;
 		place-items: center;
+		padding: 2rem;
 	}
 
 	.center-box {
@@ -36,5 +36,6 @@
 		opacity: 0.75;
 		border: 2px solid var(--primary-color);
 		border-radius: 6px;
+		margin-bottom: 1rem;
 	}
 </style>

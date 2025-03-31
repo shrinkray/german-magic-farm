@@ -3,12 +3,14 @@
 	export let tagline = '';
 </script>
 
-<div class="hero">
-	<div class="container">
-		<h2 class="highlighted-text-shadow">{herotitle}</h2>
-		<p>
-			{tagline}
-		</p>
+<div class="hero-container bottom-rounded">
+	<div class="hero">
+		<div class="value-prop">
+			<h1 class="highlighted-text-shadow">{herotitle}</h1>
+			<p class="hero-tagline">
+				{tagline}
+			</p>
+		</div>
 	</div>
 </div>
 
@@ -18,13 +20,14 @@
 		--bg-opacity: 0;
 		--visibility: visible;
 		--bg-size: cover;
-		--margin-block: 1em;
+		--margin-block: 1rem;
 	}
 
 	@layer demo {
 		.highlighted-text-shadow {
 			text-shadow:
-      /* regular text-shadow */ 0 0.15ch 15px var(--shadow),
+      /* regular text-shadow */
+				0 0.15ch 15px var(--shadow),
 				/* text-shadow highlight */ 0 -2px 0 var(--highlight);
 		}
 	}
@@ -39,15 +42,18 @@
 		}
 	}
 
+	.hero-container {
+		max-height: 470px;
+		overflow: hidden;
+		margin-bottom: 2rem;
+	}
 	.hero {
-		padding: 11em 0;
-
+		padding: 9em 0;
 		color: white;
 		background-image: var(--bg-image);
-		background-position: center;
+		background-position: center top;
 		background-repeat: no-repeat;
 		background-size: var(--bg-size);
-		margin-block: var(--margin-block);
 		position: relative;
 		isolation: isolate;
 	}
@@ -62,12 +68,14 @@
 		opacity: var(--bg-opacity);
 	}
 
-	h2 {
-		margin: 0;
-		/* font-size: 3.5em;
-		font-weight: 500; */
-		color: var(--heading-color);
+	.hero-tagline {
+		font-size: var(--fs-400);
+		font-family: 'Montserrat', sans-serif;
+		color: white;
+		line-height: 1.2;
+		margin-top: 0;
 	}
+
 	p {
 		color: var(--heading-color);
 		font-size: var(--fs-400);

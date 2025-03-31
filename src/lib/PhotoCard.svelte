@@ -17,12 +17,12 @@
 			title: 'CLINICS',
 			photo: './jumping-clinic.webp',
 			link: './clinics',
-			excerpt: 'Josef Maier clinic Sept 9-10! Learn, practice and have fun at a clinic! '
+			excerpt: 'Transform rider and horse skills. Learn, practice and have fun at a clinic! '
 		}
 	];
 </script>
 
-<section class="section">
+<section class="section my-60">
 	<div class="container">
 		<div class="auto-grid">
 			{#each pics as { title, photo, link, excerpt }}
@@ -38,17 +38,9 @@
 </section>
 
 <style>
-	.section {
-		padding-block: var(--size-fluid-5);
-	}
-
-	.flow-bottom > * {
-		/* margin-bottom: 2em; */
-		margin-block: 2em;
-	}
 
 	img {
-		margin-bottom: 2em;
+		margin-bottom: 2rem;
 	}
 
 	.auto-grid {
@@ -62,6 +54,7 @@
 	.excerpt {
 		display: -webkit-box;
 		-webkit-line-clamp: 3;
+		line-clamp: 3;
 		-webkit-box-orient: vertical;
 		overflow: hidden;
 	}
@@ -85,6 +78,8 @@
 		background-color: var(--primary-color);
 		text-decoration: none;
 		color: white;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 400;
 		font-size: 1em;
 		cursor: pointer;
 		padding: 0.5em 1em;

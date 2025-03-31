@@ -3,7 +3,7 @@
 </script>
 
 <section class="section | fade">
-	<div class="container | flow | center">
+	<div class="| flow | center container">
 		<h1>Opps you landed on old link!</h1>
 		<h2>Don't worry, just use the menu above!</h2>
 		<p>... and get a jump on our new site 😀</p>
@@ -17,15 +17,4 @@
 />
 
 <style>
-	.section {
-		padding-block: var(--size-fluid-5);
-	}
-
-	.hero {
-		margin: 0;
-	}
-
-	h3 {
-		border-bottom: 1px solid #ddd;
-	}
 </style>

@@ -5,7 +5,7 @@
 	import PhotoCard from '$lib/PhotoCard.svelte';
 	import CheckItOut from '$lib/CheckItOut.svelte';
 	import SmallLogoLayers from '$lib/SmallLogoLayers.svelte';
-
+	import { fade } from 'svelte/transition';
 	export let data;
 
 	const { posts } = data;
@@ -26,7 +26,7 @@
 <!-- svelte-ignore a11y-img-redundant-alt -->
 <!-- <img src="./german-magic-bg.webp" alt="Large Logo Image" /> -->
 
-<div class="lg-home-image | section"><SmallLogoLayers width="300" /></div>
+<div class="lg-home-image static-logo | section"><SmallLogoLayers width="300" height="300" /></div>
 <!-- begin experiment -->
 
 <!-- end experiment -->
@@ -37,6 +37,9 @@
 	<What />
 </article>
 <PhotoCard />
+
+<div class="center-w-grid static-logo"><SmallLogoLayers /></div>
+
 <CheckItOut />
 
 <Seo
@@ -47,14 +50,6 @@
 />
 
 <style>
-	img {
-		margin-inline: auto;
-	}
-
-	.section {
-		padding-block: var(--size-fluid-5);
-	}
-
 	.lg-home-image {
 		display: flex;
 

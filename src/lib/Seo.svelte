@@ -1,10 +1,10 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/stores';
 
-	export let title;
-	export let description;
-	export let type;
-	export let image;
+	export let title: string;
+	export let description: string;
+	export let type: string;
+	export let image: string | null = null;
 
 	$: url = $page.url.href;
 </script>

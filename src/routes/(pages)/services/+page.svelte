@@ -1,13 +1,29 @@
-<script land="ts">
+<script lang="ts">
 	import Seo from '$lib/Seo.svelte';
-	import Contact from '$lib/Contact.svelte';
 	import services from '$lib/data/services.json';
 	import Hero from '$lib/Hero.svelte';
 	import lessons from '$lib/data/lessons.json';
-	import SmallLogo from '$lib/SmallLogo.svelte';
 	import SmallLogoLayers from '$lib/SmallLogoLayers.svelte';
+	import { marked } from 'marked';
 
-	let showThird = true;
+	marked.use({
+		gfm: true,
+		breaks: true,
+		renderer: {
+			strong(token) {
+				const text = token?.text || token?.raw || '';
+				return text ? `<span class="bold line-height-3">${text}</span>` : '';
+			},
+			heading(token) {
+				const text = token?.text || token?.raw || '';
+				const level = token.depth;
+				// Use the heading level as is - #### will render as h4
+				return text ? `<h${level}>${text}</h${level}>` : '';
+			}
+		}
+	});
+
+	// let showThird = true;
 </script>
 
 <svelte:head
@@ -21,53 +37,66 @@
 >
 
 <Hero
-	herotitle="Services:  German Magic Farm"
-	tagline="Training, Lessons, Leasing, Showing and Fun!"
+	herotitle="German Magic Farm Services"
+	tagline="Training, Lessons, Leasing, Showing & Fun!"
 	--bg-image="url('/pam-dressage-slider.webp')"
 	--bg-opacity="0.5"
 />
 <section class="section">
 	<div class="container grid">
 		<article class="alt-color-band flow">
-			<h1>Services Offered at German Magic Farm</h1>
+			<h2 class="section-title">Learn about our services</h2>
+			<p class="section-description pull-quote">
+				German Magic Farm offers professional boarding, training, leasing, and lessons for riders of
+				all levels. From full or partial training to flexible lease options and personalized
+				instruction, we’re here to support both horse and rider every step of the way.
+			</p>
 
-			{#each services as { content, title, amount }, index}
-				<div class="">
-					<h2>{title}</h2>
-					<p class="bold">{amount}</p>
-					<p class="">{content}</p>
+			{#each services as { content, title, amount }}
+				<div class="service-feature">
+					<h3>{title}</h3>
+					<span class="bold inset" aria-label="Cost of service">{amount}</span>
+					<div class="service-description" aria-label="Description of service">
+						{@html marked(content)}
+					</div>
 				</div>
 			{/each}
 		</article>
 	</div>
 </section>
 <section class="section">
-	<div class="container italics">
-		<h4>** Note About Late Fees</h4>
-		<p>
-			Late Fees: a $50 late fee will be charged 10 days after payment is late, and every additional
-			10 days thereafter.
-		</p>
+	<div class="italics container">
+		<blockquote>
+			<h4>** Note About Late Fees</h4>
+			<p>
+				Late Fees: a $50 late fee will be charged 10 days after payment is late, and every
+				additional 10 days thereafter.
+			</p>
+		</blockquote>
 	</div>
 </section>
-<div class="center-w-grid"><SmallLogoLayers /></div>
+
 <section class="section">
-	<article class="lessons larger-wrapper fade">
-		<h2>Types Of Lessons and Pricing</h2>
-		{#each lessons as { kindOfLesson, firstPrice, firstDescription, secondPrice, secondDescription, thirdPrice, thirdDescription }}
-			<div class="flexible-grid">
-				<h3>{kindOfLesson}</h3>
-				<div class="">
-					<p>{firstPrice} {firstDescription}</p>
-					<p>{secondPrice} {secondDescription}</p>
-					{#if showThird}
-						<p class="symbol">{thirdPrice} {thirdDescription}</p>
-					{/if}
+	<article class="lessons larger-wrapper fade rounded px-20">
+		<div class="container mx-auto">
+			<h2 class="section-title">Types Of Lessons and Pricing</h2>
+			{#each lessons as { kindOfLesson, firstPrice, firstDescription, secondPrice, secondDescription, thirdPrice, thirdDescription }}
+				<div class="flexible-grid">
+					<h3>{kindOfLesson}</h3>
+					<div class="">
+						<p class=""><span class="bold mr-5">{firstPrice}</span> {firstDescription}</p>
+						<p class=""><span class="bold mr-5">{secondPrice}</span> {secondDescription}</p>
+						{#if thirdPrice && thirdDescription}
+							<p class="symbol"><span class="bold mr-5">{thirdPrice}</span> {thirdDescription}</p>
+						{/if}
+					</div>
 				</div>
-			</div>
-		{/each}
+			{/each}
+		</div>
 	</article>
 </section>
+
+<div class="center-w-grid static-logo py-20"><SmallLogoLayers /></div>
 
 <Seo
 	title="Dressage and jumping Lessons | Training Horseshow Information German Magic
@@ -78,35 +107,28 @@ Farm"
 />
 
 <style>
-	.italics {
-		font-style: italic;
-		font-size: var(--fs-300);
-	}
-
-	.section {
-		padding-block: var(--size-fluid-1);
-	}
-
 	article.alt-color-band > div:nth-child(odd) {
 		background-color: var(--accent-fade);
 	}
 	.flexible-grid {
 		display: flex;
-		flex-wrap: wrap;
 		gap: 1.5em;
+		margin-bottom: 1rem;
+		@media (max-width: 670px) {
+			flex-wrap: wrap;
+		}
 	}
 
 	h3 {
 		border-bottom: 1px solid #ddd;
-	}
+		min-width: 12rem;
+		padding-left: 1rem;
+		padding-top: 0;
 
-	.larger-wrapper {
-		width: min(100% - 3rem, 90ch);
-		margin-inline: auto;
-	}
-
-	article.larger-wrapper > * {
-		padding: 1em;
+		@media (width < 660px) {
+			width: 100%;
+			margin-top: 1rem;
+		}
 	}
 
 	.lessons {
@@ -115,5 +137,27 @@ Farm"
 
 	.bold {
 		font-weight: bold;
+	}
+	.service-description {
+		margin-top: 0.5rem;
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+	.service-feature {
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+		border-radius: 1rem;
+	}
+	.mr-5 {
+		margin-right: 0.5rem;
+	}
+	@media (max-width: 770px) {
+		.px-20 {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		.lessons h3 {
+			padding-left: 0;
+		}
 	}
 </style>

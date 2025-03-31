@@ -3,9 +3,8 @@
 	import Seo from '$lib/Seo.svelte';
 	import type { PageData } from './$types';
 	import { superForm } from 'sveltekit-superforms/client';
-	import SuperDebug from 'sveltekit-superforms/client/SuperDebug.svelte';
 	import Button from '$lib/Button.svelte';
-
+	import SmallLogoLayers from '$lib/SmallLogoLayers.svelte';
 	export let data: PageData;
 
 	// Client API:
@@ -14,9 +13,12 @@
 
 <!-- <SuperDebug data={$form} /> -->
 
-<section class="section">
-	<div class="container">
+<section class="py-30 container">
+	<div class="section">
 		<h1>Questions?</h1>
+		<p class="pull-quote section-description">
+			Please fill out the form below to contact us. We will get back to you as soon as possible.
+		</p>
 		<form class="form" method="POST">
 			<label for="name">Name</label>
 			<input
@@ -53,9 +55,9 @@
 			<!-- <textarea name="body" id="" cols="30" rows="10" /> -->
 			{#if $errors.body}<span class="invalid">{$errors.body}</span>{/if}
 
-			<!-- <div><button>Submit</button></div> -->
+			<div class="space-y-20"></div>
 
-			<div><Button class="secondary" size="medium">Submit >></Button></div>
+			<div><Button class="secondary bold" size="medium">Submit »</Button></div>
 
 			<div>
 				{#if $message}<p>{$message}</p>{/if}
@@ -66,18 +68,24 @@
 
 <section class="section">
 	<div class="larger-wrapper contact-map">
-		<div><Contact /></div>
-		<div class="map">
-			<iframe
-				src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11866.804920549557!2d-83.6402403380172!3d41.96375198592071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1435260600940"
-				width="100%"
-				height="350"
-				frameborder="0"
-				style="border:0"
-				allowfullscreen=""
-			/>
+		<div class="contact-info col"><Contact /></div>
+		<div class="map col">
+			<div class="map-container">
+				<div class="map-overlay"></div>
+				<iframe
+					title="Map showing location of German Magic Farm in Dundee, Michigan"
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1027.3392084379652!2d-83.63739278065546!3d41.96147313325206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883c9dcaecb22297%3A0x9a8a3080e9bc5486!2sGerman%20Magic%20Farm!5e0!3m2!1sen!2sus!4v1742695523556!5m2!1sen!2sus"
+					width="100%"
+					height="350"
+					style="border:0;"
+					allowfullscreen
+					loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade"
+				/>
+			</div>
 		</div>
 	</div>
+	<div class="center-w-grid static-logo"><SmallLogoLayers /></div>
 </section>
 
 <Seo
@@ -88,31 +96,42 @@
 />
 
 <style>
-	.section {
-		padding-block: var(--size-fluid-3);
-	}
-	h2 {
-	}
-
 	form {
 		padding-block: var(--size-7);
+	}
+
+	label {
+		font-family: 'Montserrat', sans-serif;
+		margin-top: 1rem;
 	}
 	.contact-map {
 		display: flex;
 		flex-wrap: wrap;
 		gap: 1.5em;
 		padding-block: var(--size-7);
+		padding-right: 2rem;
+		background-color: var(--accent-fade);
+		margin-bottom: 2rem;
+		border-radius: 1rem;
 	}
 
-	.contact-map {
-		flex: 1;
+	.contact-info {
+		padding-left: 2.5rem;
+	}
+	@media (width < 965px) {
+		.contact-info {
+			width: 100%;
+		}
 	}
 
 	.map {
 		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
 		@media (width > 965px) {
-			width: 65%;
+			width: 58%;
 		}
 	}
 
@@ -146,12 +165,41 @@
 		color: red;
 	}
 
-	button {
+	.button {
 		border: none;
 		border-radius: 0.25em;
 		background-color: var(--primary-color);
 		color: white;
 		font-size: 1em;
 		cursor: pointer;
+	}
+
+	.map-container {
+		position: relative;
+		width: 100%;
+		height: 350px;
+		border-radius: 0.5rem;
+		@media (width < 965px) {
+			margin-left: 2rem;
+		}
+	}
+
+	.map-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(89, 76, 60, 0.3);
+		pointer-events: none;
+		z-index: 1;
+		background-color: rgb(156, 156, 156); /* neutral gray */
+		mix-blend-mode: saturation;
+		border-radius: 0.5rem;
+	}
+
+	iframe {
+		position: relative;
+		border-radius: 0.5rem;
 	}
 </style>

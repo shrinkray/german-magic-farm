@@ -13,7 +13,6 @@
 <style>
 	.small {
 		width: 100px;
-		height: auto;
 		object-fit: cover;
 	}
 </style>
