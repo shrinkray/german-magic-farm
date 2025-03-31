@@ -1,3 +1,10 @@
+[build]
+  command = "npm run build"
+  publish = "build"
+
+[build.environment]
+  NODE_VERSION = "20"
+
 [[redirects]]
 from = "/index.html"
 to = "/"
@@ -37,6 +44,12 @@ status = 301
 from = "/photo-gallery.html"
 to = "/"
 status = 301
+
+# Handle SPA routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
 
 
