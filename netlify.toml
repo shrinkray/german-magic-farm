@@ -1,56 +1,7 @@
 [build]
   command = "npm run build"
   publish = "build"
+  base = "/"
 
 [build.environment]
-  NODE_VERSION = "20"
-
-[[redirects]]
-from = "/index.html"
-to = "/"
-status = 301
-
-[[redirects]]
-from = "https://www.germanmagicfarm.com/services.html"
-to = "https://www.germanmagicfarm.com/services"
-status = 301
-
-[[redirects]]
-from = "/clinics.html"
-to = "/clinics"
-status = 301
-
-[[redirects]]
-from = "/contact.html"
-to = "/contact"
-status = 301
-
-[[redirects]]
-from = "/sales.html"
-to = "/"
-status = 301
-
-[[redirects]]
-from = "/for-lease.html"
-to = "/"
-status = 301
-
-[[redirects]]
-from = "/meet-pam-bauer.html"
-to = "/meet-pam-bauer"
-status = 301
-
-[[redirects]]
-from = "/photo-gallery.html"
-to = "/"
-status = 301
-
-# Handle SPA routing
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
-
-
-
+  NODE_VERSION = "20" 
