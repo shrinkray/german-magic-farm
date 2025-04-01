@@ -8,9 +8,14 @@
 	<div class="section">
 		<h1>Questions?</h1>
 		<p class="pull-quote section-description">
-			Please fill out the form below to contact us. We will get back to you as soon as possible.
+			Please reach out to us on Facebook, call, or email. We will get back to you as soon as possible.
 		</p>
-		<form 
+
+		
+
+
+
+		<!-- <form 
 			name="contact"
 			method="POST"
 			data-netlify="true"
@@ -35,7 +40,8 @@
 				<textarea id="message" name="message" required></textarea>
 			</div>
 			<button type="submit">Send Message</button>
-		</form>
+		</form> -->
+		
 	</div>
 </section>
 
@@ -69,7 +75,7 @@
 />
 
 <style>
-	.form-group {
+	/* .form-group {
 		margin-bottom: 1rem;
 	}
 	label {
@@ -106,7 +112,7 @@
 	label {
 		font-family: 'Montserrat', sans-serif;
 		margin-top: 1rem;
-	}
+	} */
 	.contact-map {
 		display: flex;
 		flex-wrap: wrap;
@@ -120,6 +126,11 @@
 
 	.contact-info {
 		padding-left: 2.5rem;
+	}
+	@media (width < 600px) {
+		.contact-info {
+			padding-left: 2rem;
+		}
 	}
 	@media (width < 965px) {
 		.contact-info {
