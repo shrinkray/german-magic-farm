@@ -83,12 +83,40 @@
 
 <div class="bg-color" data-theme={currentTheme}>
 	<header class="header-wrap">
-		<div class="flex">
+		<div class="flex justify-start">
 			<a class="logo flex" href="/">
 				<SmallLogoLayers />
 				<span class="serif site-title">German Magic Farm</span>
 			</a>
+		</div>
+		<div class="flex justify-between">
+			<div class="menu-toggle-btn">
+				{#if open}
+					<div class="relative">
+						<nav class="color-border" bind:this={nav}>
+							<ul class="flow-bottom text-left">
+								{#each navs as { title, href }}
+									<li>
+										<a
+											{href}
+											class:active={href === '/' ? routeId === '/' : url.includes(href)}
+											{title}
+											on:click={handleLinkClick}
+										>
+											{title}
+										</a>
+									</li>
+								{/each}
+							</ul>
+						</nav>
+					</div>
+				{/if}
 
+				<div bind:this={hamburgerBtn}>
+					<Hamburger bind:open />
+				</div>
+				
+			</div>
 			<!-- begin dark light toggle code -->
 			<div class="move-moon relative">
 				{#if currentTheme == 'light'}
@@ -98,35 +126,9 @@
 				{:else}
 					<a class="sun" href={'#'} on:click={() => setTheme('light')}>
 						<Sun />
-					</a>
-				{/if}
-			</div>
-		</div>
-		<div class="menu-toggle-btn">
-			{#if open}
-				<div class="relative">
-					<nav class="color-border" bind:this={nav}>
-						<ul class="flow-bottom text-left">
-							{#each navs as { title, href }}
-								<li>
-									<a
-										{href}
-										class:active={href === '/' ? routeId === '/' : url.includes(href)}
-										{title}
-										on:click={handleLinkClick}
-									>
-										{title}
-									</a>
-								</li>
-							{/each}
-						</ul>
-					</nav>
-				</div>
+				</a>
 			{/if}
-
-			<div bind:this={hamburgerBtn}>
-				<Hamburger bind:open />
-			</div>
+		</div>
 		</div>
 	</header>
 </div>
