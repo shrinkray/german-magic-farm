@@ -55,7 +55,7 @@
 			{#each services as { content, title, amount }}
 				<div class="service-feature">
 					<h3>{title}</h3>
-					<span class="bold inset" aria-label="Cost of service">{amount}</span>
+					<p class="bold inset bright-color" aria-label="Cost of service">{amount}</p>
 					<div class="service-description" aria-label="Description of service">
 						{@html marked(content)}
 					</div>
@@ -79,7 +79,7 @@
 <section class="section">
 	<article class="lessons larger-wrapper fade rounded px-20">
 		<div class="container mx-auto">
-			<h2 class="section-title">Types Of Lessons and Pricing</h2>
+			<h2 class="section-title">Types of Lessons and Pricing</h2>
 			{#each lessons as { kindOfLesson, firstPrice, firstDescription, secondPrice, secondDescription, thirdPrice, thirdDescription }}
 				<div class="flexible-grid">
 					<h3>{kindOfLesson}</h3>
@@ -122,7 +122,7 @@ Farm"
 	h3 {
 		border-bottom: 1px solid #ddd;
 		min-width: 12rem;
-		padding-left: 1rem;
+		padding-left: 0.5rem;
 		padding-top: 0;
 
 		@media (width < 660px) {
@@ -133,10 +133,6 @@ Farm"
 
 	.lessons {
 		padding-block: var(--size-7);
-	}
-
-	.bold {
-		font-weight: bold;
 	}
 	.service-description {
 		margin-top: 0.5rem;
