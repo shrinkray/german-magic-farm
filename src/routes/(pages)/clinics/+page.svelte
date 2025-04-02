@@ -147,7 +147,9 @@
 						<p>{clinic.description}</p>
 						{#if clinic.link}
 							<p class="clinic-link">
-								<a href={clinic.link} target="_blank" rel="noopener noreferrer" class="card-link">Learn More & Register!</a>
+								<a href={clinic.link} target="_blank" rel="noopener noreferrer" class="card-link"
+									>Learn More & Register!</a
+								>
 							</p>
 						{/if}
 					</article>
@@ -175,7 +177,12 @@
 						<p></p>
 						{#if clinic.link}
 							<p class="clinic-link">
-								Sorry you missed it! <a href={clinic.link} target="_blank" rel="noopener noreferrer" class="">Read about our clinic.</a>
+								Sorry you missed it! <a
+									href={clinic.link}
+									target="_blank"
+									rel="noopener noreferrer"
+									class="">Read about our clinic.</a
+								>
 							</p>
 						{/if}
 					</article>
@@ -232,6 +239,6 @@
 		margin-top: var(--size-fluid-2);
 	}
 	.clinic-link {
-		padding-top: var(--size-fluid-2); 
+		padding-top: var(--size-fluid-2);
 	}
 </style>

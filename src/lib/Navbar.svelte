@@ -115,7 +115,6 @@
 				<div bind:this={hamburgerBtn}>
 					<Hamburger bind:open />
 				</div>
-				
 			</div>
 			<!-- begin dark light toggle code -->
 			<div class="move-moon relative">
@@ -126,9 +125,9 @@
 				{:else}
 					<a class="sun" href={'#'} on:click={() => setTheme('light')}>
 						<Sun />
-				</a>
-			{/if}
-		</div>
+					</a>
+				{/if}
+			</div>
 		</div>
 	</header>
 </div>
