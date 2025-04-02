@@ -15,7 +15,7 @@
 		"secondPrice": "$60",
 		"secondDescription": "per session on a student owned horse",
 		"thirdPrice": "$55",
-		"thirdDescription": "per session for Professional ride on non GMF horse"
+		"thirdDescription": "per session for professional ride on non GMF horse"
 	},
 	{
 		"kindOfLesson": "Group lessons",
@@ -27,12 +27,12 @@
 		"thirdDescription": ""
 	},
 	{
-		"kindOfLesson": "Off Site Lessons",
+		"kindOfLesson": "Off-site lessons",
 		"firstPrice": "$70",
 		"firstDescription": "per session for private lesson",
 		"secondPrice": "$50",
 		"secondDescription": "per session for 2 or more riders",
 		"thirdPrice": "$75",
-		"thirdDescription": "per session for Professional ride off site"
+		"thirdDescription": "per session for professional ride off-site"
 	}
 ]

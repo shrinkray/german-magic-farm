@@ -17,16 +17,16 @@
 	{
 		"title": "Leasing",
 		"amount": "To Be Determined",
-		"content": "#### Leasing Program\n\n> GMF offers a limited number of horses available for lease.\n\n>   *At this time, we offer half leases on our GMF owned horses. (see below)* \n\n>   - Lessees are responsible for 50% of veterinary and farrier costs, as well as half the cost of bodywork and grooming services such as clipping, mane pulling, and show braiding.\n\n>  - Lunging sessions are included in the lease."
+		"content": "#### Leasing Program\n\n> GMF offers a limited number of horses available for lease.\n\n>   *At this time, we offer half leases on our GMF owned horses.* \n\n>   - Lessees are responsible for 50% of veterinary and farrier costs, as well as half the cost of bodywork and grooming services such as clipping, mane pulling, and show braiding.\n\n>  - Lunging sessions are included in the lease."
 	},
 	{
 		"title": "Half Leasing",
-		"amount": "$450 total per month ($200 board plus $250 per month lesson program)",
+		"amount": "$450 total per month ($200 board plus $250 per month with lesson program)",
 		"content": "#### Half Lease includes:\n\n> Two group lessons per week (8 per month) and one free ride per week.\n\n> - Free rides may be used for trail rides, off-site shows, or GMF private weekend events such as dressage training days, show jumping, free jumping, cross-country schooling, or professional clinics.\n\n> - An additional fee may apply if a clinician is brought in for feedback during these events.\n\n> - Lunging sessions are included."
 	},
 	{
 		"title": "Lesson Program",
-		"amount": "Lesson amounts depend on which type of lesson, please see below",
+		"amount": "Cost based on type of lesson",
 		"content": "#### Lesson program includes:\n\n> Instruction is customized to each rider’s skill level, with advancement determined by the GMF training staff.\n\n> - Instruction includes equine care, groundwork, showmanship, grooming, dressage, and hunt seat equitation.\n\n> - Advanced lessons cover show jumping, cross-country, dressage, and eventing derbies.\n\n> We offer private and group lessons both on-site and off-site. \n\n> Starter lessons are available for all ages and will continue until GMF staff determine the rider is ready for group instruction."
 	}
 ]
