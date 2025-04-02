@@ -15,13 +15,13 @@
 	--header-color: var(--brown-0);
 	--visited-link-color: var(--red-10);
 	--link-color: var(--primary-color);
-	--primary-color-hover: rgb(184,0,0);
+	--primary-color-hover: rgb(184, 0, 0);
 	--interactive-color: #fecf0a;
 
 	--brown-10: #4d3928;
-	--past-clinics-bg: #ecf4fd; 
-	--past-clinic-bg:#f7fdff;
-	--show-card-bg:#faf6f2;
+	--past-clinics-bg: #ecf4fd;
+	--past-clinic-bg: #f7fdff;
+	--show-card-bg: #faf6f2;
 
 	--bright-color: #000;
 
@@ -54,7 +54,7 @@
 	--interactive-color: #fecf0a;
 	--link-color: white;
 
-	--past-clinics-bg: #545b5c; 
+	--past-clinics-bg: #545b5c;
 	--past-clinic-bg: #3a3a37;
 	--show-card-bg: #4d3928;
 
@@ -301,6 +301,11 @@ textarea {
 .bottom-rounded {
 	border-bottom-left-radius: 1rem;
 	border-bottom-right-radius: 1rem;
+
+	@media (width < 1220px) {
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+	}
 }
 
 .inset {
