@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Link support for clinic events
 - Loading states for data fetching components
 - Error handling and logging
+- Dark theme support for social icons
 
 ### Changed
 
@@ -23,12 +24,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated form styling and user experience
 - Improved responsive design for clinic cards
 - Enhanced SEO metadata implementation
+- Simplified form submission handling
+- Updated Facebook icon sizing
 
 ### Removed
 
 - SMTP email configuration and environment variables
 - Server-side form handling code
 - Legacy HTML pages (redirected to new routes)
+- Unused TypeScript types
 
 ### Fixed
 
@@ -36,6 +40,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Date parsing for clinic events
 - Link icon display in clinic cards
 - TypeScript type definitions
+- Form success message display
 
 ### Security
 
@@ -53,5 +58,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Logo components
 - Basic styling with CSS variables
 
-[0.2.0]: https://github.com/username/german-magic-farm/releases/tag/v0.2.0
-[0.1.0]: https://github.com/username/german-magic-farm/releases/tag/v0.1.0
+[0.2.0]: https://github.com/shrinkray/german-magic-farm/releases/tag/v0.2.0
+[0.1.0]: https://github.com/shrinkray/german-magic-farm/releases/tag/v0.1.0
