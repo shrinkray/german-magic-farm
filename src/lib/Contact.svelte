@@ -3,7 +3,7 @@
 		<h2>Contact Pam</h2>
 		<p><strong>German Magic Farm</strong></p>
 		<p>14082 Rightmire Rd,<br />Dundee, Mi 48131</p>
-		
+
 		<p class="nowrap squeeze">
 			<span class="phone-icon icn"></span> <a href="tel:7346523775" class="bold">(734) 652-3775</a>
 		</p>
@@ -12,7 +12,9 @@
 			<a href="mailto:pam@germanmagicfarm.com" class="bold">pam@germanmagicfarm.com</a>
 		</p>
 		<p class="nowrap squeeze">
-			<span class="facebook-icon icn"></span> <a href="https://www.facebook.com/GermanMagicFarm/" class="bold">German Magic Farm Facebook</a>
+			<span class="facebook-icon icn"></span>
+			<a href="https://www.facebook.com/GermanMagicFarm/" class="bold">German Magic Farm Facebook</a
+			>
 		</p>
 	</div>
 	<div class="contact-image">
