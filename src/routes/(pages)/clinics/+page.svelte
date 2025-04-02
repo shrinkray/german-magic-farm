@@ -118,7 +118,7 @@
 	<meta property="og:image" content={data.seo.image} />
 	<meta property="og:image:width" content="740" />
 	<meta property="og:image:height" content="423" />
-	<meta property="og:image:alt" content="Shows at German Magic Farm" />
+	<meta property="og:image:alt" content="Clinics at German Magic Farm" />
 </svelte:head>
 
 <div class="hero-wrapper">
@@ -213,7 +213,7 @@
 		margin: var(--size-fluid-2);
 	}
 	.show-title {
-		font-size: var(--font-size-fluid-1);
+		/* font-size: var(--font-size-fluid-1); */
 		padding-top: 0;
 		color: var(--text-1);
 		margin: 0;
