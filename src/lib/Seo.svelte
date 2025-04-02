@@ -16,10 +16,10 @@
 {
     "@context": "http://schema.org",
     "@type": "${type}",
-      "name": "${title}",
-      "description": "${description}",
-      "url": "${url}",
-      "image": "${image}",
-    }
-  </script>`}
+    "name": "${title}",
+    "description": "${description}",
+    "url": "${url}",
+    "image": "${image}"
+}
+</script>`}
 </svelte:head>
