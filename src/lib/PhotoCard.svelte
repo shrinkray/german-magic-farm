@@ -38,7 +38,6 @@
 </section>
 
 <style>
-
 	img {
 		margin-bottom: 2rem;
 	}

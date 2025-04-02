@@ -8,12 +8,9 @@
 	<div class="section">
 		<h1>Questions?</h1>
 		<p class="pull-quote section-description">
-			Please reach out to us on Facebook, call, or email. We will get back to you as soon as possible.
+			Please reach out to us on Facebook, call, or email. We will get back to you as soon as
+			possible.
 		</p>
-
-		
-
-
 
 		<!-- <form 
 			name="contact"
@@ -41,7 +38,6 @@
 			</div>
 			<button type="submit">Send Message</button>
 		</form> -->
-		
 	</div>
 </section>
 
@@ -75,22 +71,23 @@
 />
 
 <style>
-	/* .form-group {
-		margin-bottom: 1rem;
-	}
-	label {
-		display: block;
-		margin-bottom: 0.5rem;
-	}
-	input, textarea {
+	/* Removed form for now GRM 4/1/2025 
+
+	input,
+	textarea {
 		width: 100%;
-		padding: 0.5rem;
-		border: 1px solid #ddd;
-		border-radius: 4px;
+		padding: 0.75em 1em;
+		border-radius: 0.25em;
+		border: 1px solid var(--stone-1);
+		color: var(--input-color);
+		font-size: var(--fs-300);
 	}
+
 	textarea {
 		min-height: 150px;
+		font-size: var(--fs-300);
 	}
+
 	button {
 		background: var(--primary-color);
 		color: white;
@@ -101,6 +98,7 @@
 		font-family: 'Montserrat', sans-serif;
 		font-size: var(--fs-100);
 	}
+
 	button:hover {
 		background: var(--primary-color-hover);
 	}
@@ -112,17 +110,30 @@
 	label {
 		font-family: 'Montserrat', sans-serif;
 		margin-top: 1rem;
-	} */
-	.contact-map {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 1.5em;
-		padding-block: var(--size-7);
-		padding-right: 2rem;
-		background-color: var(--accent-fade);
-		margin-bottom: 2rem;
-		border-radius: 1rem;
+		display: block;
+		padding-bottom: 0.5em;
+		margin-bottom: 0.5rem;
 	}
+
+	.form-group {
+		margin-bottom: 1.5em;
+	}
+
+	.success-message {
+		background-color: var(--success-bg, #e6f4ea);
+		color: var(--success-color, #10491d);
+		padding: 1rem;
+		border-radius: 4px;
+		margin: 1rem 0;
+		text-align: center;
+	}
+
+	.hidden {
+		display: none;
+	}
+		
+	*/
+
 
 	.contact-info {
 		padding-left: 2.5rem;
@@ -138,36 +149,9 @@
 		}
 	}
 
-	.map {
-		width: 100%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-
-		@media (width > 965px) {
-			width: 58%;
-		}
-	}
-
-	input,
-	textarea {
-		width: 100%;
-		padding: 0.75em 1em;
-		border-radius: 0.25em;
-		border: 1px solid #999;
-		color: var(--input-color);
-		font-size: var(--fs-300);
-	}
-
-	textarea {
-		font-size: var(--fs-300);
-	}
-	.form-group {
-		margin-bottom: 1.5em;
-	}
-	label {
-		display: block;
-		padding-bottom: 0.5em;
+	iframe {
+		position: relative;
+		border-radius: 0.5rem;
 	}
 
 	.map-container {
@@ -179,7 +163,26 @@
 			margin-left: 2rem;
 		}
 	}
+	.contact-map {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1.5em;
+		padding-block: var(--size-7);
+		padding-right: 2rem;
+		background-color: var(--accent-fade);
+		margin-bottom: 2rem;
+		border-radius: 1rem;
+	}
+	.map {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
+		@media (width > 965px) {
+			width: 58%;
+		}
+	}
 	.map-overlay {
 		position: absolute;
 		top: 0;
@@ -194,21 +197,4 @@
 		border-radius: 0.5rem;
 	}
 
-	iframe {
-		position: relative;
-		border-radius: 0.5rem;
-	}
-
-	.success-message {
-		background-color: var(--success-bg, #e6f4ea);
-		color: var(--success-color, #10491d);
-		padding: 1rem;
-		border-radius: 4px;
-		margin: 1rem 0;
-		text-align: center;
-	}
-
-	.hidden {
-		display: none;
-	}
 </style>

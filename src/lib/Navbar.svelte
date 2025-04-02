@@ -115,7 +115,6 @@
 				<div bind:this={hamburgerBtn}>
 					<Hamburger bind:open />
 				</div>
-				
 			</div>
 			<!-- begin dark light toggle code -->
 			<div class="move-moon relative">
@@ -126,9 +125,9 @@
 				{:else}
 					<a class="sun" href={'#'} on:click={() => setTheme('light')}>
 						<Sun />
-				</a>
-			{/if}
-		</div>
+					</a>
+				{/if}
+			</div>
 		</div>
 	</header>
 </div>
@@ -238,7 +237,7 @@
 		text-align: left;
 		padding: 0 0.5rem;
 		list-style: none;
-		font-size: 1.5em;
+		font-size: var(--fs-400);
 	}
 
 	a {
@@ -247,6 +246,7 @@
 		font-family: 'Montserrat', sans-serif;
 		font-weight: 400;
 		border-bottom: 3px solid transparent;
+		white-space: nowrap;
 	}
 	a:hover {
 		border-bottom: 3px solid var(--stone-1);

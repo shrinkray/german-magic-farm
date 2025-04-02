@@ -48,7 +48,7 @@
 		margin-bottom: 2rem;
 	}
 	.hero {
-		padding: 9em 0;
+		padding: 8rem 0;
 		color: white;
 		background-image: var(--bg-image);
 		background-position: center top;
