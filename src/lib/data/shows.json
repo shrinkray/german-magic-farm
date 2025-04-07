@@ -1,4 +1,30 @@
 {
+	"shows": [
+		{
+			"title": "Alberdine",
+			"location": "South Lyon, MI",
+			"photo": "./show-1.jpg",
+			"link": "./show-1",
+			"excerpt": "Dressage schooling show for points towards the USDF Region 10 Championships.",
+			"button": "Learn more"
+		},
+		{
+			"title": "Albion",
+			"location": "Albion, MI",
+			"photo": "./show-2.jpg",
+			"link": "./show-2",
+			"excerpt": "Hunter/Jumper schooling show for points towards the USDF Region 10 Championships.",
+			"button": "Learn more"
+		},
+		{
+			"title": "Fun Shows",
+			"location": "German Magic Farm and other local venues",
+			"photo": "./show-3.jpg",
+			"link": "./show-3",
+			"excerpt": "Fun shows for all levels of riders and horses.",
+			"button": "Learn more"
+		}
+	],
 	"pageTitle": "Shows & Competitions",
 	"pageTagline": "Find information about upcoming events, competition schedules, and how to participate in our shows.",
 	"seo": {
