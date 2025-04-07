@@ -8,27 +8,21 @@
 			<h1>Willkommen!</h1>
 
 			<p class="pull-quote section-description">
-				German Magic Farm is a private training and lesson facility located in historic, Dundee
-				Michigan. Our tranquil farm offers a huge outdoor arena, grass pastures, and access to trail
-				riding.
+				German Magic Farm is a private training and lesson facility. We offer lessons in dressage, hunters, jumpers, and eventing. Located in historic Dundee Michigan, our tranquil farm offers a huge outdoor arena, grass pastures, and access to trail riding.
 			</p>
 
 			<p class="grande">
-				Resident trainer and owner; Pamela Bauer, is a German native who has traveled the world
-				teaching and training dressage and jumping to horses and riders. From beginner to Grand
-				Prix; German Magic Farm is happy to provide riders of all ages a relaxed fun atmosphere for
-				perfecting riding skills; or for training your next equine star!
+				Resident trainer and owner; Pamela Bauer, is a German native who has traveled the world teaching and training dressage and jumping to horses and riders. From beginner to Grand Prix; German Magic Farm is happy to provide riders of all ages a relaxed fun atmosphere for perfecting riding skills; or for training your next equine star!
 			</p>
 
 			<p class="grande">
-				Whether it's lessons in dressage, hunters, jumpers; or even a program suited to eventing
-				horses, German Magic Farm can provide the perfect mixture of German and American training to
-				suit your needs!
+				Whether it's lessons in dressage, hunters, jumpers; or even a program suited to eventing horses, German Magic Farm can provide the perfect mixture of German and American training to suit your needs!
 			</p>
 
 			<div class="space-y-20"></div>
+			<p class="pull-quote grande between">Don't wait, Contact us today!
 
-			<a href="./contact" class="button my-20"> Let's get started!</a>
+			<a href="./contact" class="button my-20">Let's get started!</a></p>
 		</div>
 		<div class="contact col">
 			<Contact />
@@ -80,5 +74,9 @@
 	.button:hover {
 		text-decoration: underline;
 		transform: scale(1.25);
+	}
+	.between {
+		display: flex;
+		justify-content: space-between;
 	}
 </style>
