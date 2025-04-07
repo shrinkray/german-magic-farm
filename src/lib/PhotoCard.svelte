@@ -5,32 +5,44 @@
 			photo: './pam-bauer-horseshow-kid.webp',
 			link: './services',
 			excerpt:
-				'Group and individual lessons, training for your OR your horse, or test out new skills at a horse show!'
+				'Group and individual lessons, training for your OR your horse, or test out new skills at a horse show!',
+			button: 'Learn more'
 		},
 		{
 			title: 'MEET PAM',
 			photo: './pam-bauer-teaching.webp',
 			link: './meet-pam-bauer',
-			excerpt: 'Meet Pam Bauer, resident trainer & owner at German Magic Farm'
+			excerpt: 'Meet Pam Bauer, resident trainer & owner at German Magic Farm',
+			button: 'My story'
 		},
 		{
 			title: 'CLINICS',
 			photo: './jumping-clinic.webp',
 			link: './clinics',
-			excerpt: 'Transform rider and horse skills. Learn, practice and have fun at a clinic! '
+			excerpt: 'Transform rider and horse skills. Learn, practice and have fun at a clinic! ',
+			button: 'Build skills'
+		},
+		{
+			title: 'SHOWS',
+			photo: './jumping-clinic.webp',
+			link: './shows-and-competitions',
+			excerpt: 'Learn, practice and have fun at a show! Gain experience and confidence to compete! ',
+			button: 'Get Experience'
 		}
+
+	
 	];
 </script>
 
 <section class="section my-60">
 	<div class="container">
 		<div class="auto-grid">
-			{#each pics as { title, photo, link, excerpt }}
+			{#each pics as { title, photo, link, excerpt, button }}
 				<div class="card flow-bottom">
 					<h3>{title}</h3>
 					<a href={link}><img class="square" src={photo} alt={title} /> </a>
 					<div class="excerpt">{excerpt}</div>
-					<a class="button" href={link}>Learn more</a>
+					<a class="button" href={link}>{button}</a>
 				</div>
 			{/each}
 		</div>
