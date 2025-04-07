@@ -2,8 +2,8 @@
 	"clinics": [
 		{
 			"id": "josef-maier",
-			"title": "Josef Maier Clinic",
-			"subtitle": "Josef Maier will be teaching at German Magic Farm",
+			"title": "Guest Clinition Clinic",
+			"subtitle": "Our expert guest clinician will be teaching at German Magic Farm.",
 			"description": "If you are interested in this clinic please sign up and register on our Facebook page. Space is limited, so get your spot today!",
 			"date": "April 12-13, 2025",
 			"instructor": "Josef Maier",
@@ -14,7 +14,7 @@
 		},
 		{
 			"id": "josef-maier-sept-2023",
-			"title": "Josef Maier Clinic",
+			"title": "Expert Clinician Clinic",
 			"subtitle": "Josef Maier will be teaching at German Magic Farm on September 9th and 10th",
 			"description": "If you are interested in this clinic please register on our Facebook page.",
 			"date": "September 9-10, 2023",
