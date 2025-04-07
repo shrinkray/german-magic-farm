@@ -144,6 +144,7 @@
 					<article class="show-card">
 						<h3 class="show-title">{clinic.title}</h3>
 						<p><strong>Date:</strong> {clinic.date}</p>
+						<p class="">{clinic.subtitle}</p>
 						<p>{clinic.description}</p>
 						{#if clinic.link}
 							<p class="clinic-link">

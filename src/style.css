@@ -308,6 +308,11 @@ textarea {
 	}
 }
 
+.between {
+	display: flex;
+	justify-content: space-between;
+}
+
 .inset {
 	padding-left: 1rem;
 	padding-right: 1rem;

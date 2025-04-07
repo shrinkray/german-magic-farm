@@ -42,7 +42,7 @@
 			>
 			5th level and rode for Olympic dressage rider Mieko Yagi. She served as Chief Instructor at the
 			prestigious
-			<a href="https://www.okamotoriding.com/" target="_blank" rel="noopener noreferrer"
+			<a href="https://whereintokyo.com/venues/25112.html" target="_blank" rel="noopener noreferrer"
 				>Tokyo Riding Club</a
 			>, where she trained horses and students all the way to Grand Prix level. In addition to her
 			competitive and training work, Pam also volunteered at a
@@ -64,6 +64,13 @@
 			Pam specializes in building strong partnerships between horse and rider. She emphasizes
 			correct and effective body positioning and aids in both dressage and jumping disciplines,
 			helping her students become confident, capable riders.
+		</p>
+
+		<p class="grande">
+			Pam helps riders who had an accident in the past and are looking to get back into riding. If
+			you have a fear or phobia of equestrian activities, she has helped others overcome
+			difficulties and grow into confident riders and lovers of the sport. You will not find a
+			more skilled and compassionate trainer in the Midwest.
 		</p>
 
 		<p class="grande">
